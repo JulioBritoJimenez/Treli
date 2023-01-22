@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +14,7 @@ export default function Login() {
       </Head>
         <div>
           <h1>Login</h1>
-          <a href='/'>Volver al Home</a>
+          <Link href='/'>Volver al Home</Link>
         </div>
     </>
   )
