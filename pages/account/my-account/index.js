@@ -4,7 +4,7 @@ function MyAccount() {
   return (
     <>
       <Layout>
-        <h1>Mi Cuenta</h1>
+        <h2>Mi Cuenta</h2>
       </Layout>
     </>
   )

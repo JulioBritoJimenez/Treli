@@ -5,7 +5,7 @@ function Account() {
   return (
     <>
       <Layout>
-        <h1>Account</h1>
+        <h2>Account</h2>
       </Layout>
     </>
   )

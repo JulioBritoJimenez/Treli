@@ -22,7 +22,7 @@ function Sidebar() {
           </Link>
         </div>
         <div className="sidebar_top-row_orders sidebar_top-row_items">
-          <Link className={router.pathname == "/account/order" ? "active-head" : ""} href="/account/order">
+          <Link className={router.pathname == "/account/orders" ? "active-head" : ""} href="/account/orders">
 					  <Image src={iconPagos} alt="Icono" /><span>Pagos</span>
           </Link>
 				</div>

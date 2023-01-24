@@ -4,7 +4,7 @@ function Settings() {
   return (
     <>
       <Layout>
-        <h1>Configuraciones</h1>
+        <h2>Configuraciones</h2>
       </Layout>
     </>
   )

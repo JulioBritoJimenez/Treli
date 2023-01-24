@@ -13,7 +13,7 @@ export default function Header() {
     <div className="macc-header">
       <a href="https://treli.co/feedback/" target="_blank" className="feedback">Feedback</a>
       <div className="macc-header-col1">
-        <Link href="/login">
+        <Link href="/account">
           <Image src={iconoTreli} alt="Icono Logo Treli" />
           <span>Treli</span>
         </Link>
