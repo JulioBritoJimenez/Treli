@@ -159,7 +159,7 @@ function GetStarted() {
                   <span className="step-status step-started">
                     <span className="steps-completed">1</span>
                     de
-                    <span className="steps-remaining">1</span>
+                    <span className="steps-remaining">4</span>
                     completado
                   </span>
                 </div>
