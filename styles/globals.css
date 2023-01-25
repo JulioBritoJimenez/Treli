@@ -58,9 +58,9 @@ h2 {
   font-weight: var(--h2-font-weight);
   letter-spacing: var(--h2-letter-spacing);
 }
-h3 {
-  font-size: var(--font-size-20px);
-  font-weight: 500;
+h3, .ant-modal-title {
+  font-size: var(--font-size-20px) !important;
+  font-weight: 500 !important;
 }
 p {
   margin-bottom: 1.5em;
@@ -86,22 +86,22 @@ span.small {
 }
 
 /* Botones */
-.botones {
+.botones, .ant-btn {
   height: var(--boton-height);
   padding: var(--boton-padding);
   border-radius: var(--boton-radius);
   font-weight: var(--boton-font-weight);
   font-size: var(--boton-font-size);
 }
-.boton-violeta {
+.boton-violeta, .ant-btn {
   background-color: var(--morado-oscuro);
   border: none;
   color: #fff !important;
 }
-.boton-violeta:hover {
+.boton-violeta:hover, .ant-btn:hover {
   background-color: var(--azul-oscuro) !important;
 }
-.button-full {
+.button-full, .ant-btn {
   padding: 0 20px;
   height: var(--boton-height-bajo);
   line-height: 44px;
@@ -123,6 +123,11 @@ span.small {
 .boton-border:hover {
   background-color: var(--morado-oscuro);
   color: white;
+}
+.ant-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 40px;
 }
 
 /* Layout */
@@ -318,7 +323,7 @@ a.active-head {
   color: var(--input-color);
 }
 ::placeholder {
-  color: var(--placeholder-color);
+  color: var(--placeholder-color) !important;
   letter-spacing: var(--placeholder-letter-spacing);
 }
 input:focus-visible, select:focus-visible {
@@ -1029,24 +1034,24 @@ a.order-back svg:hover {
 .order-item_name {
   flex: 0 0 40%;
 }
-.order-item_sub {
-  flex: 0 0 25%;
-  padding-left: 10px;
-}
 a.order-item_name {
   color: var(--morado-oscuro);
 }
 span.text-dec {
   text-decoration: underline;
 }
+.order-item_sub {
+  flex: 0 0 25%;
+  padding-left: 10px;
+}
+.order-item_total {
+  flex-grow: 1;
+  text-align: right;
+}
 span.order-vars-cont {
   display: block;
   font-size: var(--font-size-15px);
   color: var(--azul-oscuro);
-}
-.order-item_sub {
-  flex: 0 0 25%;
-  padding-left: 10px;
 }
 span.order-qty {
   margin-left: 10px;
@@ -1124,4 +1129,110 @@ span.remove-fee svg {
 }
 .payment-expire {
   color: var(--placeholder-color);
+}
+.ant-modal {
+  width: 700px !important;
+  border-radius: 15px !important;
+}
+.ant-modal-content {
+  border-radius: 15px !important;
+}
+.ant-modal-header {
+  margin-bottom: 30px !important;
+}
+.ant-modal-title {
+  color: var(--azul-oscuro) !important;
+}
+.ant-modal-close-x {
+  background-color: #F6F6F6;
+  padding: 4px;
+  border-radius: 10px;
+  color: var(--azul-oscuro);
+  position: absolute;
+  top: 0px;
+  right: 7px;
+  height: 38px;
+}
+.ant-modal-close-x:hover {
+  background-color: var(--violeta-claro);
+  color: var(--morado-oscuro);
+}
+button.ant-modal-close:hover {
+  background-color: transparent !important;
+}
+.ant-modal-close-x svg {
+  font-size: 30px !important;
+}
+.ant-btn span {
+  padding-top: 4px;
+}
+.subs-inf-box .subs-action {
+  margin-left: 0;
+  margin-bottom: 20px;
+  color: var(--morado-oscuro);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.subs-inf-box .subs-action:hover {
+  color: var(--violeta)
+}
+.subs-inf-box .subs-action:last-child {
+  margin-bottom: 0;
+}
+.subs-action svg {
+  font-size: 23px;
+  margin: -4px 6px 0px 0px;
+}
+.subs-action svg.icon-trash, .subs-action svg.icon-pencil {
+  width: 16px;
+  margin: -4px 9px 0px 4px;
+}
+.add-select-addons label {
+  color: var(--azul-oscuro);
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.ant-modal-content input, .ant-modal-content select {
+  width: 100%;
+  background-color: var(--input-bg);
+  border: var(--input-border);
+  border-radius: var(--input-radius);
+  height: var(--input-height);
+  color: var(--azul-oscuro);
+  padding: var(--input-padding);
+  margin-bottom: 10px;
+}
+.add-charge.link {
+  color: var(--morado-oscuro);
+  display: flex;
+  cursor: pointer;
+}
+.add-charge.link:hover {
+  color: var(--violeta);
+}
+.add-charge.link svg {
+  width: 15px;
+  margin-right: 6px;
+}
+.flex input:first-child, .flex select:first-child {
+  margin-right: 5px;
+}
+.flex input:last-child, .flex select:last-child {
+  margin-left: 5px;
+}
+.charge-input-container, .save-charge, .add-charge.link.agregarCargo {
+  display: none;
+}
+.charge-input-container.agregarCargo, .save-charge.agregarCargo {
+  display: block;
+}
+.ant-modal-footer {
+  text-align: right !important;
+  display: flex;
+  justify-content: flex-end !important;
+  margin-bottom: 10px;
 }
