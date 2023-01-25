@@ -177,17 +177,35 @@ function OrderSuscription() {
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box order-actions">
                   <div className="subs-action" onClick={showCancel}><BsX />Cancelar suscripción</div>
-                  <Modal title="Cancelar suscripción #26836" open={isCancelOpen} onOk={handleOk} onCancel={handleCancel} footer={[<Button onClick={handleCancel}>Cancelar</Button>]} closeIcon={<BsX />} centered>
+                  <Modal 
+                    title="Cancelar suscripción #26836" 
+                    open={isCancelOpen} 
+                    onOk={handleOk} 
+                    onCancel={handleCancel} 
+                    footer={[<Button onClick={handleCancel} key="cancelar">Cancelar</Button>]} closeIcon={<BsX />} 
+                    centered width={700}>
                     <p>Dependiendo de tu configuración de notificaciones, tu cliente recibirá un correo electrónico para informarle que esta suscripción ha sido cancelada.</p>
                   </Modal>
 
                   <div className="subs-action" onClick={showPausar}><BsPause />Pausar suscripción</div>
-                  <Modal title="Pausar suscripción #26836" open={isPausarOpen} onOk={handleOkPausar} onCancel={handlePausar} footer={[<Button onClick={handlePausar}>Pausar</Button>]} closeIcon={<BsX />} centered>
+                  <Modal 
+                    title="Pausar suscripción #26836" 
+                    open={isPausarOpen} 
+                    onOk={handleOkPausar} 
+                    onCancel={handlePausar} 
+                    footer={[<Button onClick={handlePausar} key="pausar">Pausar</Button>]} closeIcon={<BsX />} 
+                    centered width={700}>
                     <p>Dependiendo de tu configuración de notificaciones, tu cliente recibirá un correo electrónico para informarle que esta suscripción ha sido pausada.</p>
                   </Modal>
 
                   <div className="subs-action" onClick={showEliminar}><BsTrash className="icon-trash" />Eliminar suscripción</div>
-                  <Modal title="Eliminar suscripción #26836" open={isEliminarOpen} onOk={handleOkEliminar} onCancel={handleEliminar} footer={[<Button onClick={handleEliminar}>Eliminar</Button>]} closeIcon={<BsX />} centered>
+                  <Modal 
+                    title="Eliminar suscripción #26836" 
+                    open={isEliminarOpen} 
+                    onOk={handleOkEliminar} 
+                    onCancel={handleEliminar} 
+                    footer={[<Button onClick={handleEliminar} key="eliminar">Eliminar</Button>]} closeIcon={<BsX />} 
+                    centered width={700}>
                     <p>Esta acción es irreversible. La suscripción cambiará automáticamente al estado cancelado y se eliminarán todas las renovaciones programadas.</p>
                   </Modal>
                 </div>
@@ -196,7 +214,13 @@ function OrderSuscription() {
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box order-actions">
                   <div className="subs-action" onClick={showAddon}><BsPlus />Agregar addon</div>
-                  <Modal title="Agregar addon" open={isAddonOpen} onOk={handleOkAddon} onCancel={handleAddon} footer={[<Button onClick={handleAddon}>Agregar addon</Button>]} closeIcon={<BsX />} centered>
+                  <Modal 
+                    title="Agregar addon" 
+                    open={isAddonOpen} 
+                    onOk={handleOkAddon} 
+                    onCancel={handleAddon} 
+                    footer={[<Button onClick={handleAddon} key="agregar">Agregar addon</Button>]} closeIcon={<BsX />} 
+                    centered width={700}>
                     <p>Los addons son una forma efectiva de vender productos/servicios adicionales a tus clientes y aumentar tus ingresos. El addon seleccionado se agregará a la suscripción y se cobrará en la próxima fecha de renovación programada.</p>
                     <div className="add-select-addons">
                       <label>Seleccionar addon</label>
@@ -212,7 +236,13 @@ function OrderSuscription() {
                   </Modal>
 
                   <div className="subs-action" onClick={showCargo}><BsPlus />Agregar cargo</div>
-                  <Modal title="Agregar cargo" open={isCargoOpen} onOk={handleOkCargo} onCancel={handleCargo}  footer={[<Button className={`ant-btn save-charge ${cargo ? "agregarCargo": ""}` .trimEnd()} onClick={handleCargo}>Guardar y cobrar</Button>]} closeIcon={<BsX />} centered>
+                  <Modal 
+                    title="Agregar cargo" 
+                    open={isCargoOpen} 
+                    onOk={handleOkCargo} 
+                    onCancel={handleCargo}  
+                    footer={[<Button className={`ant-btn save-charge ${cargo ? "agregarCargo": ""}` .trimEnd()} onClick={handleCargo} key="guardar-y-cobrar">Guardar y cobrar</Button>]} closeIcon={<BsX />} 
+                    centered width={700}>
                     <p>A menudo, es posible que debas cobrar a tus clientes por productos o servicios que no son recurrentes. Los cargos representan estos productos o servicios y se cobran inmediatamente, una sola vez.</p>
                     <div className={`add-charge link ${cargo ? "agregarCargo": ""}` .trimEnd()} onClick={agregarCargo}><BsPlusCircleFill />Agregar cargo</div>
 
@@ -230,8 +260,53 @@ function OrderSuscription() {
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box order-actions">
                   <div className="subs-action" onClick={showEditItem}><BsPencil className="icon-pencil" />Editar items de suscripción</div>
-                  <Modal title="Editar items" open={isEditItemOpen} onOk={handleOkEditItem} onCancel={handleEditItem} footer={[<Button onClick={handleEditItem}>Agregar item</Button>]} closeIcon={<BsX />} centered>
-                    <input type="number" name="sel_addon_qty" id="sel_addon_qty" placeholder="Cantidad" />
+                  <Modal 
+                    title="Editar items"
+                    open={isEditItemOpen}
+                    onOk={handleOkEditItem}
+                    onCancel={handleEditItem}
+                    footer={[
+                      <Button onClick={handleEditItem} key="agregar-item">Agregar item</Button>,
+                      <Button onClick={handleEditItem} key="actualizar-item">Actualizar items</Button>
+                    ]} closeIcon={<BsX />} centered width={900}>
+                    <div className="edit_items-list">
+                      <div className="order-item">
+                        <div className="order-item_name">Item</div>
+                        <div className="order-item_unit-price">Precio unitario</div>
+                        <div className="order-item_qty">Cantidad</div>
+                        <div className="order-item_total">Total</div>
+                        <div className="edit_items-list_delete"></div>
+                      </div>
+                      <div className="order-item" data-id="2026" data-total="150000" data-qty="1">
+                        <div className="order-item_name">
+                          <span className="text-dec">Suscripción Demo</span>
+                          <span className="order-vars-cont"><span className="order-vars-cont"></span></span>
+                        </div>
+                        <div className="order-item_unit-price">
+                          <input type="number" name="item-unit-price" id="item-unit-price" placeholder="Unit price" />
+                        </div>
+                        <div className="order-item_qty">
+                          <input type="number" name="item-unit-qty" id="item-unit-qty" placeholder="Quantity" />
+                        </div>
+                        <div className="order-item_total">
+                          <span className="price-amount amount"><bdi><span className="price-currencySymbol">$</span>150,000</bdi></span>
+                        </div>
+                        <div className="edit_items-list_delete">
+                         <BsX /> 
+                        </div>
+                      </div>
+                    </div>
+                  </Modal>
+
+                  <div className="subs-action" onClick={showEliminar}><BsTrash className="icon-trash" />Eliminar suscripción</div>
+                  <Modal 
+                    title="Eliminar suscripción #26836" 
+                    open={isEliminarOpen} 
+                    onOk={handleOkEliminar} 
+                    onCancel={handleEliminar} 
+                    footer={[<Button onClick={handleEliminar} key="editar-fecha">Eliminar</Button>]} closeIcon={<BsX />} 
+                    centered width={700}>
+                    <p>Esta acción es irreversible. La suscripción cambiará automáticamente al estado cancelado y se eliminarán todas las renovaciones programadas.</p>
                   </Modal>
                 </div>
               </div>

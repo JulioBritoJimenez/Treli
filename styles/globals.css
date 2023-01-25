@@ -1131,7 +1131,6 @@ span.remove-fee svg {
   color: var(--placeholder-color);
 }
 .ant-modal {
-  width: 700px !important;
   border-radius: 15px !important;
 }
 .ant-modal-content {
@@ -1235,4 +1234,38 @@ button.ant-modal-close:hover {
   display: flex;
   justify-content: flex-end !important;
   margin-bottom: 10px;
+}
+.edit_items-list {
+  margin-bottom: 22px;
+}
+.edit_items-list .order-item {
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 15px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.edit_items-list .order-item_name {
+  flex: 0 0 35%;
+}
+.order-item_unit-price, .order-item_qty {
+  flex: 0 0 20%;
+  margin: 0 10px;
+}
+.order-item_total {
+  flex-grow: 1;
+  text-align: right;
+}
+.edit_items-list span.text-dec {
+  text-decoration: none;
+}
+.edit_items-list_delete svg {
+  font-size: 25px;
+  margin-left: 2px;
+  color: var(--morado-oscuro);
+  cursor: pointer;
+}
+.edit_items-list input {
+  margin: 0;
 }
