@@ -317,7 +317,7 @@ a.active-head {
   text-align: center;
   margin-bottom: 30px;
 }
-.login-content input, .register-container input, .register-container select {
+.login-content input, .register-container input, .register-container select, .input input, .input select {
   width: 100%;
   font-size: var(--input-font-size);
   background-color: var(--input-bg);
@@ -1320,7 +1320,7 @@ span.acc-label {
   background-color: white;
   box-shadow: var(--shadow-empezar);
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 500;
   display: block;
 }
 .sh_content {
@@ -1344,7 +1344,7 @@ table.payment-history {
   padding: 8px;
 }
 .payment-history th {
-  font-weight: 600;
+  font-weight: 500;
 }
 .t_table_right {
   text-align: right;
@@ -1354,4 +1354,39 @@ table {
 }
 .sh_content .status-style {
   margin: 0px;
+}
+.t_table_right {
+  text-align: right;
+}
+.ch-empty {
+  text-align: center;
+  padding: 20px 10px 7px;
+}
+
+/* Crear suscripción */
+a.flex-no-space.list-item {
+  border-bottom: 1px solid var(--color-borde);
+  display: flex;
+  align-items: center;
+  color: var(--azul-oscuro);
+  padding: 15px 20px;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Settings */
+.settings-home-container {
+  display: flex;
+  margin-bottom: 25px;
+}
+.settings-home-title {
+  flex: 0 0 35%;
+  padding-right: 90px;
+}
+.settings-items {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow-empezar);
 }

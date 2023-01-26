@@ -6,14 +6,20 @@ import Demoimg from '../../../public/demo_suscripcion.jpg';
 import VisaLogo from '../../../public/Visa-Logo.png';
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
-import PaymentHistory from "../../../componentes/paymentHistory";
+import HistorialPagos from "../../../componentes/historialPagos";
+import HistorialCorreos from "../../../componentes/historialCorreos";
+import EventosSuscripcion from "../../../componentes/eventosSuscripcion";
 
 function OrderSuscription() {
 
   const [historialState, setHistorialState] = useState(1);
   const historialTab = (index) => {
     setHistorialState(index);
-    console.log("Hola mundo");
+  }
+
+  const [eventosState, setEventosState] = useState(1);
+  const eventosTab = (index) => {
+    setEventosState(index);
   }
 
   const [cargo, setCargo] = useState(false);
@@ -206,7 +212,7 @@ function OrderSuscription() {
                 <div className="order-box">
                   <h3>Método de pago</h3>
                   <div className="payment-cart flex">
-                    <div className="payment-title"><Image src={VisaLogo} alt="Logo pago" /> Terminada en 4242 via Wompi</div>
+                    <div className="payment-title"><Image src={VisaLogo} alt="Logo pago" /> Terminada en 4242 vía Wompi</div>
                     <div className="payment-expire">Expira 12/2025</div>
                   </div>
                 </div>
@@ -222,11 +228,39 @@ function OrderSuscription() {
                 </div>
                 <div className="history-filter-content">
                   <div className={`sh_content ${historialState === 1 ? "active": ""}` .trimEnd()}>
-                    <PaymentHistory />
+                    <HistorialPagos />
                   </div>
-                  <div className={`sh_content ${historialState === 2 ? "active": ""}` .trimEnd()}>Historial correos</div>
-                  <div className={`sh_content ${historialState === 3 ? "active": ""}` .trimEnd()}>Historial de WhatsApp</div>
-                  <div className={`sh_content ${historialState === 4 ? "active": ""}` .trimEnd()}>Reclamación</div>
+                  <div className={`sh_content ${historialState === 2 ? "active": ""}` .trimEnd()}>
+                    <HistorialCorreos />
+                  </div>
+                  <div className={`sh_content ${historialState === 3 ? "active": ""}` .trimEnd()}>
+                    <div className="ch-empty">Aún no hay historia de WhatsApp</div>
+                  </div>
+                  <div className={`sh_content ${historialState === 4 ? "active": ""}` .trimEnd()}>
+                    <div className="ch-empty">Aún no hay historial de reclamación</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="order-box-container t-order-notes subs-inf-box margin-bottom">
+                <h3>Eventos</h3>
+                <div className="history-filter-titles">
+                  <span id="e_subscription" className={eventosState === 1 ? "sh_active_filter" : "history-tab"} onClick={() => eventosTab(1)}>Suscripción</span>
+                  <span id="payment_27135" className={eventosState === 2 ? "sh_active_filter" : "history-tab"} onClick={() => eventosTab(2)}>Pago #27135</span>
+                  <span id="payment_26834" className={eventosState === 3 ? "sh_active_filter" : "history-tab"} onClick={() => eventosTab(3)}>Pago #26834</span>
+                </div>
+                <div className="history-filter-content">
+                  <div className={`sh_content ${eventosState === 1 ? "active": ""}` .trimEnd()}>
+                    <EventosSuscripcion />
+                  </div>
+                  <div className={`sh_content ${eventosState === 2 ? "active": ""}` .trimEnd()}>
+                    <EventosSuscripcion />
+                    <div className="ch-empty">Pago #27135</div>
+                  </div>
+                  <div className={`sh_content ${eventosState === 3 ? "active": ""}` .trimEnd()}>
+                    <EventosSuscripcion />
+                    <div className="ch-empty">Pago #26834</div>
+                  </div>
                 </div>
               </div>
             </div>
