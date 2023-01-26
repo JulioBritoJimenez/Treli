@@ -1,13 +1,20 @@
 import Layout from "../../../componentes/layout";
 import Link from 'next/link';
-import { BsArrowLeftShort, BsPencilSquare, BsX, BsPause, BsTrash, BsPlus, BsPlusCircleFill, BsPencil } from "react-icons/bs";
+import { BsArrowLeftShort, BsPencilSquare, BsX, BsPause, BsTrash, BsPlus, BsPlusCircleFill, BsPencil, BsCalendar4Event, BsPersonBadge } from "react-icons/bs";
 import Image from "next/image";
 import Demoimg from '../../../public/demo_suscripcion.jpg';
 import VisaLogo from '../../../public/Visa-Logo.png';
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
+import PaymentHistory from "../../../componentes/paymentHistory";
 
 function OrderSuscription() {
+
+  const [historialState, setHistorialState] = useState(1);
+  const historialTab = (index) => {
+    setHistorialState(index);
+    console.log("Hola mundo");
+  }
 
   const [cargo, setCargo] = useState(false);
 
@@ -79,6 +86,39 @@ function OrderSuscription() {
   };
   const handleEditItem = () => {
     setIsEditItemOpen(false);
+  };
+
+  const [isEditarFechaOpen, setIsEditarFechaOpen] = useState(false);
+  const showEditarFecha = () => {
+    setIsEditarFechaOpen(true);
+  };
+  const handleOkEditarFecha = () => {
+    setIsEditarFechaOpen(false);
+  };
+  const handleEditarFecha = () => {
+    setIsEditarFechaOpen(false);
+  };
+
+  const [isEditarFrecuenciaOpen, setIsEditarFrecuenciaOpen] = useState(false);
+  const showEditarFrecuencia = () => {
+    setIsEditarFrecuenciaOpen(true);
+  };
+  const handleOkEditarFrecuencia = () => {
+    setIsEditarFrecuenciaOpen(false);
+  };
+  const handleEditarFrecuencia = () => {
+    setIsEditarFrecuenciaOpen(false);
+  };
+
+  const [isEditarDireccionOpen, setIsEditarDireccionOpen] = useState(false);
+  const showEditarDireccion = () => {
+    setIsEditarDireccionOpen(true);
+  };
+  const handleOkEditarDireccion = () => {
+    setIsEditarDireccionOpen(false);
+  };
+  const handleEditarDireccion = () => {
+    setIsEditarDireccionOpen(false);
   };
 
   return(
@@ -169,6 +209,24 @@ function OrderSuscription() {
                     <div className="payment-title"><Image src={VisaLogo} alt="Logo pago" /> Terminada en 4242 via Wompi</div>
                     <div className="payment-expire">Expira 12/2025</div>
                   </div>
+                </div>
+              </div>
+
+              <div className="order-box-container payment-history subs-inf-box margin-bottom">
+                <h3>Historial</h3>
+                <div className="history-filter-titles">
+                  <span id="sh_payments" className={historialState === 1 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(1)}>Pagos</span>
+                  <span id="sh_emails" className={historialState === 2 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(2)}>Historial de correos</span>
+                  <span id="sh_whatsapp" className={historialState === 3 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(3)}>Historial de WhatsApp</span>
+                  <span id="sh_dunning" className={historialState === 4 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(4)}>Historial de reclamación</span>
+                </div>
+                <div className="history-filter-content">
+                  <div className={`sh_content ${historialState === 1 ? "active": ""}` .trimEnd()}>
+                    <PaymentHistory />
+                  </div>
+                  <div className={`sh_content ${historialState === 2 ? "active": ""}` .trimEnd()}>Historial correos</div>
+                  <div className={`sh_content ${historialState === 3 ? "active": ""}` .trimEnd()}>Historial de WhatsApp</div>
+                  <div className={`sh_content ${historialState === 4 ? "active": ""}` .trimEnd()}>Reclamación</div>
                 </div>
               </div>
             </div>
@@ -298,15 +356,81 @@ function OrderSuscription() {
                     </div>
                   </Modal>
 
-                  <div className="subs-action" onClick={showEliminar}><BsTrash className="icon-trash" />Eliminar suscripción</div>
+                  <div className="subs-action" onClick={showEditarFecha}><BsCalendar4Event className="icon-calendar" />Editar próxima fecha de renovación</div>
                   <Modal 
-                    title="Eliminar suscripción #26836" 
-                    open={isEliminarOpen} 
-                    onOk={handleOkEliminar} 
-                    onCancel={handleEliminar} 
-                    footer={[<Button onClick={handleEliminar} key="editar-fecha">Eliminar</Button>]} closeIcon={<BsX />} 
+                    title="Editar próxima fecha de renovación" 
+                    open={isEditarFechaOpen} 
+                    onOk={handleOkEditarFecha} 
+                    onCancel={handleEditarFecha} 
+                    footer={[<Button onClick={handleEditarFecha} key="editar-fecha">Guardar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
-                    <p>Esta acción es irreversible. La suscripción cambiará automáticamente al estado cancelado y se eliminarán todas las renovaciones programadas.</p>
+                    <p className="app-input">
+                      <span className="acc-label">Fecha de renovación</span>
+                      <input type="datetime-local" id="next-payment" name="next-payment" />
+                    </p>
+                  </Modal>
+
+                  <div className="subs-action" onClick={showEditarFrecuencia}><BsPencil className="icon-pencil" />Editar frecuencia</div>
+                  <Modal 
+                    title="Editar frecuencia" 
+                    open={isEditarFrecuenciaOpen} 
+                    onOk={handleOkEditarFrecuencia} 
+                    onCancel={handleEditarFrecuencia} 
+                    footer={[<Button onClick={handleEditarFrecuencia} key="editar-frecuencia">Editar</Button>]} closeIcon={<BsX />} 
+                    centered width={700}>
+                    <p><span className="strong">Frecuencia actual:</span> Cada 2 semanas</p>
+                    <p className="app-input popup-frecuencia">
+                      <span className="acc-label">Frecuencia</span>
+                      <select className="space-r interval" name="interval">
+                        <option value="1">Cada 1</option>
+                        <option value="2">Cada 2</option>
+                        <option value="3">Cada 3</option>
+                        <option value="4">Cada 4</option>
+                        <option value="5">Cada 5</option>
+                        <option value="6">Cada 6</option>
+                      </select>
+                      <select className="period" name="period">
+                        <option value="day">Día</option>
+                        <option value="week">Semana</option>
+                        <option value="month">Mes</option>
+                        <option value="year">Año</option>
+                      </select>
+                    </p>
+                  </Modal>
+
+                  <div className="subs-action" onClick={showEditarDireccion}><BsPersonBadge className="icon-personbook" />Editar dirección de facturación</div>
+                  <Modal 
+                    title="Dirección de facturación" 
+                    open={isEditarDireccionOpen} 
+                    onOk={handleOkEditarDireccion} 
+                    onCancel={handleEditarDireccion} 
+                    footer={null} closeIcon={<BsX />} 
+                    centered width={700}>
+                    <div className="editar_direccion_wrap">
+                      <div className="flex">
+                        <input type="text" id="lnombre" name="lnombre" placeholder="Nombre" />
+                        <input type="text" id="lapellido" name="lapellido" placeholder="Apellido" />
+                      </div>
+                      <div className="flex">
+                        <input type="number" id="cedula" name="cedula" placeholder="Identificación" />
+                        <input type="text" id="telefono" name="telefono" placeholder="Teléfono" />
+                      </div>
+                      <input type="text" id="ldireccionuno" name="ldireccionuno" placeholder="Dirección" />
+                      <input type="text" id="ldirecciondos" name="ldirecciondos" placeholder="Apartamento, casa, etc. (opcional)" />
+                      <select name="lpais" id="lpais">
+			                  <option value="0">Seleccionar país</option>
+                        <option value="CO">Colombia</option>
+                      </select>
+                      <select name="lstate" id="lstate">
+			                  <option value="0">Seleccionar estado/departamento</option>
+                        <option value="ATL">Atlántico</option>
+                      </select>
+                      <select name="lcity" id="lcity">
+                        <option value="barranquilla">Barranquilla</option>
+                      </select>
+                      <input type="text" id="lzip" name="lzip" placeholder="Código postal" />
+                      <button type="submit" className="guardar_dir_edit_subs_bill boton-violeta botones">Guardar</button>
+                    </div>
                   </Modal>
                 </div>
               </div>

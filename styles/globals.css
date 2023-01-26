@@ -70,6 +70,12 @@ p {
 a, button {
   cursor: pointer;
 }
+a {
+  color: var(--morado-oscuro);
+}
+a:hover {
+  color: var(--violeta);
+}
 b, strong {
   font-weight: 600;
 }
@@ -334,6 +340,9 @@ input:focus-visible, select:focus-visible {
   display: flex;
   align-items: center;
   position: relative;
+}
+.app-input.popup-frecuencia {
+  margin-bottom: 0px;
 }
 .btn-login-registro {
   width: 100%;
@@ -1184,7 +1193,8 @@ button.ant-modal-close:hover {
   font-size: 23px;
   margin: -4px 6px 0px 0px;
 }
-.subs-action svg.icon-trash, .subs-action svg.icon-pencil {
+.subs-action svg.icon-trash, .subs-action svg.icon-pencil, .subs-action svg.icon-calendar,
+.subs-action svg.icon-personbook {
   width: 16px;
   margin: -4px 9px 0px 4px;
 }
@@ -1204,6 +1214,12 @@ button.ant-modal-close:hover {
   color: var(--azul-oscuro);
   padding: var(--input-padding);
   margin-bottom: 10px;
+}
+.space-r {
+  margin-right: 15px;
+}
+.strong {
+  font-weight: 500;
 }
 .add-charge.link {
   color: var(--morado-oscuro);
@@ -1268,4 +1284,74 @@ button.ant-modal-close:hover {
 }
 .edit_items-list input {
   margin: 0;
+}
+span.acc-label {
+  flex: 0 0 200px;
+  font-weight: 500;
+  font-size: var(--font-size-18px);
+}
+.guardar_dir_edit_subs_bill {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.order-box-container.payment-history {
+  margin-bottom: 30px;
+}
+.payment-history.subs-inf-box h3, .t-order-notes.subs-inf-box h3 {
+  margin-bottom: 10px;
+}
+.history-filter-titles {
+  margin: 0 -25px;
+  padding: 10px 25px;
+  background-color: var(--violeta-claro);
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.history-filter-titles span {
+  font-size: var(--font-size-15px);
+  padding: 4px 16px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.sh_active_filter {
+  background-color: white;
+  box-shadow: var(--shadow-empezar);
+  border-radius: 8px;
+  font-weight: 600;
+  display: block;
+}
+.sh_content {
+  display: none;
+}
+.sh_content.active {
+  display: block;
+}
+table.payment-history {
+  text-align: left;
+  margin: 0;
+  border-collapse: collapse;
+}
+.payment-history tr {
+  border-bottom: 1px solid var(--color-borde);
+}
+.payment-history tr:last-child, .payment-history tr:first-child {
+  border-bottom: none;
+}
+.payment-history td, .payment-history th {
+  padding: 8px;
+}
+.payment-history th {
+  font-weight: 600;
+}
+.t_table_right {
+  text-align: right;
+}
+table {
+  width: 100%;
+}
+.sh_content .status-style {
+  margin: 0px;
 }
