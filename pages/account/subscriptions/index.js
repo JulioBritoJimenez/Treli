@@ -2,8 +2,15 @@ import Layout from "../../../componentes/layout";
 import Link from 'next/link';
 import Suscriptionitem from "../../../componentes/suscriptionItem";
 import Paginacion from "../../../componentes/paginacion";
+import { useState } from 'react';
 
 function Subscription() {
+
+  const [estadoFiltroState, setEstadoFiltroState] = useState(1);
+  const estadoFiltroTab = (index) => {
+    setEstadoFiltroState(index);
+  }
+
   return (
     <>
       <Layout>
@@ -20,11 +27,11 @@ function Subscription() {
 
           <div className="plist-head-row1">
             <div className="olist-status status-filter">
-              <div className="filter-order olist-all plist-activestyle" data-status="any">Todos</div>
-              <div className="filter-order olist-active" data-status="active">Activo</div>
-              <div className="filter-order olist-cancelled" data-status="cancelled">Cancelado</div>
-              <div className="filter-order olist-paused" data-status="on-hold">Pausado</div>
-              <div className="filter-order olist-archived" data-status="trash">Archivadas</div>
+              <div className={`filter-order olist-all ${estadoFiltroState === 1 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(1)} data-status="any">Todos</div>
+              <div className={`filter-order olist-active ${estadoFiltroState === 2 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(2)} data-status="active">Activo</div>
+              <div className={`filter-order olist-cancelled ${estadoFiltroState === 3 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(3)} data-status="cancelled">Cancelado</div>
+              <div className={`filter-order olist-paused ${estadoFiltroState === 4 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(4)} data-status="on-hold">Pausado</div>
+              <div className={`filter-order olist-archived ${estadoFiltroState === 5 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(5)} data-status="trash">Archivadas</div>
             </div>
             <div className="plist-search">
               <input type="text" name="psearch" id="psearch" placeholder="Buscar # de suscripción" />
