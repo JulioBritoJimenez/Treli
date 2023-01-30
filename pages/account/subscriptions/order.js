@@ -268,9 +268,10 @@ function OrderSuscription() {
             <div className="new-product-col2">
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box order-actions">
-                  <div className="subs-action" onClick={showCancel}><BsX />Cancelar suscripción</div>
+                  <div className="subs-action" data-action="cancel-p" onClick={showCancel}><BsX />Cancelar suscripción</div>
                   <Modal 
                     title="Cancelar suscripción #26836" 
+                    className="cancel-p"
                     open={isCancelOpen} 
                     onOk={handleOk} 
                     onCancel={handleCancel} 
