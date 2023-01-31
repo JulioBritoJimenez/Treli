@@ -26,7 +26,7 @@ function Subscription() {
           </div>
 
           <div className="plist-head-row1">
-            <div className="olist-status status-filter">
+            <div className="olist-status status-filter estados-suscripciones">
               <div className={`filter-order olist-all ${estadoFiltroState === 1 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(1)} data-status="any">Todos</div>
               <div className={`filter-order olist-active ${estadoFiltroState === 2 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(2)} data-status="active">Activo</div>
               <div className={`filter-order olist-cancelled ${estadoFiltroState === 3 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(3)} data-status="cancelled">Cancelado</div>

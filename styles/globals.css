@@ -187,13 +187,12 @@ span.small {
   margin-right: 0;
 }
 a.new_head {
-  margin-right: 35px;
+  margin: 1px 35px 0 0;
   font-weight: 500;
   color: var(--morado-oscuro);
   background-color: var(--violeta-claro);
   padding: 8px 13px 5px;
   border-radius: 50px;
-  margin-top: 1px;
   font-size: var(--font-size-15px);
 }
 a.new_head:hover {
@@ -236,10 +235,9 @@ a.feedback:hover {
 /* Sidebar */
 .macc-sidebar {
   min-width: 220px;
-  padding: 20px;
+  padding: 30px 20px 20px;
   height: calc(100vh - 70px);
   position: fixed;
-  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -247,8 +245,7 @@ a.feedback:hover {
   max-width: 220px;
 }
 .sidebar_top-row_items {
-  margin-bottom: 30px;
-  margin-right: -20px;
+  margin: 0 -20px 30px 0;
 }
 .sidebar_top-row_items a {
   display: flex;
@@ -269,12 +266,10 @@ a.feedback:hover {
   margin-right: 18px;
 }
 .macc-sidebar_bottom-row {
-  padding-top: 30px;
+  padding: 30px 20px 0 20px;
   border-top: 1px solid;
   border-color: rgba(199, 199, 204, 0.3);
   margin: 0 -20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 a.active-head {
   color: var(--morado-oscuro);
@@ -446,9 +441,7 @@ p.dont a:hover, p.reg-priv a:hover, p.why-text a:hover {
 }
 .register-col.register-col-2 {
   flex: 0 0 60%;
-  padding-left: 8%;
-  padding-top: 80px;
-  padding-right: 8%;
+  padding: 80px 8%;
 }
 .logo-registro {
   margin-bottom: 50px;
@@ -728,10 +721,6 @@ span.check-container-text_title {
   padding-right: 15px;
   box-sizing: border-box;
 }
-.olist-container.subs-container .olist-status.status-filter {
-  flex: 1;
-  padding-right: 0;
-}
 .subs-container.olist-container .status-filter div {
   flex: 1;
 }
@@ -777,11 +766,9 @@ input#psearch {
   border: none;
   border-radius: 10px;
   color: var(--input-color);
-  padding: 0;
-  padding-left: 10px;
+  padding: 0 10px 0 10px;
   line-height: 22.5px;
   margin-top: 1px;
-  padding-right: 10px;
 }
 .plist-but, .search-but {
   margin: 1px 0px 0px 10px;
@@ -804,11 +791,9 @@ input#psearch {
   border: none;
   border-radius: 10px;
   color: var(--placeholder-color);
-  padding: 0;
-  padding-left: 15px;
+  padding: 0 15px 0 15px;
   line-height: 22.5px;
   margin-top: 1px;
-  padding-right: 15px;
   font-size: var(--input-font-size);
 }
 select#bulkactions {
@@ -926,6 +911,10 @@ a.order-list-item:hover {
 }
 
 /* Suscripciones */
+.estados-suscripciones {
+  flex: 1;
+  padding-right: 0;
+}
 .subs-container .plist-type, .status-filter .plist-avail {
   flex: 0 0 40%;
   padding-right: 10px;
@@ -963,9 +952,7 @@ a.order-list-item:hover {
 }
 .ofofof {
   font-size: var(--font-size-18px);
-  margin-top: 6px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 6px 15px 0px;
 }
 
 /* Suscripción detalle */
@@ -990,9 +977,8 @@ a.order-back {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -2px;
+  margin: -2px 20px 0 0;
   border: 1px solid var(--morado-oscuro);
-  margin-right: 20px;
 }
 a.order-back:hover {
   background-color: var(--morado-oscuro);
@@ -1032,11 +1018,9 @@ a.order-back:hover svg {
   margin-bottom: 25px;
 }
 .order-box {
-  margin: 0 -25px;
-  padding: 0 25px;
+  margin: 0 -25px 25px;
+  padding: 0 25px 25px;
   border-bottom: 1px solid var(--color-borde);
-  padding-bottom: 25px;
-  margin-bottom: 25px;
 }
 .order-box:last-child {
   border: none;
@@ -1193,8 +1177,7 @@ button.ant-modal-close:hover {
   padding-top: 4px;
 }
 .subs-inf-box .subs-action {
-  margin-left: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   color: var(--morado-oscuro);
   font-weight: 500;
   cursor: pointer;
@@ -1218,9 +1201,8 @@ button.ant-modal-close:hover {
 }
 .add-select-addons label {
   color: var(--azul-oscuro);
-  margin-top: 10px;
+  margin: 10px 0 6px;
   display: block;
-  margin-bottom: 6px;
   font-weight: 500;
 }
 .ant-modal-content input, .ant-modal-content select {
@@ -1274,11 +1256,8 @@ button.ant-modal-close:hover {
 }
 .edit_items-list .order-item {
   border-bottom: 1px solid var(--color-borde);
-  padding-bottom: 15px;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 -20px;
+  padding: 10px 20px;
 }
 .edit_items-list .order-item_name {
   flex: 0 0 35%;
@@ -1319,11 +1298,9 @@ span.acc-label {
   margin-bottom: 10px !important;
 }
 .history-filter-titles {
-  margin: 0 -25px;
+  margin: -10px -25px 10px;
   padding: 10px 25px;
   background-color: var(--violeta-claro);
-  margin-top: -10px;
-  margin-bottom: 10px;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
