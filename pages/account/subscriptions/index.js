@@ -31,11 +31,10 @@ function Subscription() {
               <div className={`filter-order olist-active ${estadoFiltroState === 2 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(2)} data-status="active">Activo</div>
               <div className={`filter-order olist-cancelled ${estadoFiltroState === 3 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(3)} data-status="cancelled">Cancelado</div>
               <div className={`filter-order olist-paused ${estadoFiltroState === 4 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(4)} data-status="on-hold">Pausado</div>
-              <div className={`filter-order olist-archived ${estadoFiltroState === 5 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(5)} data-status="trash">Archivadas</div>
-            </div>
-            <div className="plist-search">
-              <input type="text" name="psearch" id="psearch" placeholder="Buscar # de suscripción" />
-              <div className="plist-but plist-but-search boton-border">Buscar</div>
+              <div className={`filter-order olist-archived ${estadoFiltroState === 5 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(5)} data-status="dunning">Reclamación</div>
+              <div className={`filter-order olist-archived ${estadoFiltroState === 6 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(6)} data-status="failed">Fallido</div>
+              <div className={`filter-order olist-archived ${estadoFiltroState === 7 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(7)} data-status="in_validation">En validación</div>
+              <div className={`filter-order olist-archived ${estadoFiltroState === 8 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(8)} data-status="on_hold">En espera</div>
             </div>
           </div>
 
@@ -52,18 +51,22 @@ function Subscription() {
             </div>
 
             <div className="plist-filter-container">
-              <div className="plist-type">
+              <div className="plist-type filter-search">
                 <input name="filterdate" id="filterdate" type="text" placeholder="Filtrar por fecha" />
+                <div className="plist-but plist-but-filter boton-border">Filtrar</div>
               </div>
 
-              <div className="plist-avail">
+              <div className="plist-avail search-customer-c">
                 <div id="subs-search-customer" className="subs-search-customer">
                   <input type="text" placeholder="Buscar cliente" issubs="yes" id="customer-search" name="customer-search" />
                   <div className="customer-list-results"></div>
                 </div>
               </div>
 
-              <div className="plist-but plist-but-filter boton-border">Filtrar</div>
+              <div className="plist-search search-subs-number">
+                <input type="text" name="psearch" id="psearch" placeholder="Buscar # de suscripción"/>
+                <div className="plist-but plist-but-search boton-border">Buscar</div>
+              </div>
             </div>
           </div>
 

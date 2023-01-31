@@ -32,9 +32,6 @@ function OrderSuscription() {
   const showCancel = () => {
     setIsCancelOpen(true);
   };
-  const handleOk = () => {
-    setIsCancelOpen(false);
-  };
   const handleCancel = () => {
     setIsCancelOpen(false);
   };
@@ -42,9 +39,6 @@ function OrderSuscription() {
   const [isPausarOpen, setIsPausarOpen] = useState(false);
   const showPausar = () => {
     setIsPausarOpen(true);
-  };
-  const handleOkPausar = () => {
-    setIsPausarOpen(false);
   };
   const handlePausar = () => {
     setIsPausarOpen(false);
@@ -54,9 +48,6 @@ function OrderSuscription() {
   const showEliminar = () => {
     setIsEliminarOpen(true);
   };
-  const handleOkEliminar = () => {
-    setIsEliminarOpen(false);
-  };
   const handleEliminar = () => {
     setIsEliminarOpen(false);
   };
@@ -64,9 +55,6 @@ function OrderSuscription() {
   const [isAddonOpen, setIsAddonOpen] = useState(false);
   const showAddon = () => {
     setIsAddonOpen(true);
-  };
-  const handleOkAddon = () => {
-    setIsAddonOpen(false);
   };
   const handleAddon = () => {
     setIsAddonOpen(false);
@@ -76,9 +64,6 @@ function OrderSuscription() {
   const showCargo = () => {
     setIsCargoOpen(true);
   };
-  const handleOkCargo = () => {
-    setIsCargoOpen(false);
-  };
   const handleCargo = () => {
     setIsCargoOpen(false);
   };
@@ -86,9 +71,6 @@ function OrderSuscription() {
   const [isEditItemOpen, setIsEditItemOpen] = useState(false);
   const showEditItem = () => {
     setIsEditItemOpen(true);
-  };
-  const handleOkEditItem = () => {
-    setIsEditItemOpen(false);
   };
   const handleEditItem = () => {
     setIsEditItemOpen(false);
@@ -98,9 +80,6 @@ function OrderSuscription() {
   const showEditarFecha = () => {
     setIsEditarFechaOpen(true);
   };
-  const handleOkEditarFecha = () => {
-    setIsEditarFechaOpen(false);
-  };
   const handleEditarFecha = () => {
     setIsEditarFechaOpen(false);
   };
@@ -109,9 +88,6 @@ function OrderSuscription() {
   const showEditarFrecuencia = () => {
     setIsEditarFrecuenciaOpen(true);
   };
-  const handleOkEditarFrecuencia = () => {
-    setIsEditarFrecuenciaOpen(false);
-  };
   const handleEditarFrecuencia = () => {
     setIsEditarFrecuenciaOpen(false);
   };
@@ -119,9 +95,6 @@ function OrderSuscription() {
   const [isEditarDireccionOpen, setIsEditarDireccionOpen] = useState(false);
   const showEditarDireccion = () => {
     setIsEditarDireccionOpen(true);
-  };
-  const handleOkEditarDireccion = () => {
-    setIsEditarDireccionOpen(false);
   };
   const handleEditarDireccion = () => {
     setIsEditarDireccionOpen(false);
@@ -268,12 +241,10 @@ function OrderSuscription() {
             <div className="new-product-col2">
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box order-actions">
-                  <div className="subs-action" data-action="cancel-p" onClick={showCancel}><BsX />Cancelar suscripción</div>
+                  <div className="subs-action" onClick={showCancel}><BsX />Cancelar suscripción</div>
                   <Modal 
-                    title="Cancelar suscripción #26836" 
-                    className="cancel-p"
+                    title="Cancelar suscripción #26836"
                     open={isCancelOpen} 
-                    onOk={handleOk} 
                     onCancel={handleCancel} 
                     footer={[<Button onClick={handleCancel} key="cancelar">Cancelar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
@@ -284,7 +255,6 @@ function OrderSuscription() {
                   <Modal 
                     title="Pausar suscripción #26836" 
                     open={isPausarOpen} 
-                    onOk={handleOkPausar} 
                     onCancel={handlePausar} 
                     footer={[<Button onClick={handlePausar} key="pausar">Pausar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
@@ -294,8 +264,7 @@ function OrderSuscription() {
                   <div className="subs-action" onClick={showEliminar}><BsTrash className="icon-trash" />Eliminar suscripción</div>
                   <Modal 
                     title="Eliminar suscripción #26836" 
-                    open={isEliminarOpen} 
-                    onOk={handleOkEliminar} 
+                    open={isEliminarOpen}
                     onCancel={handleEliminar} 
                     footer={[<Button onClick={handleEliminar} key="eliminar">Eliminar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
@@ -309,8 +278,7 @@ function OrderSuscription() {
                   <div className="subs-action" onClick={showAddon}><BsPlus />Agregar addon</div>
                   <Modal 
                     title="Agregar addon" 
-                    open={isAddonOpen} 
-                    onOk={handleOkAddon} 
+                    open={isAddonOpen}
                     onCancel={handleAddon} 
                     footer={[<Button onClick={handleAddon} key="agregar">Agregar addon</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
@@ -331,8 +299,7 @@ function OrderSuscription() {
                   <div className="subs-action" onClick={showCargo}><BsPlus />Agregar cargo</div>
                   <Modal 
                     title="Agregar cargo" 
-                    open={isCargoOpen} 
-                    onOk={handleOkCargo} 
+                    open={isCargoOpen}
                     onCancel={handleCargo}  
                     footer={[<Button className={`ant-btn save-charge ${cargo ? "agregarCargo": ""}` .trimEnd()} onClick={handleCargo} key="guardar-y-cobrar">Guardar y cobrar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
@@ -356,7 +323,6 @@ function OrderSuscription() {
                   <Modal 
                     title="Editar items"
                     open={isEditItemOpen}
-                    onOk={handleOkEditItem}
                     onCancel={handleEditItem}
                     footer={[
                       <Button onClick={handleEditItem} key="agregar-item">Agregar item</Button>,
@@ -395,7 +361,6 @@ function OrderSuscription() {
                   <Modal 
                     title="Editar próxima fecha de renovación" 
                     open={isEditarFechaOpen} 
-                    onOk={handleOkEditarFecha} 
                     onCancel={handleEditarFecha} 
                     footer={[<Button onClick={handleEditarFecha} key="editar-fecha">Guardar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
@@ -409,7 +374,6 @@ function OrderSuscription() {
                   <Modal 
                     title="Editar frecuencia" 
                     open={isEditarFrecuenciaOpen} 
-                    onOk={handleOkEditarFrecuencia} 
                     onCancel={handleEditarFrecuencia} 
                     footer={[<Button onClick={handleEditarFrecuencia} key="editar-frecuencia">Editar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
@@ -436,8 +400,7 @@ function OrderSuscription() {
                   <div className="subs-action" onClick={showEditarDireccion}><BsPersonBadge className="icon-personbook" />Editar dirección de facturación</div>
                   <Modal 
                     title="Dirección de facturación" 
-                    open={isEditarDireccionOpen} 
-                    onOk={handleOkEditarDireccion} 
+                    open={isEditarDireccionOpen}
                     onCancel={handleEditarDireccion} 
                     footer={null} closeIcon={<BsX />} 
                     centered width={700}>
