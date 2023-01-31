@@ -184,7 +184,7 @@ function OrderSuscription() {
 
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box">
-                  <h3>Información de suscripción</h3>
+                  <h3 className="h3-borde">Información de suscripción</h3>
                   <p><strong>Frecuencia:</strong> Cada mes</p>
                   <p><strong>Fecha de inicio:</strong> enero 17, 2023 - 06:02 PM</p>
                   <p><strong>Próximo pago:</strong> febrero 18, 2023 - 06:06 PM</p>
@@ -193,7 +193,7 @@ function OrderSuscription() {
 
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box">
-                  <h3>Cliente</h3>
+                  <h3 className="h3-borde">Cliente</h3>
                   <p>Nombre Apellido</p>
                   <p>demo@treli.co</p>
                   <p>3991111111</p>
@@ -202,7 +202,7 @@ function OrderSuscription() {
 
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box">
-                  <h3>Direccion de facturación</h3>
+                  <h3 className="h3-borde">Direccion de facturación</h3>
                   <p><strong>Nombre Apellido</strong></p>
                   <p>Cra 1 1 1, Barranquilla, ATL, Colombia, 80001</p>
                 </div>
@@ -210,7 +210,7 @@ function OrderSuscription() {
 
               <div className="order-box-container order-details subs-inf-box margin-bottom">
                 <div className="order-box">
-                  <h3>Método de pago</h3>
+                  <h3 className="h3-borde">Método de pago</h3>
                   <div className="payment-cart flex">
                     <div className="payment-title"><Image src={VisaLogo} alt="Logo pago" /> Terminada en 4242 vía Wompi</div>
                     <div className="payment-expire">Expira 12/2025</div>
@@ -219,7 +219,7 @@ function OrderSuscription() {
               </div>
 
               <div className="order-box-container payment-history subs-inf-box margin-bottom">
-                <h3>Historial</h3>
+                <h3 className="h3-borde">Historial</h3>
                 <div className="history-filter-titles">
                   <span id="sh_payments" className={historialState === 1 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(1)}>Pagos</span>
                   <span id="sh_emails" className={historialState === 2 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(2)}>Historial de correos</span>
@@ -243,7 +243,7 @@ function OrderSuscription() {
               </div>
 
               <div className="order-box-container t-order-notes subs-inf-box margin-bottom">
-                <h3>Eventos</h3>
+                <h3 className="h3-borde">Eventos</h3>
                 <div className="history-filter-titles">
                   <span id="e_subscription" className={eventosState === 1 ? "sh_active_filter" : "history-tab"} onClick={() => eventosTab(1)}>Suscripción</span>
                   <span id="payment_27135" className={eventosState === 2 ? "sh_active_filter" : "history-tab"} onClick={() => eventosTab(2)}>Pago #27135</span>
