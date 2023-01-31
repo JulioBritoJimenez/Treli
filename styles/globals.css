@@ -355,6 +355,7 @@ p.user-forgot-password {
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
+  margin-bottom: 0px;
 }
 .forgot-email {
   text-align: center;
@@ -363,6 +364,7 @@ p.user-forgot-password {
 }
 .forgot-email.olvido-contrasena {
   display: block;
+  margin-top: 20px;
 }
 .dont {
   text-align: center;
@@ -985,7 +987,7 @@ a.order-back svg {
   font-size: 40px;
   color: var(--morado-oscuro);
 }
-a.order-back svg:hover {
+a.order-back:hover svg {
   color: #fff;
 }
 .new-product-cols {

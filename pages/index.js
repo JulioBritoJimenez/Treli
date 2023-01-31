@@ -1,13 +1,8 @@
 import Head from 'next/head';
-import { Inter } from '@next/font/google';
-import { League_Spartan } from '@next/font/google';
 import Link from 'next/link';
 import Image from "next/image";
 import LogoTreli from '../public/treli.svg';
 import { useState } from 'react';
-
-const inter = Inter({ subsets: ['latin'] })
-const spartan = League_Spartan({ subsets: ['latin'] })
 
 export default function Home() {
 
@@ -47,9 +42,6 @@ export default function Home() {
                 </p>
                 <button className="forgot-send boton-violeta botones btn-login-registro">Enviar</button>
               </div>
-              <p className="dont">
-                ¿No tienes cuenta? <Link href="/register">Crea una</Link>
-              </p>
             </form>
           </div>
       </div>
