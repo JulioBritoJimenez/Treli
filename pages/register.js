@@ -51,7 +51,7 @@ function Register() {
             <input className="input-text" placeholder="Contraseña" type="password" name="password" id="reg_password" autoComplete="new-password" />
           </p>
           <p className="aff-code-register" onClick={afiliadoClic}>Tengo un código de afiliado</p>
-          <p className={`app-input affiliate-input ${afiliado ? "codigo-afiliado": ""}` .trimEnd()}>
+          <p className={`app-input affiliate-input hidden ${afiliado ? "active": ""}` .trimEnd()}>
             <input className="input-text" placeholder="Código de afiliado" type="text" name="affcode" id="affcode" />
           </p>
           <p className="reg-priv">

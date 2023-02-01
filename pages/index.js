@@ -35,7 +35,7 @@ export default function Home() {
                 <button type="submit" className="boton-violeta botones btn-login-registro" name="login" value="Acceder">Iniciar sesión</button>
               </p>
               <p className="user-forgot-password" onClick={contrasenaClic}>¿Olvidaste tu contraseña?</p>
-              <div className={`forgot-email ${olvido ? "olvido-contrasena": ""}` .trimEnd()}>
+              <div className={`forgot-email hidden ${olvido ? "active": ""}` .trimEnd()}>
                 <p>Te enviaremos un email para recuperar tu contraseña.</p>
                 <p className="app-input">
                   <input placeholder="Email" type="email" name="user_email" id="user_email" autoComplete="email" />

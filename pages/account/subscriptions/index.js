@@ -3,6 +3,117 @@ import Link from 'next/link';
 import Suscriptionitem from "../../../componentes/suscriptionItem";
 import Paginacion from "../../../componentes/paginacion";
 import { useState } from 'react';
+import { Checkbox,Table } from 'antd';
+import { useRouter } from 'next/router'
+
+const columns = [
+  {
+    title: 'Suscripción',
+    dataIndex: 'suscripcion',
+    key: 'suscripcion',
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: 'Producto',
+    dataIndex: 'producto',
+    key: 'producto',
+  },
+  {
+    title: 'Estado',
+    dataIndex: 'estado',
+    key: 'estado',
+    className: 'estado status-processing',
+    render: (text) => <span>{text}</span>,
+  },
+  {
+    title: 'Próximo pago',
+    dataIndex: 'proximoPago',
+    key: 'proximo-pago',
+  },
+  {
+    title: 'Total',
+    dataIndex: 'total',
+    key: 'total',
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    suscripcion: '#26836 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '2',
+    suscripcion: '#27135 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '3',
+    suscripcion: '#27135 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '4',
+    suscripcion: '#25135 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '5',
+    suscripcion: '#27435 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '6',
+    suscripcion: '#27125 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '7',
+    suscripcion: '#27735 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '8',
+    suscripcion: '#28135 Nombre Apellido ',
+    producto: 'Suscripción Demo',
+    estado: 'Activa',
+    proximoPago: 'Febrero 18, 2023',
+    total: 'COP $178,000 / mes'
+  },
+];
+
+const rowSelection = {
+  onChange: (selectedRowKeys, selectedRows) => {
+    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+  },
+  getCheckboxProps: (record) => ({
+    disabled: record.name === 'Disabled User',
+    // Column configuration not to be checked
+    name: record.name,
+  }),
+};
 
 function Subscription() {
 
@@ -10,6 +121,8 @@ function Subscription() {
   const estadoFiltroTab = (index) => {
     setEstadoFiltroState(index);
   }
+  
+  const router = useRouter()
 
   return (
     <>
@@ -71,23 +184,24 @@ function Subscription() {
           </div>
 
           <div className="order-list-container">
-            <div className="order-list-head">
-              <div className="order-head-bulk"><input type="checkbox" className="selectall" /></div>
-              <div className="order-head-order">Suscripción</div>
-              <div className="order-head-date">Producto</div>
-              <div className="order-head-status">Estado</div>
-              <div className="order-head-type">Próximo pago</div>
-              <div className="order-head-total">Total</div>
-            </div>
-
-            <div className="order-list-items">
-              <Suscriptionitem />
-              <Suscriptionitem />
-              <Suscriptionitem />
-              <Suscriptionitem />
-              <Suscriptionitem />
-              <Suscriptionitem />
-            </div>
+            <Table
+              onRow={(record, rowIndex) => {
+                return {
+                  onClick: (event) => {
+                    router.push('/account/subscriptions/order')
+                    console.log("Fila")
+                  }, // click row
+                };
+              }}
+              rowSelection={{
+                type: Checkbox,
+              }}
+              columns={columns}
+              dataSource={data}
+              pagination={{
+                pageSize: 5,
+              }}
+            />
           </div>
 
           <Paginacion />

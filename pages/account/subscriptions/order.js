@@ -23,9 +23,13 @@ function OrderSuscription() {
   }
 
   const [cargo, setCargo] = useState(false);
-
   const agregarCargo = () => {
     setCargo(!cargo);
+  };
+
+  const [agregarItem, setagregarItem] = useState(false);
+  const agregarItemClic = () => {
+    setagregarItem(!agregarItem);
   };
 
   const [isCancelOpen, setIsCancelOpen] = useState(false);
@@ -133,7 +137,7 @@ function OrderSuscription() {
                     <div className="order-item_total">
                       COP <span className="price-amount amount"><bdi><span className="price-currencySymbol">$</span>150,000</bdi></span>
                     </div>
-                    <div className="edit-item" data-productid="2026" data-qty="1" data-price="150000">
+                    <div className="edit-item hidden pointer" data-productid="2026" data-qty="1" data-price="150000">
                       <BsPencilSquare />
                     </div>
                   </div>
@@ -200,16 +204,16 @@ function OrderSuscription() {
                   <span id="sh_dunning" className={historialState === 4 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(4)}>Historial de reclamación</span>
                 </div>
                 <div className="history-filter-content">
-                  <div className={`sh_content ${historialState === 1 ? "active": ""}` .trimEnd()}>
+                  <div className={`sh_content hidden ${historialState === 1 ? "active": ""}` .trimEnd()}>
                     <HistorialPagos />
                   </div>
-                  <div className={`sh_content ${historialState === 2 ? "active": ""}` .trimEnd()}>
+                  <div className={`sh_content hidden ${historialState === 2 ? "active": ""}` .trimEnd()}>
                     <HistorialCorreos />
                   </div>
-                  <div className={`sh_content ${historialState === 3 ? "active": ""}` .trimEnd()}>
+                  <div className={`sh_content hidden ${historialState === 3 ? "active": ""}` .trimEnd()}>
                     <div className="ch-empty">Aún no hay historia de WhatsApp</div>
                   </div>
-                  <div className={`sh_content ${historialState === 4 ? "active": ""}` .trimEnd()}>
+                  <div className={`sh_content hidden ${historialState === 4 ? "active": ""}` .trimEnd()}>
                     <div className="ch-empty">Aún no hay historial de reclamación</div>
                   </div>
                 </div>
@@ -223,14 +227,14 @@ function OrderSuscription() {
                   <span id="payment_26834" className={eventosState === 3 ? "sh_active_filter" : "history-tab"} onClick={() => eventosTab(3)}>Pago #26834</span>
                 </div>
                 <div className="history-filter-content">
-                  <div className={`sh_content ${eventosState === 1 ? "active": ""}` .trimEnd()}>
+                  <div className={`sh_content hidden ${eventosState === 1 ? "active": ""}` .trimEnd()}>
                     <EventosSuscripcion />
                   </div>
-                  <div className={`sh_content ${eventosState === 2 ? "active": ""}` .trimEnd()}>
+                  <div className={`sh_content hidden ${eventosState === 2 ? "active": ""}` .trimEnd()}>
                     <EventosSuscripcion />
                     <div className="ch-empty">Pago #27135</div>
                   </div>
-                  <div className={`sh_content ${eventosState === 3 ? "active": ""}` .trimEnd()}>
+                  <div className={`sh_content hidden ${eventosState === 3 ? "active": ""}` .trimEnd()}>
                     <EventosSuscripcion />
                     <div className="ch-empty">Pago #26834</div>
                   </div>
@@ -301,12 +305,12 @@ function OrderSuscription() {
                     title="Agregar cargo" 
                     open={isCargoOpen}
                     onCancel={handleCargo}  
-                    footer={[<Button className={`ant-btn save-charge ${cargo ? "agregarCargo": ""}` .trimEnd()} onClick={handleCargo} key="guardar-y-cobrar">Guardar y cobrar</Button>]} closeIcon={<BsX />} 
+                    footer={[<Button className={`ant-btn hidden ${cargo ? "active": ""}` .trimEnd()} onClick={handleCargo} key="guardar-y-cobrar">Guardar y cobrar</Button>]} closeIcon={<BsX />} 
                     centered width={700}>
                     <p>A menudo, es posible que debas cobrar a tus clientes por productos o servicios que no son recurrentes. Los cargos representan estos productos o servicios y se cobran inmediatamente, una sola vez.</p>
-                    <div className={`add-charge link ${cargo ? "agregarCargo": ""}` .trimEnd()} onClick={agregarCargo}><BsPlusCircleFill />Agregar cargo</div>
+                    <div className={`add-charge link ${cargo ? "hidden": ""}` .trimEnd()} onClick={agregarCargo}><BsPlusCircleFill />Agregar cargo</div>
 
-                    <div className={`charge-input-container ${cargo ? "agregarCargo": ""}` .trimEnd()}>
+                    <div className={`charge-input-container hidden ${cargo ? "active": ""}` .trimEnd()}>
                       <p>Ingrese el nombre del cargo y el precio a continuación. Se creará un pago separado para este cargo y se le cobrará al cliente de inmediato.</p>
                       <div className="flex">
                         <input type="text" name="charge_name" id="charge_name" placeholder="Nombre del cargo" />
@@ -325,7 +329,7 @@ function OrderSuscription() {
                     open={isEditItemOpen}
                     onCancel={handleEditItem}
                     footer={[
-                      <Button onClick={handleEditItem} key="agregar-item">Agregar item</Button>,
+                      <Button onClick={agregarItemClic} key="agregar-item">Agregar item</Button>,
                       <Button onClick={handleEditItem} key="actualizar-item">Actualizar items</Button>
                     ]} closeIcon={<BsX />} centered width={900}>
                     <div className="edit_items-list">
@@ -339,7 +343,6 @@ function OrderSuscription() {
                       <div className="order-item" data-id="2026" data-total="150000" data-qty="1">
                         <div className="order-item_name">
                           <span className="text-dec">Suscripción Demo</span>
-                          <span className="order-vars-cont"><span className="order-vars-cont"></span></span>
                         </div>
                         <div className="order-item_unit-price">
                           <input type="number" name="item-unit-price" id="item-unit-price" placeholder="Unit price" />
@@ -354,6 +357,14 @@ function OrderSuscription() {
                          <BsX /> 
                         </div>
                       </div>
+                    </div>
+
+                    <div className={`edit-select-products hidden ${agregarItem ? "active": ""}` .trimEnd()}>
+                      <select>
+                        <option>Seleccionar un item</option>
+                        <option value="28778" data-name="Lugar de trabajo 1" data-price="200000">Lugar de trabajo 1 - $200,000</option>
+                        <option value="28778" data-name="Plan Estandar" data-price="20000">Plan estandar - $20,000</option>
+                      </select>
                     </div>
                   </Modal>
 

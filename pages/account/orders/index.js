@@ -1,7 +1,122 @@
 import Layout from "../../../componentes/layout";
 import Orderitem from "../../../componentes/orderItem";
+import { useState } from 'react';
+import { Checkbox, Table } from 'antd';
+import { useRouter } from 'next/router'
+
+const columns = [
+  {
+    title: 'Pago',
+    dataIndex: 'pago',
+    key: 'pago',
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: 'Fecha',
+    dataIndex: 'fecha',
+    key: 'fecha',
+  },
+  {
+    title: 'Estado',
+    dataIndex: 'estado',
+    key: 'estado',
+    className: 'estado status-processing',
+    render: (text) => <span>{text}</span>,
+  },
+  {
+    title: 'Tipo',
+    dataIndex: 'tipo',
+    key: 'tipo',
+  },
+  {
+    title: 'Total',
+    dataIndex: 'total',
+    key: 'total',
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '2',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '3',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '4',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '5',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '6',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '7',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+  {
+    key: '8',
+    pago: '#28135 Nombre Apellido ',
+    fecha: 'Febrero 18, 2023',
+    estado: 'Aprovado',
+    tipo: 'Pago de suscripción',
+    total: 'COP $178,000 / mes'
+  },
+];
+
+const rowSelection = {
+  onChange: (selectedRowKeys, selectedRows) => {
+    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+  },
+  getCheckboxProps: (record) => ({
+    disabled: record.name === 'Disabled User',
+    // Column configuration not to be checked
+    name: record.name,
+  }),
+};
 
 function Order() {
+  
+  const router = useRouter()
+
   return (
     <>
       <Layout>
@@ -69,20 +184,24 @@ function Order() {
           </div>
 
           <div className="order-list-container">
-            <div className="order-list-head">
-              <div className="order-head-bulk"><input type="checkbox" className="selectall" /></div>
-              <div className="order-head-order">Pago</div>
-              <div className="order-head-date">Fecha</div>
-              <div className="order-head-status">Estado</div>
-              <div className="order-head-type">Tipo</div>
-              <div className="order-head-total">Total</div>
-            </div>
-
-            <div className="order-list-items">
-              <Orderitem />
-              <Orderitem />
-              <Orderitem />
-            </div>
+            <Table
+              onRow={(record, rowIndex) => {
+                return {
+                  onClick: (event) => {
+                    router.push('/account/subscriptions/order')
+                    console.log("Fila")
+                  }, // click row
+                };
+              }}
+              rowSelection={{
+                type: Checkbox,
+              }}
+              columns={columns}
+              dataSource={data}
+              pagination={{
+                pageSize: 5,
+              }}
+            />
           </div>
         </div>
       </Layout>

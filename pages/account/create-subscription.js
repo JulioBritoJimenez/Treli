@@ -25,6 +25,12 @@ function CreateSubscription() {
     setCliente(!cliente);
   };
 
+  const [selectedInput, setSelectedInput] = useState({checked: null})
+
+  const handleChange = e => {
+    setSelectedInput({checked: e.target.value});
+  }
+
   return(
     <>
       <Layout>
@@ -72,7 +78,7 @@ function CreateSubscription() {
                 </a>
               </div>
 
-              <div className={`create-new-customer ${crearcliente ? "active": ""} ${cliente ? "active": ""}` .trimEnd()}>
+              <div className={`create-new-customer hidden ${crearcliente ? "active": ""} ${cliente ? "active": ""}` .trimEnd()}>
                 <h4>Dirección de facturación</h4>
                 <input type="hidden" name="customer-id" id="customer-id"></input>
                 <div className="input">
@@ -121,7 +127,7 @@ function CreateSubscription() {
             <div className="settings-items product-list">
               <div className="selected-products"></div>
               <div className="product-list-items">
-                <a product-id="28137" className={`flex-no-space list-item list-item-product ${seleccionarProducto ? "active": ""}` .trimEnd()} onClick={seleccionarProductoClic}>
+                <a product-id="28137" className="flex-no-space list-item list-item-product" onClick={seleccionarProductoClic}>
                   <div className="product-img">
                     <Image src={Demoimg} alt="Imagen Demo" priority />
                   </div>
@@ -130,15 +136,19 @@ function CreateSubscription() {
                   </div>
                   <span className="settings-item-go"><BsChevronRight /></span>
                 </a>
-                <div className={`product-plan ${seleccionarProducto ? "active": ""}` .trimEnd()}>
-                  <a product-id="28137" plan-id="28137" className="flex-no-space list-item list-item-plan">
-                    <div className="product-chk">
-                      <input type="checkbox" className="product-to-add" data-plan="" name="" data-pid="" />
-                    </div>
+                <div className={`product-plan hidden ${seleccionarProducto ? "active": ""}` .trimEnd()}>
+                  <label className="input-radio pointer" product-id="28137" plan-id="28137">
+                    <input type="radio" value="uno" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "uno"} onChange={handleChange} />
                     <div className="text">
-                      <div className="strong">COP <span className="price-amount amount"><bdi><span className="woocommerce-Price-currencySymbol">$</span>192,900</bdi></span> / 1 month</div>
+                      <div className="strong">COP <span className="price-amount amount"><bdi><span className="woocommerce-Price-currencySymbol">$</span>192,900</bdi></span> / 1 mes</div>
                     </div>
-                  </a>
+                  </label>
+                  <label className="input-radio pointer" product-id="28137" plan-id="28137">
+                    <input type="radio" value="dos" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "dos"} onChange={handleChange} />
+                    <div className="text">
+                      <div className="strong">COP <span className="price-amount amount"><bdi><span className="woocommerce-Price-currencySymbol">$</span>145,900</bdi></span> / 3 mes</div>
+                    </div>
+                  </label>
                 </div>
 
                 <a product-id="28137" className="flex-no-space list-item list-item-product">
@@ -163,7 +173,7 @@ function CreateSubscription() {
             </div>
           </div>
 
-          <div className={`settings-home-container select-payment ${cliente ? "active": ""}` .trimEnd()}>
+          <div className={`settings-home-container select-payment hidden ${cliente ? "active": ""}` .trimEnd()}>
             <div className="settings-home-title">
               <h3>Seleccionar pago</h3>
               <p>Selecciona un pago para la suscripción</p>
