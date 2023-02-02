@@ -71,7 +71,7 @@ function GetStarted() {
                 </div>
               </div>
 
-              <div className={`get-started_step-content hidden ${step1Activo ? "step-active": ""}` .trimEnd()} onClick={step1Clic}>
+              <div className={`get-started_step-content hidden ${step1Activo ? "active": ""}` .trimEnd()} onClick={step1Clic}>
                 <Step 
                   titulo="Monedas"
                   texto="Configura la moneda base de su sitio. Si vendes en varias monedas, habilita las opción de multi-moneda y agrega las monedas en las que deseas procesar pagos."
@@ -102,7 +102,7 @@ function GetStarted() {
                 </div>
               </div>
 
-              <div className={`get-started_step-content hidden ${step2Activo ? "step-active": ""}` .trimEnd()} onClick={step2Clic}>
+              <div className={`get-started_step-content hidden ${step2Activo ? "active": ""}` .trimEnd()} onClick={step2Clic}>
                 <Step 
                   titulo="Estilo de marca"
                   texto="Agrega un toque de tu marca a tu página de pago, correos electrónicos y más. Haz que tus clientes se familiaricen con tu marca."
@@ -139,7 +139,7 @@ function GetStarted() {
                 </div>
               </div>
 
-              <div className={`get-started_step-content hidden ${step3Activo ? "step-active": ""}` .trimEnd()} onClick={step3Clic}>
+              <div className={`get-started_step-content hidden ${step3Activo ? "active": ""}` .trimEnd()} onClick={step3Clic}>
                 <Step 
                   titulo="Pasarelas de pago"
                   texto="Conecta una o más pasarelas de pago para comenzar a procesar pagos y cobrar a tus clientes."
@@ -165,7 +165,7 @@ function GetStarted() {
                 </div>
               </div>
 
-              <div className={`get-started_step-content hidden ${step4Activo ? "step-active": ""}` .trimEnd()} onClick={step4Clic}>
+              <div className={`get-started_step-content hidden ${step4Activo ? "active": ""}` .trimEnd()} onClick={step4Clic}>
                 <Step 
                   titulo="Ajustes de suscripciones"
                   texto="Configura ajustes avanzados o activa funcionalidades extra para tus suscripciones."
