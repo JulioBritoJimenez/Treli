@@ -26,9 +26,13 @@ function CreateSubscription() {
   };
 
   const [selectedInput, setSelectedInput] = useState({checked: null})
-
   const handleChange = e => {
     setSelectedInput({checked: e.target.value});
+  }
+
+  const [selectedPago, setSelectedPago] = useState({checked: null})
+  const handleSeleaccionarPago = e => {
+    setSelectedPago({checked: e.target.value});
   }
 
   return(
@@ -180,33 +184,27 @@ function CreateSubscription() {
             </div>
             <div className="settings-items product-list">
               <div className="product-list-items">
-                <a className="flex-no-space list-item credi-card-item">
-                  <div className="product-chk">
-                    <input type="checkbox" className="card-to-add" card-gateway="wompi" card-key="0" />
-                  </div>
+                <label className="input-radio pointer" product-id="28137" plan-id="28137">
+                  <input type="radio" value="wompi" className="card-to-add" card-gateway="wompi" card-key="0" checked={selectedPago.checked === "wompi"} onChange={handleSeleaccionarPago} />
                   <div className="text">
                     <div className="strong">VISA terminada en 4242 vía wompi</div>
                     <div>Expira 12/2025</div>
                   </div>
-                </a>
-                <a className="flex-no-space list-item credi-card-item">
-                  <div className="product-chk">
-                    <input type="checkbox" className="card-to-add" card-gateway="wompi" card-key="0" />
-                  </div>
+                </label>
+                <label className="input-radio pointer" product-id="28137" plan-id="28137">
+                  <input type="radio" value="payu" className="card-to-add" card-gateway="payu" card-key="0" checked={selectedPago.checked === "payu"} onChange={handleSeleaccionarPago} />
                   <div className="text">
                     <div className="strong">VISA terminada en 4940 vía payu</div>
                     <div>Expira 10/2026</div>
                   </div>
-                </a>
-                <a className="flex-no-space list-item credi-card-item">
-                  <div className="product-chk">
-                    <input type="checkbox" className="card-to-add" card-gateway="wompi" card-key="0" />
-                  </div>
+                </label>
+                <label className="input-radio pointer" product-id="28137" plan-id="28137">
+                  <input type="radio" value="epayco" className="card-to-add" card-gateway="epayco" card-key="0" checked={selectedPago.checked === "epayco"} onChange={handleSeleaccionarPago} />
                   <div className="text">
-                    <div className="strong">VISA terminada en 1984 vía payu</div>
-                    <div>Expira 12/2025</div>
+                    <div className="strong">VISA terminada en 1984 vía ePayco</div>
+                    <div>Expira 10/2024</div>
                   </div>
-                </a>
+                </label>
               </div>
             </div>
           </div>

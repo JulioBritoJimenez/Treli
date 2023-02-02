@@ -859,18 +859,6 @@ td.ant-table-cell a, td.ant-table-cell a:hover {
   text-decoration: underline;
   color: var(--morado-oscuro);
 }
-.ant-table-cell.estado span {
-  padding: 5px 0px;
-  border-radius: 8px;
-  width: 110px;
-  display: block;
-  text-align: center;
-  font-size: var(--font-size-15px);
-  margin-left: -10px;
-  background-color: #EDEDED;
-  color: #919191;
-  border: 1px solid;
-}
 label.ant-checkbox-wrapper {
   padding-left: 10px;
 }
@@ -888,23 +876,35 @@ li.ant-pagination-prev button, li.ant-pagination-next button {
 .ant-pagination .ant-pagination-item-active a, .ant-pagination .ant-pagination-item-active:hover a {
   color: var(--morado-oscuro);
 }
-.estado.status-processing span {
+.ant-table-cell.estado span, .head-status {
+  padding: 5px 0px;
+  border-radius: 8px;
+  width: 110px;
+  display: block;
+  text-align: center;
+  font-size: var(--font-size-15px);
+  margin-left: -10px;
+  background-color: #EDEDED;
+  color: #919191;
+  border: 1px solid;
+}
+.estado.status-processing span, .head-status.status-processing {
   background-color: var(--verde-claro);
   color: var(--verde-oscuro);
   border-color: var(--verde-oscuro);
   border: 1px solid;
 }
-.estado.dunning-status span {
+.estado.dunning-status span, .head-status.dunning-status {
   background-color: #fff7e6;
   color: #763b24;
   border-color: #763b24;
   border: 1px solid;
 }
-.estado.status-cancelled span {
+.estado.status-cancelled span, .head-status.status-cancelled {
   background-color: #FF9494;
   color: #510B0B;
 }
-.estado.status-hold span {
+.estado.status-hold span, .head-status.status-hold {
   background-color: #FFE494;
   color: #51390B;
 }
