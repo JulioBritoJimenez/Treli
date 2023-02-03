@@ -195,8 +195,8 @@ function Order() {
               onRow={(record, rowIndex) => {
                 return {
                   onClick: (event) => {
-                    router.push('/account/subscriptions/order')
-                    console.log("Fila")
+                    router.push('/account/orders/order')
+                    console.log("Item Pagos")
                   }, // click row
                 };
               }}

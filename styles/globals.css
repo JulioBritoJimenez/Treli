@@ -4,6 +4,7 @@
   --violeta-claro: #F2F0FF;
   --azul-oscuro: #14264C;
   --gris-bg: #F6F6F6;
+  --gris-oscuro: #919191;
   --blanco: #fff;
   --verde-oscuro: #0C6A14;
   --verde-claro: #B3F5BA;
@@ -32,6 +33,7 @@
   --boton-radius: 10px;
   --boton-font-size: 16px;
   --boton-padding: 2px 18px 0px;
+  --boton-gris-bg: #EDEDED;
   --shadow-empezar: 0 1px 2px 0 rgb(0 0 20 / 8%), 0 2px 4px 0 rgb(0 0 20 / 8%);
 }
 
@@ -121,7 +123,7 @@ span.small {
 }
 .boton-border {
   background-color: var(--violeta-claro);
-  padding: 4px 18px 0px;
+  padding: 3px 18px 0px;
   border-radius: var(--boton-radius);
   color: var(--morado-oscuro);
   font-weight: var(--boton-font-weight);
@@ -144,6 +146,25 @@ span.small {
 }
 .btn100 {
   width: 100%;
+}
+.order-action {
+  margin-left: 20px;
+  background-color: #FAFAFA;
+  color: var(--gris-oscuro);
+  border: 1px solid var(--gris-oscuro);
+  height: var(--boton-height-bajo);
+}
+.order-action:hover {
+  background-color: var(--gris-oscuro);
+}
+.primary-action {
+  background-color: var(--violeta-claro);
+  color: var(--morado-oscuro);
+  border-color: var(--morado-oscuro);
+}
+.primary-action:hover {
+  background-color: var(--morado-oscuro);
+  color: #fff;
 }
 
 /* Layout */
@@ -707,6 +728,9 @@ span.check-container-text_title {
   align-items: center;
   justify-content: space-between;
 }
+.paid-on {
+  padding-top: 2px;
+}
 .plist-head-titlecol1 {
   display: flex;
   align-items: center;
@@ -890,16 +914,19 @@ li.ant-pagination-prev button, li.ant-pagination-next button {
   color: var(--morado-oscuro);
 }
 .ant-table-cell.estado span, .head-status {
-  padding: 4px 0px;
+  padding: 4px 20px;
   border-radius: 8px;
   width: 110px;
   display: block;
   text-align: center;
   font-size: var(--font-size-15px);
   margin-left: -10px;
-  background-color: #EDEDED;
-  color: #919191;
+  background-color: var(--boton-gris-bg);
+  color: var(--gris-oscuro);
   border: 1px solid;
+}
+.head-status.status-subs {
+  width: auto;
 }
 .estado.status-processing span, .head-status.status-processing {
   background-color: var(--verde-claro);
@@ -1092,6 +1119,9 @@ span.order-qty {
 }
 .order-container .flex {
   align-items: center;
+}
+.order-box.flex.order-actions {
+  justify-content: flex-end;
 }
 .totals-subtotal {
   display: flex;
