@@ -3,6 +3,7 @@ import Orderitem from "../../../componentes/orderItem";
 import { useState } from 'react';
 import { Checkbox, Table } from 'antd';
 import { useRouter } from 'next/router'
+import Link from 'next/link';
 
 const columns = [
   {
@@ -114,6 +115,11 @@ const rowSelection = {
 };
 
 function Order() {
+
+  const [estadoFiltroState, setEstadoFiltroState] = useState(1);
+  const estadoFiltroTab = (index) => {
+    setEstadoFiltroState(index);
+  }
   
   const router = useRouter()
 
@@ -124,6 +130,7 @@ function Order() {
           <div className="plist-head-title">
             <div className="plist-head-titlecol1">
               <h2>Pagos</h2>
+              <Link href="/account/orders/" className="crear-pago botones boton-violeta button-full">Crear pago</Link>
             </div>
             <div className="plist-head-titlecol1">
               <button data-action="export_payments" data-text="Pagos exportados" data-name="pagos_treli" className="botones boton-violeta button-full export-data">Exportar pagos</button>
@@ -132,11 +139,11 @@ function Order() {
 
           <div className="plist-head-row1">
             <div className="olist-status status-filter">
-              <div className="filter-order olist-all plist-activestyle" data-status="">Todos</div>
-              <div className="filter-order olist-processing" data-status="processing">Aprobado</div>
-              <div className="filter-order olist-completed" data-status="completed">Completado</div>
-              <div className="filter-order olist-pending" data-status="pending">Pendiente</div>
-              <div className="filter-order olist-canceled" data-status="cancelled">Rechazado</div>
+              <div className={`filter-order olist-all ${estadoFiltroState === 1 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(1)} data-status="any">Todos</div>
+              <div className={`filter-order olist-processing ${estadoFiltroState === 2 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(2)} data-status="processing">Aprobado</div>
+              <div className={`filter-order olist-completed ${estadoFiltroState === 3 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(3)} data-status="completed">Completado</div>
+              <div className={`filter-order olist-pending ${estadoFiltroState === 4 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(4)} data-status="pending">Pendiente</div>
+              <div className={`filter-order olist-canceled ${estadoFiltroState === 5 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(5)} data-status="cancelled">Fallido</div>
             </div>
             <div className="plist-search">
               <input type="text" name="psearch" id="psearch" placeholder="Buscar pago #" />

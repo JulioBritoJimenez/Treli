@@ -1,30 +1,57 @@
 import Link from 'next/link';
+import { Table } from 'antd';
+
+const columns = [
+  {
+    title: 'ID',
+    dataIndex: 'id',
+    key: 'id',
+    render: (text) => <Link href="/account/subscriptions/">{text}</Link>,
+  },
+  {
+    title: 'Estado',
+    dataIndex: 'estado',
+    key: 'estado',
+    className: 'estado status-processing',
+    render: (text) => <span>{text}</span>,
+  },
+  {
+    title: 'Fecha',
+    dataIndex: 'fecha',
+    key: 'fecha',
+  },
+  {
+    title: 'Total',
+    dataIndex: 'total',
+    key: 'total',
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    id: '26836',
+    estado: 'Activa',
+    fecha: 'febrero 3, 2023',
+    total: 'COP $178,000',
+  },
+  {
+    key: '2',
+    id: '26852',
+    estado: 'Activa',
+    fecha: 'enero 18, 2023',
+    total: 'COP $78,000',
+  },
+];
 
 function HistorialPagos() {
   return(
     <>
-      <table className="payment-history">
-        <tbody>
-          <tr>
-            <th>ID</th>
-            <th>Estado</th>
-            <th>Fecha</th>
-            <th className="t_table_right">Total</th>
-          </tr>
-          <tr>
-            <td><Link href="/account/subscriptions/order">27135</Link></td>
-            <td><span className="status-style status-processing">Aprobado</span></td>
-            <td>enero 18, 2023</td>
-            <td className="t_table_right">COP <span className="price-amount amount"><bdi><span className="rice-currencySymbol">$</span>178,000</bdi></span></td>
-          </tr>
-          <tr>
-            <td><Link href="/account/subscriptions/order">26834</Link></td>
-            <td><span className="status-style status-processing">Aprobado</span></td>
-            <td>enero 17, 2023</td>
-            <td className="t_table_right">COP <span className="price-amount amount"><bdi><span className="rice-currencySymbol">$</span>0</bdi></span></td>
-          </tr>
-        </tbody>
-      </table>
+      <Table
+        columns={columns}
+        dataSource={data}
+        pagination={false}
+      />
     </>
   )
 }

@@ -1,26 +1,44 @@
+import { Table } from 'antd';
+
+const columns = [
+  {
+    title: 'Evento',
+    dataIndex: 'evento',
+    key: 'evento',
+  },
+  {
+    title: 'Fecha',
+    dataIndex: 'fecha',
+    key: 'fecha',
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    evento: 'Estado cambió de En espera a Activa.',
+    fecha: 'enero 18, 2023 at 06:06 PM',
+  },
+  {
+    key: '2',
+    evento: 'Estado cambió de En espera a Activa.',
+    fecha: 'enero 18, 2023 at 06:06 PM',
+  },
+  {
+    key: '3',
+    evento: 'Estado cambió de En espera a Activa.',
+    fecha: 'enero 18, 2023 at 06:06 PM',
+  },
+];
+
 function EventosSuscripcion() {
     return(
       <>
-        <table className="payment-history">
-          <tbody>
-            <tr>
-              <th>Evento</th>
-              <th className="t_table_right">Fecha</th>
-            </tr>
-            <tr>
-              <td>Estado cambió de En espera a Activa.</td>
-              <td className="t_table_right">enero 18, 2023 at 06:06 PM</td>
-            </tr>
-            <tr>
-              <td>Estado del pago marcado como completo.</td>
-              <td className="t_table_right">enero 18, 2023 at 06:06 PM</td>
-            </tr>
-            <tr>
-              <td>Creado el pedido #27135 para registrar la renovación.</td>
-              <td className="t_table_right">enero 18, 2023 at 06:02 PM</td>
-            </tr>
-          </tbody>
-        </table>
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+        />
       </>
     )
   }

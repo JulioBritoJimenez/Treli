@@ -127,7 +127,7 @@ function Subscription() {
   return (
     <>
       <Layout>
-        <div className="olist-container subs-container">
+        <div className="olist-container subs-container suscripciones">
           <div className="plist-head-title">
             <div className="plist-head-titlecol1">
               <h2>Suscripciones</h2>

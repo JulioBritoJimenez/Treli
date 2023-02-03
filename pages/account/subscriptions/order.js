@@ -203,7 +203,7 @@ function OrderSuscription() {
                   <span id="sh_whatsapp" className={historialState === 3 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(3)}>Historial de WhatsApp</span>
                   <span id="sh_dunning" className={historialState === 4 ? "sh_active_filter" : "history-tab"} onClick={() => historialTab(4)}>Historial de reclamación</span>
                 </div>
-                <div className="history-filter-content">
+                <div className="history-filter-content tabla-simple">
                   <div className={`sh_content hidden ${historialState === 1 ? "active": ""}` .trimEnd()}>
                     <HistorialPagos />
                   </div>
@@ -219,7 +219,7 @@ function OrderSuscription() {
                 </div>
               </div>
 
-              <div className="order-box-container t-order-notes subs-inf-box margin-bottom">
+              <div className="order-box-container t-order-notes subs-inf-box margin-bottom tabla-simple">
                 <h3 className="h3-borde">Eventos</h3>
                 <div className="history-filter-titles">
                   <span id="e_subscription" className={eventosState === 1 ? "sh_active_filter" : "history-tab"} onClick={() => eventosTab(1)}>Suscripción</span>

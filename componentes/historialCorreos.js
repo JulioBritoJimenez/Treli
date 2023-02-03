@@ -1,30 +1,52 @@
+import { Table } from 'antd';
+
+const columns = [
+  {
+    title: 'Destinatario',
+    dataIndex: 'destinatario',
+    key: 'destinatario',
+  },
+  {
+    title: 'Enviada en',
+    dataIndex: 'enviada',
+    key: 'enviada',
+  },
+  {
+    title: 'Notificación',
+    dataIndex: 'notificacion',
+    key: 'notificacion',
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    destinatario: 'demo@treli.co',
+    enviada: 'enero 18, 2023 06:06 PM',
+    notificacion: 'Renovación de suscripción',
+  },
+  {
+    key: '2',
+    destinatario: 'demo@treli.co',
+    enviada: '	enero 17, 2023 06:02 PM',
+    notificacion: 'Pago aprobado',
+  },
+  {
+    key: '3',
+    destinatario: 'demo@treli.co',
+    enviada: '	enero 16, 2023 07:02 PM',
+    notificacion: 'Activación de suscripción',
+  },
+];
+
 function HistorialCorreos() {
   return(
     <>
-      <table className="payment-history">
-        <tbody>
-          <tr>
-            <th>Destinatario</th>
-            <th>Enviada en</th>
-            <th className="t_table_right">Notificación</th>
-          </tr>
-          <tr>
-            <td>demo@treli.co</td>
-            <td>enero 18, 2023 06:06 PM</td>
-            <td className="t_table_right">Renovación de suscripción</td>
-          </tr>
-          <tr>
-            <td>demo@treli.co</td>
-            <td>enero 17, 2023 06:02 PM</td>
-            <td className="t_table_right">Pago aprobado</td>
-          </tr>
-          <tr>
-            <td>demo@treli.co</td>
-            <td>enero 17, 2023 06:02 PM</td>
-            <td className="t_table_right">Activación de suscripción</td>
-          </tr>
-        </tbody>
-      </table>
+      <Table
+        columns={columns}
+        dataSource={data}
+        pagination={false}
+      />
     </>
   )
 }
