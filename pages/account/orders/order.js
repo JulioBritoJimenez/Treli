@@ -108,7 +108,7 @@ function OrderPagos() {
                 </div>
 
                 <div className="order-box">
-                  <div className="details-head caja-flex">
+                  <div className="details-head flex">
                     <h3>Dirección de facturación</h3>
                     <p className="texto-link pointer" onClick={showEditarDireccion}>Editar</p>
                     <Modal 
@@ -134,7 +134,7 @@ function OrderPagos() {
                   <h3>Línea de tiempo de la suscripción</h3>
                 </div>
                 <div className="order-box">
-                  <div className="caja-flex">
+                  <div className="flex">
                     <Link href="/account/subscriptions/order" className="subs-number1 texto-link">Suscripción #28859</Link>
                     <div className="status-style pending-cancel-status status-auto">Cancelación Pendiente</div>
                   </div>

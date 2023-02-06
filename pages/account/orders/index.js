@@ -130,7 +130,7 @@ function Order() {
           <div className="plist-head-title">
             <div className="plist-head-titlecol1">
               <h2>Pagos</h2>
-              <Link href="/account/orders/" className="crear-pago botones boton-violeta button-full">Crear pago</Link>
+              <Link href="/account/create-payment/" className="crear-pago botones boton-violeta button-full">Crear pago</Link>
             </div>
             <div className="plist-head-titlecol1">
               <button data-action="export_payments" data-text="Pagos exportados" data-name="pagos_treli" className="botones boton-violeta button-full export-data">Exportar pagos</button>
