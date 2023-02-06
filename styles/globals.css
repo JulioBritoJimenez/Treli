@@ -4,6 +4,7 @@
   --violeta-claro: #F2F0FF;
   --azul-oscuro: #14264C;
   --gris-bg: #F6F6F6;
+  --gris-bg-claro: #FAFAFA;
   --gris-oscuro: #919191;
   --blanco: #fff;
   --verde-oscuro: #0C6A14;
@@ -149,7 +150,7 @@ span.small {
 }
 .order-action {
   margin-left: 20px;
-  background-color: #FAFAFA;
+  background-color: var(--gris-bg-claro);
   color: var(--gris-oscuro);
   border: 1px solid var(--gris-oscuro);
   height: var(--boton-height-bajo);
@@ -722,7 +723,7 @@ span.check-container-text_title {
   text-decoration: underline;
 }
 
-/* Orders */
+/* Orders - Pagos */
 .plist-head-title {
   display: flex;
   align-items: center;
@@ -886,14 +887,14 @@ th.ant-table-cell {
   font-weight: 500 !important;
 }
 .ant-table-row:nth-child(odd) {
-  background-color: #fafafa !important;
+  background-color: var(--gris-bg-claro) !important;
 }
 .ant-table-row:hover, tr.ant-table-row:hover>td, tr.ant-table-row-selected >td {
   background-color: var(--violeta-claro) !important;
   transition: 100ms;
 }
-td.ant-table-cell a, td.ant-table-cell a:hover {
-  text-decoration: underline;
+td.ant-table-cell a, td.ant-table-cell a:hover, .texto-link {
+  text-decoration: underline !important;
   color: var(--morado-oscuro);
 }
 label.ant-checkbox-wrapper {
@@ -913,7 +914,7 @@ li.ant-pagination-prev button, li.ant-pagination-next button {
 .ant-pagination .ant-pagination-item-active a, .ant-pagination .ant-pagination-item-active:hover a {
   color: var(--morado-oscuro);
 }
-.ant-table-cell.estado span, .head-status {
+.ant-table-cell.estado span, .status-style {
   padding: 4px 20px;
   border-radius: 8px;
   width: 110px;
@@ -925,7 +926,7 @@ li.ant-pagination-prev button, li.ant-pagination-next button {
   color: var(--gris-oscuro);
   border: 1px solid;
 }
-.head-status.status-subs {
+.head-status.status-subs, .status-auto {
   width: auto;
 }
 .estado.status-processing span, .head-status.status-processing {
@@ -947,6 +948,37 @@ li.ant-pagination-prev button, li.ant-pagination-next button {
 .estado.status-hold span, .head-status.status-hold {
   background-color: #FFE494;
   color: #51390B;
+}
+
+/* Orders - Pagos Detalle */
+.note-item {
+  background-color: var(--gris-bg-claro);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.note-item:last-child {
+  margin-bottom: 0;
+}
+p.note-time {
+  margin-top: 10px !important;
+  color: #BBBBBB;
+}
+.order-notes h3 {
+  margin-bottom: 20px;
+}
+.caja-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.subs-timeline .order-box {
+  padding-bottom: 20px;
+}
+a.subs-number1 {
+  font-size: var(--font-size-18px);
+}
+.subs-timeline p {
+  margin-top: 10px !important;
 }
 
 /* Suscripciones */

@@ -173,7 +173,7 @@ function Order() {
                   <option value="">Filtrar por cliente</option>
                   <option value="Nombre-Apellido">Nombre Apellido</option>
                   <option value="Prueba-Prueba">Prueba Prueba</option>
-                  <option value="Gabriel-Prueba">Gabriel Prueba</option>
+                  <option value="Nombre-Prueba">Nombre Prueba</option>
                 </select>
               </div>
 
