@@ -135,7 +135,7 @@ function Order() {
             <div className="plist-head-titlecol1">
               <button data-action="export_payments" data-text="Pagos exportados" data-name="pagos_treli" className="botones boton-violeta button-full export-data">Exportar pagos</button>
             </div>
-          </div>
+          </div> 
 
           <div className="plist-head-row1">
             <div className="olist-status status-filter">
@@ -181,7 +181,7 @@ function Order() {
                 <select name="ordertype" id="ordertype">
                   <option value="">Filtrar por tipo</option>
                   <option value="renewal">Pago de renovación</option>
-                  <option value="parent">Pago de suscripción </option>
+                  <option value="parent">Pago de suscripción</option>
                   <option value="regular">Pago único</option>
                 </select>
               </div>

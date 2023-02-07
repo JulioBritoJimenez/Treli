@@ -38,7 +38,7 @@ function Sidebar() {
 					  <Image src={iconSuscripciones} alt="Icono" /><span>Suscripciones</span>
           </Link>
 				</div>
-        <div className="sidebar_top-row_prods sidebar_top-row_items toggle-submenu ">
+        <div className="sidebar_top-row_prods sidebar_top-row_items toggle-submenu">
 					<a onClick={catalogoClic}><Image src={iconCatalogo} alt="Icono" /><span>Catálogo 
             <BsChevronDown className={`${catalogo ? "hidden": ""}` .trimEnd()} />
             <BsChevronUp className={`hidden ${catalogo ? "active": ""}` .trimEnd()} /></span>
