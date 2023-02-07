@@ -1699,8 +1699,43 @@ a.mas-opciones svg.hidden.flex {
   text-decoration: none;
   font-size: initial;
   display: flex;
+  align-items: center;
 }
 .ant-tooltip-inner {
   color: var(--azul-oscuro) !important;
   box-shadow: 0px 1px 3px 0px #d6d6e6;
+}
+.additional_options_cont svg {
+  margin: 2px 0px 0px 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ant-tooltip-inner {
+  min-width: 328px !important;
+  padding: 20px !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 1px 3px 0px #d6d6e6 !important;
+}
+.ant-tooltip .ant-tooltip-arrow::after {
+  box-shadow: 0px 0px 2px 0px #d6d6e6 !important;
+}
+.ant-tooltip-inner span {
+  margin-bottom: 15px;
+  display: block;
+  font-weight: 600;
+}
+span.row2 select, span.row2 {
+  width: 100%;
+}
+.additional_options_cont span.row1 {
+  display: flex;
+}
+span.row2.input.hidden.flex {
+  display: flex !important;
+}
+.trial_day_togg-cont {
+  margin-top: 14px;
+}
+.trial_day_togg-cont a {
+  text-decoration: underline;
 }

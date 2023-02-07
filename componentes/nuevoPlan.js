@@ -9,7 +9,35 @@ function NuevoPlan() {
     setMasopciones(!masopciones);
   };
 
-  const cobro = <div><span className="strong">Cobro basado en el uso</span><br /> Actívalo si, como empresa, proporcionas acceso a tus servicios y le cobras a tu cliente en función de su uso al final del ciclo de suscripción.</div>;
+  const [numerofijo, setNumerofijo] = useState(false);
+  const numerofijoClic = () => {
+    setNumerofijo(!numerofijo);
+  };
+
+  const [permanencia, setPermanencia] = useState(false);
+  const permanenciaClic = () => {
+    setPermanencia(!permanencia);
+  };
+
+  const [inscripcion, setInscripcion] = useState(false);
+  const inscripcionClic = () => {
+    setInscripcion(!inscripcion);
+  };
+
+  const [prueba, setPrueba] = useState(false);
+  const pruebaClic = () => {
+    setPrueba(!prueba);
+  };
+
+  const cobro = <div><span>Cobro basado en el uso</span> Actívalo si, como empresa, proporcionas acceso a tus servicios y le cobras a tu cliente en función de su uso al final del ciclo de suscripción.</div>;
+
+  const numerofijoinfo = <div><span>Número fijo de pagos</span> Actívalo si este plan tiene un número fijo de pagos totales, incluyendo el primer pago y y pagos de renovacion.</div>;
+
+  const permanenciainfo = <div><span>Períodos de permanencia</span> Configura el número mínimo de renovaciones antes de permitir que tu cliente cancele o pause su suscripción.</div>;
+
+  const inscripcioninfo = <div><span>Cuota de inscripción</span> Configura una tarifa única para este plan de suscripción.</div>;
+
+  const pruebainfo = <div><span>Prueba gratis</span> Con la prueba gratuita, puedes establecer la duración que un cliente puede estar en modo de prueba. Una vez que terminan los días de prueba, Treli automáticamente intenta procesar el primer pago.</div>;
 
   return (
     <div className="plan-container">
@@ -66,12 +94,84 @@ function NuevoPlan() {
         <p className="app-input">
           <span className="row1">
             <label className="check-container">Cobro basado en el uso
-              <Tooltip title={cobro} placement="bottom" color="#fff">
-                <BsInfoCircleFill />
-              </Tooltip>
               <input type="checkbox" className="usage_billing input_tog" name="usage_billing" value="1" />
               <span className="checkmark"></span>
             </label>
+            <Tooltip title={cobro} trigger="click" placement="bottom" color="#fff">
+              <BsInfoCircleFill />
+            </Tooltip>
+          </span>
+        </p>
+        <p className="app-input">
+          <span className="row1">
+            <label className="check-container">Este plan tiene un número fijo de pagos
+              <input type="checkbox" className="subscription_length input_tog" name="subscription_length" value="1" onClick={numerofijoClic} />
+              <span className="checkmark"></span>
+            </label>
+            <Tooltip title={numerofijoinfo} trigger="click" placement="bottom" color="#fff">
+              <BsInfoCircleFill />
+            </Tooltip>
+          </span>
+          <span className={`row2 input hidden ${numerofijo ? "active": ""}` .trimEnd()}>
+            <select>
+              <option value="">Selecciona el número de pagos totales</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </span>
+        </p>
+        <p className="app-input">
+          <span className="row1">
+            <label className="check-container">Este plan tiene períodos de permanencia
+              <input type="checkbox" className="commitment_periods_i input_tog" name="commitment_periods_i" value="1" onClick={permanenciaClic} />
+              <span className="checkmark"></span>
+            </label>
+            <Tooltip title={permanenciainfo} trigger="click" placement="bottom" color="#fff">
+              <BsInfoCircleFill />
+            </Tooltip>
+          </span>
+          <span className={`row2 input hidden ${permanencia ? "active": ""}` .trimEnd()}>
+            <input type="number" name="commitment_periods[]" className="commitment_periods" placeholder="Ninguno" />
+          </span>
+        </p>
+        <p className="app-input">
+          <span className="row1">
+            <label className="check-container">Este plan tiene cuota de inscripción
+              <input type="checkbox" className="has_signup_fee" id="has_signup_fee" name="has_signup_fee" value="1" onClick={inscripcionClic} />
+              <span className="checkmark"></span>
+            </label>
+            <Tooltip title={inscripcioninfo} trigger="click" placement="bottom" color="#fff">
+              <BsInfoCircleFill />
+            </Tooltip>
+          </span>
+          <span className={`row2 input hidden ${inscripcion ? "active": ""}` .trimEnd()}>
+            <input className="signup_fee" type="number" name="signup_fee[]" placeholder="Cuota de inscripción COP" />
+          </span>
+        </p>
+        <p className="app-input">
+          <span className="row1">
+            <label className="check-container">Este plan tiene prueba gratis
+              <input type="checkbox" className="hast_trial" id="hast_trial" name="hast_trial" value="1" onClick={pruebaClic} />
+              <span className="checkmark"></span>
+            </label>
+            <Tooltip title={pruebainfo} trigger="click" placement="bottom" color="#fff">
+              <BsInfoCircleFill />
+            </Tooltip>
+          </span>
+          <span className={`row2 input hidden ${prueba ? "flex": ""}` .trimEnd()}>
+            <input className="space-r trial_length" type="number" name="trial_length[]" placeholder="Duración de prueba gratuita" />
+            <select className="trial_period" name="trial_period[]">
+							<option value="day">Día</option>
+							<option value="week">Semana</option>
+							<option value="month">Mes</option>
+							<option value="year">Año</option>
+						</select>
+          </span>
+          <span className={`trial_day_togg-cont hidden ${prueba ? "active": ""}` .trimEnd()}>
+            <a>O comienza el pago en un día específico del mes</a>
+            <a className="hidden">O define la duración de la prueba</a>
           </span>
         </p>
       </div>
