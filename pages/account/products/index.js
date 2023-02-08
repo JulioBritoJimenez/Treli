@@ -178,8 +178,8 @@ function Products() {
               onRow={(record, rowIndex) => {
                 return {
                   onClick: (event) => {
-                    router.push('/account/orders/order')
-                    console.log("Item Pagos")
+                    router.push('/account/products/new-plan')
+                    console.log("Item Planes")
                   }, // click row
                 };
               }}

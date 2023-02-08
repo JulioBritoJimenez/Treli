@@ -1,5 +1,7 @@
 import Layout from "../../../componentes/layout";
 import NuevoPlan from "../../../componentes/nuevoPlan";
+import Image from "next/image";
+import CamaraIcon from '../../../public/camara-boton.png';
 
 function NewPlan() {
   return (
@@ -57,7 +59,7 @@ function NewPlan() {
             </div>
 
             <div className="new-product-col2">
-              <div className="order-box-container">
+              <div className="order-box-container margin-bottom">
                 <h3 className="margin-bottom">Configuraciones</h3>
                 <p className="app-input input">
                   <span className="acc-label">Estado</span>
@@ -71,6 +73,24 @@ function NewPlan() {
                   <span className="acc-label">Etiquetas</span>
                   <input type="text" name="tags" id="tags" placeholder="Etiqueta1, Etiqueta2, Etiqueta3" />
                 </p>
+              </div>
+
+              <div className="order-box-container">
+                <h3 className="margin-bottom">Galería de imágenes</h3>
+                <div className="product-image-show">
+                  <label htmlFor="product-image" className="front-image-place pointer">
+                    <Image src={CamaraIcon} alt="Imagen de producto" />
+                  </label>
+                </div>
+                <div className="product-gallery-show">
+                  <label htmlFor="product-gallery" className="gallery-image-place pointer">
+                    <Image src={CamaraIcon} alt="Imagen de producto" />
+                  </label>
+                </div>
+                <div className="images-upload">
+                  <button className="front-image-upload botones boton-border btn100" htmlFor="product-image">Agregar imagen principal</button>
+                  <button className="front-image-upload botones boton-border btn100" htmlFor="product-gallery">Agregar galería</button>
+                </div>
               </div>
             </div>
           </div>

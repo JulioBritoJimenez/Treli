@@ -164,10 +164,12 @@ function CreatePayment() {
           <div className="settings-items payment-settings-r create-new-customer">
             <div className="payment-collection_schedule">
               <p className="app-input">
-                <label className="pointer" product-id="28137" plan-id="28137">
-                  <input type="radio" value="schedule" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "schedule"} onChange={cobroPago} />
-                  <span className="acc-label">Plantilla de pago</span>
-                </label>
+                <span className="radio-buttons-container">
+                  <label className="check-container strong">Plantilla de pago
+                    <input type="radio" value="schedule" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "schedule"} onChange={cobroPago} />
+                    <span className="checkmark"></span>
+                  </label>
+                </span>
               </p>
               <div className="collection_schedule-toggle">
                 <p>Selecciona una plantilla para solicitar un pago en una fecha específica</p>
@@ -184,10 +186,12 @@ function CreatePayment() {
 
             <div className="payment-collection_request-now">
               <p className="app-input">
-                <label className="pointer" product-id="28137" plan-id="28137">
-                  <input type="radio" value="request" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "request"} onChange={cobroPago} />
-                  <span className="acc-label">Solicitar pago ahora</span>
-                </label>
+                <span className="radio-buttons-container">
+                  <label className="check-container strong">Solicitar pago ahora
+                    <input type="radio" value="request" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "request"} onChange={cobroPago} />
+                    <span className="checkmark"></span>
+                  </label>
+                </span>
               </p>
               <div className="collection_schedule-toggle hidden">
                 <p>Crear un pago con fecha de vencimiento hoy</p>
@@ -203,10 +207,12 @@ function CreatePayment() {
 
             <div className="payment-collection_request-now">
               <p className="app-input">
-                <label className="pointer" product-id="28137" plan-id="28137">
-                  <input type="radio" value="autocharge" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "autocharge"} onChange={cobroPago} />
-                  <span className="acc-label">Cobrar automáticamente</span>
-                </label>
+                <span className="radio-buttons-container">
+                  <label className="check-container strong">Cobrar automáticamente
+                    <input type="radio" value="autocharge" className="product-to-add" data-plan="" name="" data-pid="" checked={selectedInput.checked === "autocharge"} onChange={cobroPago} />
+                    <span className="checkmark"></span>
+                  </label>
+                </span>
               </p>
               <div className="collection_schedule-toggle hidden">
                 <p>Cobrar automáticamente un método de pago registrado</p>
