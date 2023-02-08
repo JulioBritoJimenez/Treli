@@ -30,6 +30,48 @@ function NewPlan() {
                 </div>
                 <div className="order-box flex order-actions"><a>Agregar plan</a></div>
               </div>
+
+              <div className="order-box-container">
+                <h3 className="margin-bottom">Disponibilidad</h3>
+                <p className="app-input input">
+                  <span className="acc-label">ID/SKU</span>
+                  <input type="text" name="sku" id="sku" placeholder="ID/SKU" />
+                </p>
+                <p className="app-input input">
+                  <span className="acc-label">Cantidad</span>
+                  <input type="number" name="inventory" id="inventory" placeholder="Inventario" />
+                </p>
+                <p className="app-input input">
+                  <span className="acc-label">Disponibilidad</span>
+                  <select name="stockstatus" id="stockstatus">
+                    <option value="instock">Disponible</option>
+                    <option value="outofstock">Agotado</option>
+                  </select>
+                </p>
+                <label className="check-container">
+                  Activa la gestión de inventario
+                  <input type="checkbox" id="trackqty" name="trackqty" value="1" />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+            </div>
+
+            <div className="new-product-col2">
+              <div className="order-box-container">
+                <h3 className="margin-bottom">Configuraciones</h3>
+                <p className="app-input input">
+                  <span className="acc-label">Estado</span>
+                  <select name="productstatus" id="productstatus">
+                    <option value="active">Activo</option>
+                    <option value="draft">Borrador</option>
+                    <option value="private">Privado</option>
+                  </select>
+                </p>
+                <p className="app-input input">
+                  <span className="acc-label">Etiquetas</span>
+                  <input type="text" name="tags" id="tags" placeholder="Etiqueta1, Etiqueta2, Etiqueta3" />
+                </p>
+              </div>
             </div>
           </div>
         </div>

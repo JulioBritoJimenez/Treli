@@ -657,7 +657,6 @@ span.steps-completed, .steps-remaining {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
-  font-size: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1685,6 +1684,7 @@ td.ant-table-cell.img-tabla {
 }
 .plan-container-all p.app-input .flex {
   width: 100%;
+  align-items: center;
 }
 a.mas-opciones {
   display: flex;
@@ -1694,6 +1694,9 @@ a.mas-opciones svg {
 }
 a.mas-opciones svg.hidden.flex {
   display: block !important;
+}
+.additional_options_cont {
+  margin-top: 25px;
 }
 .additional_options_cont label {
   text-decoration: none;
@@ -1738,4 +1741,11 @@ span.row2.input.hidden.flex {
 }
 .trial_day_togg-cont a {
   text-decoration: underline;
+}
+span.trial_day_txt {
+  margin-left: 10px;
+  width: 50%;
+}
+.new-product-col2 span.acc-label {
+  flex: 0 0 100px;
 }

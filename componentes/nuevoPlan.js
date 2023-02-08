@@ -29,6 +29,16 @@ function NuevoPlan() {
     setPrueba(!prueba);
   };
 
+  const [diaEspecifico, setDiaEspecifico] = useState(true);
+  const diaEspecificoClic = () => {
+    setDiaEspecifico(!diaEspecifico);
+  };
+
+  const [duracion, setDuracion] = useState(false);
+  const duracionClic = () => {
+    setDuracion(!duracion);
+  };
+
   const cobro = <div><span>Cobro basado en el uso</span> Actívalo si, como empresa, proporcionas acceso a tus servicios y le cobras a tu cliente en función de su uso al final del ciclo de suscripción.</div>;
 
   const numerofijoinfo = <div><span>Número fijo de pagos</span> Actívalo si este plan tiene un número fijo de pagos totales, incluyendo el primer pago y y pagos de renovacion.</div>;
@@ -86,11 +96,11 @@ function NuevoPlan() {
 					</select>
         </span>
       </p>
-      <a className="mas-opciones margin-bottom" onClick={masopcionesClic}>+ Opciones adicionales 
+      <a className="mas-opciones" onClick={masopcionesClic}>+ Opciones adicionales 
         <BsChevronDown className={`${masopciones ? "hidden": ""}` .trimEnd()} />
         <BsChevronUp className={`hidden ${masopciones ? "flex": ""}` .trimEnd()} />
       </a>
-      <div className="additional_options_cont">
+      <div className={`additional_options_cont hidden ${masopciones ? "active": ""}` .trimEnd()}>
         <p className="app-input">
           <span className="row1">
             <label className="check-container">Cobro basado en el uso
@@ -161,17 +171,24 @@ function NuevoPlan() {
             </Tooltip>
           </span>
           <span className={`row2 input hidden ${prueba ? "flex": ""}` .trimEnd()}>
-            <input className="space-r trial_length" type="number" name="trial_length[]" placeholder="Duración de prueba gratuita" />
-            <select className="trial_period" name="trial_period[]">
+            <input className={`space-r trial_length ${diaEspecifico ? "": "hidden"}` .trimEnd()} type="number" name="trial_length[]" placeholder="Duración de prueba gratuita" />
+            <select className={`trial_period ${diaEspecifico ? "": "hidden"}` .trimEnd()} name="trial_period[]">
 							<option value="day">Día</option>
 							<option value="week">Semana</option>
 							<option value="month">Mes</option>
 							<option value="year">Año</option>
 						</select>
+            <select className={`trial_day hidden ${diaEspecifico ? "": "active"}` .trimEnd()} name="trial_day[]">
+							<option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <span className={`trial_day_txt hidden ${diaEspecifico ? "": "active"}` .trimEnd()}>De cada mes</span>
           </span>
           <span className={`trial_day_togg-cont hidden ${prueba ? "active": ""}` .trimEnd()}>
-            <a>O comienza el pago en un día específico del mes</a>
-            <a className="hidden">O define la duración de la prueba</a>
+            <a className={`${diaEspecifico ? "": "hidden"} ${duracion ? "active": ""}` .trimEnd()} onClick={diaEspecificoClic}>O comienza el pago en un día específico del mes</a>
+            <a className={`${diaEspecifico ? "hidden": ""} ${duracion ? "hidden": ""}` .trimEnd()} onClick={duracionClic}>O define la duración de la prueba</a>
           </span>
         </p>
       </div>
