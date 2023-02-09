@@ -2,7 +2,7 @@ import Layout from "../../../componentes/layout";
 import Link from 'next/link';
 import { useState } from 'react';
 import { Checkbox, Table } from 'antd';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import Image from "next/image";
 import ImgPlan from '../../../public/demo_suscripcion.jpg';
 

@@ -383,7 +383,7 @@ a.active-head {
   color: var(--placeholder-color) !important;
   letter-spacing: var(--placeholder-letter-spacing);
 }
-input:focus-visible, select:focus-visible {
+input:focus-visible, select:focus-visible, textarea:focus-visible {
   box-shadow: var(--input-shadow-focus-visible);
   outline: none !important;
 }
@@ -1586,7 +1586,7 @@ span.settings-item-go {
 }
 
 /* Planes */
-.planes .status-filter div, .addons .status-filter div {
+.planes .status-filter div, .addons .status-filter div, .productos .status-filter div {
   flex: 0 0 33.333333%;
 }
 td.ant-table-cell img {

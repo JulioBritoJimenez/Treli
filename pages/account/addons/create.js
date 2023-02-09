@@ -1,7 +1,14 @@
 import Layout from "../../../componentes/layout";
 import NuevoAddon from "../../../componentes/nuevoAddon";
+import { useState } from 'react';
 
 function CreateAddon() {
+
+  const [productos, setProductos] = useState(false);
+  const productosClic = () => {
+    setProductos(!productos);
+  };
+
   return (
     <>
       <Layout>
@@ -37,7 +44,7 @@ function CreateAddon() {
 
               <div className="order-box-container">
                 <h3 className="h3-borde margin-bottom">Restricciones de uso</h3>
-                <p className="app-input radio-buttons">
+                <p className="app-input radio-buttons input">
                   <span className="acc-label">Aplica a</span>
                   <span className="radio-buttons-container">
                     <label className="check-container">Todos los productos
@@ -45,15 +52,33 @@ function CreateAddon() {
                       <span className="checkmark"></span>
                     </label>
                     <label className="check-container">Productos específicos
-                      <input className="takeval checkapplies" type="radio" id="productsp" name="applies_to" value="productsp" />
+                      <input className="takeval checkapplies" type="radio" id="productsp" name="applies_to" value="productsp" onClick={productosClic} />
                       <span className="checkmark"></span>
                     </label>
+                    <span className={`select-products hidden ${productos ? "active": ""}` .trimEnd()}>
+                      <select name="schedule_template" id="schedule_template">
+                        <option value="0">Selecciona un producto</option>
+                        <option value="1">30 dias</option>
+                        <option value="2">My new template</option>
+                      </select>
+                    </span>
                   </span>
                 </p>
               </div>
             </div>
 
-            <div className="new-product-col2"></div>
+            <div className="new-product-col2">
+              <div className="order-box-container">
+                <h3 className="h3-borde margin-bottom">Estado</h3>
+                <p className="app-input input">
+                  <span className="acc-label">Estado</span>
+                  <select className="takeval" name="status" id="status">
+                    <option value="active">Activo</option>
+                    <option value="draft">Borrador</option>
+                  </select>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Layout>
