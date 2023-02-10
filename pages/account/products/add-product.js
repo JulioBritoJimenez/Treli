@@ -14,12 +14,12 @@ function AddProduct() {
               <h3>Membresía</h3>
               <p>Ofrece a tus miembros acceso a beneficios exclusivos</p>
             </Link>
-            <Link href="https://treli.co/account/products/new-product?type=subsproduct" className="choose-type_subs choose-type_subs_member">
+            <Link href="/account/products/new-product" className="choose-type_subs choose-type_subs_member">
               <BsCodeSlash />
               <h3>Producto recurrente</h3>
               <p>Ofrece productos o cajas para recibirlos en una frecuencia</p>
             </Link>
-            <Link href="https://treli.co/account/products/new-plan?type=service" className="choose-type_subs choose-type_subs_member">
+            <Link href="/account/products/new-plan" className="choose-type_subs choose-type_subs_member">
               <BsCodeSlash />
               <h3>Servicio recurrente</h3>
               <p>Permite a los clientes suscribirse a tu servicio</p>
