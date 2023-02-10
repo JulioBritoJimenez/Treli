@@ -94,7 +94,7 @@ function CreatePayment() {
               <input type="text" placeholder="Buscar o agregar un item" id="item-search" name="item-search" onClick={listaResultadosClic} />
               <div className={`item-list-results hidden ${listaResultados ? "active": ""}` .trimEnd()}>
                 <a className="strong" onClick={agregarItemClic}>+ Agregar item personalizado</a>
-                <a className="strong" href="/account/products/new-product">+ Crear nuevo item</a>
+                <Link href="/account/products/new-product" className="strong">+ Crear nuevo item</Link>
                 <a className="strong">Full time hot desk - $517,000 <span className="settings-item-go"><BsChevronRight /></span></a>
                 <a className="strong">GRAVEL SPECIALIZED SEQOIA SRAM - $50,000 <span className="settings-item-go"><BsChevronRight /></span></a>
                 <a className="strong">Prueba - $20,000 <span className="settings-item-go"><BsChevronRight /></span></a>
