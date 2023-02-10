@@ -4,12 +4,73 @@ import { useState } from 'react';
 import { Checkbox, Table } from 'antd';
 import { useRouter } from 'next/router';
 
+const columns = [
+  {
+    title: 'Código',
+    dataIndex: 'codigo',
+    key: 'codigo',
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: 'Tipo',
+    dataIndex: 'tipo',
+    key: 'tipo',
+  },
+  {
+    title: 'Valor',
+    dataIndex: 'valor',
+    key: 'valor',
+  },
+  {
+    title: 'Uso/límite',
+    dataIndex: 'uso',
+    key: 'uso',
+  },
+  {
+    title: 'Estado',
+    dataIndex: 'estado',
+    key: 'estado',
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    codigo: 'Prueba',
+    tipo: 'Descuento fijo',
+    valor: '$80,000',
+    uso: 'Ilimitado',
+    estado: 'Activo',
+  },
+  {
+    key: '2',
+    codigo: 'Prueba',
+    tipo: 'Descuento fijo',
+    valor: '$80,000',
+    uso: 'Ilimitado',
+    estado: 'Activo',
+  },
+];
+
+const rowSelection = {
+  onChange: (selectedRowKeys, selectedRows) => {
+    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+  },
+  getCheckboxProps: (record) => ({
+    disabled: record.name === 'Disabled User',
+    // Column configuration not to be checked
+    name: record.name,
+  }),
+};
+
 function Coupons() {
 
   const [estadoFiltroState, setEstadoFiltroState] = useState(1);
   const estadoFiltroTab = (index) => {
     setEstadoFiltroState(index);
   }
+
+  const router = useRouter()
 
   return (
     <>
@@ -60,6 +121,26 @@ function Coupons() {
               </div>
               <div className="plist-but plist-but-filter boton-border">Filtrar</div>
             </div>
+          </div>
+
+          <div className="order-list-container">
+            <Table
+              onRow={(record, rowIndex) => {
+                return {
+                  onClick: (event) => {
+                    router.push('/account/coupons/coupon')
+                  }, // click row
+                };
+              }}
+              rowSelection={{
+                type: Checkbox,
+              }}
+              columns={columns}
+              dataSource={data}
+              pagination={{
+                pageSize: 5,
+              }}
+            />
           </div>
         </div>
       </Layout>
