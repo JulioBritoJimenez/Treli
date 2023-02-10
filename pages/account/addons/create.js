@@ -57,9 +57,9 @@ function CreateAddon() {
                     </label>
                     <span className={`select-products hidden ${productos ? "active": ""}` .trimEnd()}>
                       <select name="schedule_template" id="schedule_template">
-                        <option value="0">Selecciona un producto</option>
+                        <option value="0">Seleccionar productos</option>
                         <option value="1">30 dias</option>
-                        <option value="2">My new template</option>
+                        <option value="2">Nuevo template</option>
                       </select>
                     </span>
                   </span>
