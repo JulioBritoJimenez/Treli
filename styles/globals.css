@@ -766,15 +766,15 @@ span.check-container-text_title {
   text-align: center;
   background-color: white;
   height: 36px;
+  padding-top: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--placeholder-color);
   cursor: pointer;
 }
-.status-filter div {
+.pagos .status-filter div {
   flex: 0 0 20%;
-  padding-top: 3px;
 }
 .plist-status .plist-activestyle, .status-filter .plist-activestyle {
   background-color: var(--morado-oscuro);
@@ -808,6 +808,7 @@ input#psearch {
 }
 .plist-but, .search-but {
   margin: 1px 0px 0px 10px;
+  min-width: 90px;
 }
 .plist-head-row2 {
   display: flex;
@@ -1819,4 +1820,18 @@ span.radio-buttons-container label.check-container {
 }
 p.app-input.radio-buttons {
   align-items: unset;
+}
+
+/* Cupones */
+.cupones .plist-filter-container {
+  flex: 0 0 30%;
+}
+.cupones .plist-avail {
+  width: 100%;
+  flex-grow: 1;
+  margin-left: 15px;
+  padding-right: 0;
+}
+.cupones .plist-but.plist-but-filter {
+  flex-grow: initial;
 }

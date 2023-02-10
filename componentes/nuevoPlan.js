@@ -72,7 +72,7 @@ function NuevoPlan() {
           </tr>
           <tr>
             <td><span className="unit_first">1</span></td>
-            <td><input type="number" className="graduated_units" placeholder="& Above" /></td>
+            <td><input type="number" className="graduated_units" placeholder="hasta" /></td>
             <td><input type="number" className="graduated_price" placeholder="$0.00" /></td>
           </tr>
         </tbody>

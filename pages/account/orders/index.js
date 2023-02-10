@@ -126,7 +126,7 @@ function Order() {
   return (
     <>
       <Layout>
-        <div className="olist-container order-filtert">
+        <div className="olist-container order-filtert pagos">
           <div className="plist-head-title">
             <div className="plist-head-titlecol1">
               <h2>Pagos</h2>
