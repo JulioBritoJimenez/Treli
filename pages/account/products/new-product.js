@@ -2,6 +2,9 @@ import Layout from "../../../componentes/layout";
 import { useState } from 'react';
 import Image from "next/image";
 import CamaraIcon from '../../../public/camara-boton.png';
+import { BsX, BsArrowLeftShort } from "react-icons/bs";
+import { Modal } from 'antd';
+import Link from 'next/link';
 
 function NuevoProducto() {
 
@@ -10,12 +13,26 @@ function NuevoProducto() {
     setMasmonedas(!masmonedas);
   };
 
+  const [isPagpagosOpen, setIsPagpagosOpen] = useState(false);
+  const showPagpagos = () => {
+    setIsPagpagosOpen(true);
+  };
+  const handlePagpagos = () => {
+    setIsPagpagosOpen(false);
+  };
+
   return (
     <>
       <Layout>
         <div className="agregar-nuevo">
           <div className="order-head">
             <h2>Agregar nuevo producto</h2>
+            <div className="head-status status-style status-processing">Activo</div>
+            <div className="edit-product-stock color-green">Disponible</div>
+          </div>
+          <div className="order-head-paid">
+            <Link href="/account/one-time-products" className="order-back"><BsArrowLeftShort /></Link>
+            <button className="order-action red-button delete-product botones">Eliminar producto</button>
           </div>
 
           <div className="new-product-cols">
@@ -31,9 +48,35 @@ function NuevoProducto() {
                 </p>
               </div>
 
-              <div className="order-box-container margin-bottom">
+              <div className="order-box-container plan-container-all product-box_plan margin-bottom">
+                <a className="edit-plan">Editar</a>
                 <h3 className="margin-bottom">Precios</h3>
-                <div className="plan-container-all">
+                <div className="plan-info flex">
+                  <span>
+                    <span className="acc-label planinfo-label">Estándar</span>
+                    <span>COP $517,000</span>
+                  </span>
+                  <a className="open-direct-checkout" onClick={showPagpagos}>Página de pago</a>
+                  <Modal 
+                    title="URL de página de pago"
+                    open={isPagpagosOpen} 
+                    onCancel={handlePagpagos} 
+                    footer={null} closeIcon={<BsX />} 
+                    centered width={700}>
+                    <p>Copia la URL de la página de pago y compártela con tus clientes o vincúlala a un botón en tu sitio web/aplicación</p>
+                    <p>
+                      <span className="acc-label">Cantidad</span>
+                      <input type="number" name="plan_qty" id="plan_qty" placeholder="1" />
+                    </p>
+                    <div className="url-code-box-container">
+                      <div className="url-code-box">
+                        <span className="t_blue">https://treli.co/payment-page/?<span className="t_red">username</span>=demo&<span className="t_red">product_id</span>=29038&<span className="t_red">quantity</span>=<span className="ch-link-qty">1</span>&<span className="t_red">currency</span>=<span className="checkout-plan-currency">COP</span></span>
+                      </div>
+                      <div className="copy-code botones boton-violeta pointer">Copiar</div>
+                    </div>
+                  </Modal>
+                </div>
+                <div className="product-pricing plan-container-all">
                   <p className="app-input input">
                     <label className="acc-label strong">Modelo de precio</label>
                     <select className="pricing_model" name="pricing_model[]">
@@ -42,7 +85,7 @@ function NuevoProducto() {
                       <option value="volume">Precio por volumen</option>
                     </select>
                   </p>
-                  <p className="app-input input">
+                  <p className="app-input subs-pricing input">
                     <label className="acc-label strong">Precio COP</label>
                     <input className="subsprice" type="number" id="price" name="price" placeholder="Precio" />
                   </p>

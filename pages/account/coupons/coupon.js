@@ -1,5 +1,7 @@
 import Layout from "../../../componentes/layout";
 import { useState } from 'react';
+import Link from 'next/link';
+import { BsArrowLeftShort } from "react-icons/bs";
 
 function NuevoCupon() {
 
@@ -19,6 +21,10 @@ function NuevoCupon() {
         <div className="agregar-nuevo nuevo-cupon">
           <div className="order-head">
             <h2>Nuevo cupón</h2>
+            <div className="head-status status-style status-processing">Activo</div>
+          </div>
+          <div className="order-head-paid">
+            <Link href="/account/coupons" className="order-back"><BsArrowLeftShort /></Link>
           </div>
 
           <div className="new-product-cols">
@@ -86,11 +92,39 @@ function NuevoCupon() {
                     </span>
                   </p>
                 </div>
+
+                <div className="order-box">
+                  <p className="app-input input">
+                    <span className="acc-label">Requerimientos de compra</span>
+                    <input className="takeval" type="number" name="usagelimit" id="usagelimit" placeholder="Uso ilimitado" />
+                  </p>
+                  <p className="app-input input">
+                    <span className="acc-label">Requerimientos de compra</span>
+                    <input className="takeval" type="number" name="usagelimituser" id="usagelimituser" placeholder="Uso ilimitado" />
+                  </p>
+                </div>
+
+                <div className="order-box style-check">
+                  <p className="app-input">
+                    <span className="acc-label">Excluir productos en descuento</span>
+                    <label className="check-container">Este cupón no debe aplicarse a productos en descuento
+                      <input className="takeval" type="checkbox" id="nosale" name="nosale" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </p>
+                  <p className="app-input">
+                    <span className="acc-label">Envío gratis</span>
+                    <label className="check-container">Este cupón permite envío gratis
+                      <input className="takeval" type="checkbox" id="freeship" name="freeship" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="new-product-col2">
-              <div className="order-box-container">
+            <div className="new-product-col2 coupon-summary">
+              <div className="order-box-container margin-bottom">
                 <h3 className="h3-borde margin-bottom">Resumen</h3>
                 <p className="app-input input">
                   <span className="acc-label">Estado</span>
@@ -99,6 +133,24 @@ function NuevoCupon() {
                     <option value="draft">Borrador</option>
                   </select>
                 </p>
+                <p className="app-input">
+                  <span className="acc-label">Uso / límite</span>
+                  <span className="usagelimit">0 / 10</span>
+                </p>
+              </div>
+
+              <div className="order-box-container">
+                <h3 className="h3-borde margin-bottom">Fechas del cupón</h3>
+                <div className="order-box">
+                  <p className="app-input input">
+                    <span className="acc-label">Fecha de inicio</span>
+                    <input className="takeval" type="date" name="startdate" id="startdate" placeholder="Fecha de inicio" />
+                  </p>
+                  <p className="app-input input">
+                    <span className="acc-label">Fecha final</span>
+                    <input className="takeval" type="date" name="enddate" id="enddate" placeholder="Fecha final" />
+                  </p>
+                </div>
               </div>
             </div>
           </div>

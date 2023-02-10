@@ -170,6 +170,15 @@ span.small {
   background-color: var(--morado-oscuro);
   color: #fff;
 }
+.red-button {
+  background-color: #fff0f8;
+  color: #b50000;
+  border: 1px solid #b50000;
+}
+.red-button:hover {
+  background-color: #b50000;
+  color: #fff;
+}
 
 /* Layout */
 .maccount-container a {
@@ -1603,7 +1612,7 @@ td.ant-table-cell.img-tabla {
   color: #510B0B;
   font-weight: 500;
 }
-.disponibilidad.disponible {
+.disponibilidad.disponible, .color-green {
   color: #0C6A14;
 }
 
@@ -1654,8 +1663,8 @@ td.ant-table-cell.img-tabla {
 }
 
 /* Agregar Nuevo */
-.agregar-nuevo h2 {
-  margin-bottom: 20px;
+.agregar-nuevo .order-head {
+  margin-bottom: 25px;
 }
 .order-box-container p:last-child {
   margin-bottom: 0px;
@@ -1821,6 +1830,54 @@ span.radio-buttons-container label.check-container {
 p.app-input.radio-buttons {
   align-items: unset;
 }
+.agregar-nuevo .order-action {
+  margin-left: 0px;
+}
+.agregar-nuevo .status-style {
+  margin: -6px 40px 0px;
+}
+
+/* Productos */
+.order-box-container.plan-container-all.product-box_plan {
+  position: relative;
+}
+a.edit-plan {
+  position: absolute;
+  right: 25px;
+  text-decoration: underline;
+}
+span.planinfo-label {
+  width: 120px;
+  display: block;
+  float: left;
+}
+.url-code-box-container {
+  position: relative;
+}
+.url-code-box {
+  background-color: var(--input-bg);
+  border-radius: var(--input-radius);
+  padding: var(--input-padding);
+  margin-top: 10px;
+  font-size: var(--input-font-size);
+}
+.url-code-box-container span.t_blue {
+  color: #00f;
+  word-break: break-all;
+}
+span.t_red {
+  color: red;
+}
+.copy-code {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translate(0px, -50%);
+  visibility: hidden;
+}
+.url-code-box-container:hover .copy-code {
+  visibility: visible;
+}
 
 /* Cupones */
 .cupones .plist-filter-container {
@@ -1834,4 +1891,11 @@ p.app-input.radio-buttons {
 }
 .cupones .plist-but.plist-but-filter {
   flex-grow: initial;
+}
+.style-check label.check-container {
+  text-decoration: none;
+  font-weight: normal;
+}
+.coupon-summary.new-product-col2 span.acc-label {
+  flex: 0 0 120px;
 }

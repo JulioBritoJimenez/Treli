@@ -33,7 +33,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="macc-head_create">
-          <Link href="/account/products/add-product/" className="create-butt">Create +</Link>
+          <Link href="/account/products/add-product/" className="create-butt">Crear +</Link>
         </div>
       </div>
     </div>
