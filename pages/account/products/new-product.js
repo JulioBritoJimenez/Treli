@@ -112,6 +112,8 @@ function NuevoProducto() {
                     <select id="add_currencies_sel">
 									    <option value="">Seleccionar moneda</option>
 											<option value="USD">USD - Dólar de los Estados Unidos</option>
+                      <option value="PEN">PEN - SOL</option>
+                      <option value="MXN">MXN - Peso mexicano</option>
 										</select>
                   </p>
                 </div>

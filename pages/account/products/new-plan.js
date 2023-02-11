@@ -2,6 +2,8 @@ import Layout from "../../../componentes/layout";
 import NuevoPlan from "../../../componentes/nuevoPlan";
 import Image from "next/image";
 import CamaraIcon from '../../../public/camara-boton.png';
+import Link from 'next/link';
+import { BsArrowLeftShort } from "react-icons/bs";
 
 function NewPlan() {
   return (
@@ -10,6 +12,12 @@ function NewPlan() {
         <div className="agregar-nuevo">
           <div className="order-head">
             <h2>Agregar nueva membresía</h2>
+            <div className="head-status status-style status-processing">Activo</div>
+            <div className="edit-product-stock color-green">Disponible</div>
+          </div>
+          <div className="order-head-paid">
+            <Link href="/account/one-time-products" className="order-back"><BsArrowLeftShort /></Link>
+            <button className="order-action red-button delete-product botones">Eliminar membresía</button>
           </div>
 
           <div className="new-product-cols">

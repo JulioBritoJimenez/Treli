@@ -1,6 +1,8 @@
 import Layout from "../../../componentes/layout";
 import NuevoAddon from "../../../componentes/nuevoAddon";
 import { useState } from 'react';
+import Link from 'next/link';
+import { BsArrowLeftShort } from "react-icons/bs";
 
 function CreateAddon() {
 
@@ -15,6 +17,10 @@ function CreateAddon() {
         <div className="agregar-nuevo nuevo-addon">
           <div className="order-head">
             <h2>Nuevo Addon</h2>
+            <div className="head-status status-style status-processing">Activo</div>
+          </div>
+          <div className="order-head-paid">
+            <Link href="/account/addons" className="order-back"><BsArrowLeftShort /></Link>
           </div>
 
           <div className="new-product-cols">

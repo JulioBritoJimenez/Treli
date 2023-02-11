@@ -105,6 +105,7 @@ span.small {
 .botones, .ant-btn {
   height: var(--boton-height);
   padding: var(--boton-padding);
+  border: none;
   border-radius: var(--boton-radius);
   font-weight: var(--boton-font-weight);
   font-size: var(--boton-font-size);
@@ -178,6 +179,15 @@ span.small {
 .red-button:hover {
   background-color: #b50000;
   color: #fff;
+}
+.eliminar-btn {
+  background-color: #FF0000;
+  color: white !important;
+  border-color: #FF0000;
+}
+.eliminar-btn:hover {
+  background-color: #b50000;
+  border-color: #b50000;
 }
 
 /* Layout */
@@ -770,7 +780,7 @@ span.check-container-text_title {
 .subs-container.olist-container .status-filter div {
   flex: 1;
 }
-.plist-status div, .status-filter div {
+.plist-status div, .status-filter div, .settings-head a {
   flex: 0 0 25%;
   text-align: center;
   background-color: white;
@@ -1246,6 +1256,9 @@ span.order-qty {
 .flex {
   display: flex;
   justify-content: space-between;
+}
+.inline-flex {
+  display: inline-flex;
 }
 .order-total-item.flex {
   margin-bottom: 15px;
@@ -1898,4 +1911,22 @@ span.t_red {
 }
 .coupon-summary.new-product-col2 span.acc-label {
   flex: 0 0 120px;
+}
+
+/* Cuenta */
+.settings-head {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+.my-account-container a.settings-head-item {
+  flex: 0 0 50%;
+}
+a.settings-head-item:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

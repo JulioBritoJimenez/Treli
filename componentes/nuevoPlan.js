@@ -4,6 +4,11 @@ import { Tooltip } from 'antd';
 
 function NuevoPlan() {
 
+  const [masmonedas, setMasmonedas] = useState(false);
+  const masmonedasClic = () => {
+    setMasmonedas(!masmonedas);
+  };
+
   const [masopciones, setMasopciones] = useState(false);
   const masopcionesClic = () => {
     setMasopciones(!masopciones);
@@ -63,6 +68,16 @@ function NuevoPlan() {
         <label className="acc-label strong">Precio COP</label>
         <input className="subsprice" type="number" name="subsprice[]" placeholder="Precio" />
       </p>
+      <a className={`mas-opciones margin-bottom ${masmonedas ? "hidden": ""}` .trimEnd()} onClick={masmonedasClic}>+ Agregar más monedas</a>
+      <p className={`app-input currency-USD input hidden ${masmonedas ? "active": ""}` .trimEnd()}>
+        <select id="add_currencies_sel">
+					<option value="">Seleccionar moneda</option>
+					<option value="USD">USD - Dólar de los Estados Unidos</option>
+          <option value="PEN">PEN - SOL</option>
+          <option value="MXN">MXN - Peso mexicano</option>
+				</select>
+      </p>
+
       <table className="tabla-codigo input hidden">
         <tbody>
           <tr>
