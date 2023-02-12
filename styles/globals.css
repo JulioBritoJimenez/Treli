@@ -55,9 +55,8 @@ body * {
   line-height: 1.3rem;
   letter-spacing: 0.5px;
   font-size: var(--font-size-16px);
-  color: var(--azul-oscuro);
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, span {
   color: var(--azul-oscuro);
 }
 h2 {
@@ -1989,7 +1988,8 @@ p.current-period {
 }
 .plans-item h4 {
   font-size: var(--font-size-30px);
-  margin-bottom: 5px;
+  margin: 10px 0px 16px;
+  font-weight: 600;
 }
 span.plan-pricing_currency, span.plan-pricing_period {
   font-size: var(--font-size-18px);
@@ -1999,4 +1999,25 @@ span.plan-pricing_amount {
   font-size: var(--font-size-30px);
   font-weight: 600;
   margin: 0px 4px;
+}
+.plan-details {
+  text-align: left;
+  margin: 20px 0px 30px;
+  padding-top: 20px;
+  border-top: 1px solid;
+  border-color: var(--color-borde);
+}
+.plan-details-item {
+  display: flex;
+}
+.plan-details-item svg {
+  font-size: 24px;
+  margin-right: 4px;
+  color: var(--morado-oscuro);
+}
+.plan-details-item span {
+  padding-top: 4px;
+}
+.plan-pricing-transaction {
+  margin-top: 10px;
 }

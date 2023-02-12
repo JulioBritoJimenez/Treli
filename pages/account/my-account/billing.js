@@ -1,6 +1,6 @@
 import Layout from "../../../componentes/layout";
 import Link from 'next/link';
-import { BsCreditCard2Back, BsX } from "react-icons/bs";
+import { BsCreditCard2Back, BsX, BsCheck } from "react-icons/bs";
 import Image from "next/image";
 import VisaLogo from '../../../public/Visa-Logo.png';
 import { Modal } from 'antd';
@@ -117,8 +117,101 @@ function Billing() {
                         <span className="plan-pricing_period">/ mes</span>
                       </div>
                       <div className="plan-pricing-transaction">+ 3% por transacción</div>
+                      <div className="plan-details">
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Tienda en línea</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Página de pagos</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Suscripciones y pagos ilimitados</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Plataforma de gestión de suscripciones</span>
+                        </div>
+                      </div>
+                      <button className="plan-select botones boton-violeta" id="launch">Elegir plan</button>
                     </div>
-                  </div> 
+
+                    <div className="plans-item">
+                      <h4>Starter</h4>
+                      <p>Comience a explorar un negocio de ingresos recurrentes más avanzado</p>
+                      <div className="plan-pricing-price">
+                        <span className="plan-pricing_currency">USD</span>
+                        <span className="plan-pricing_amount">$79</span>
+                        <span className="plan-pricing_period">/ mes</span>
+                      </div>
+                      <div className="plan-pricing-transaction">hasta $8k/mes en transacciones<br /> + 1% en transacciones adicionales</div>
+                      <div className="plan-details">
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Todo lo del plan Launch incluido</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>APIs y Webhooks</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Validador de suscripciones QR</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Integración con software de facturación</span>
+                        </div>
+                      </div>
+                      <button className="plan-select botones boton-violeta" id="starter">Elegir plan</button>
+                    </div>
+
+                    <div className="plans-item">
+                      <h4>Rise</h4>
+                      <p>Todo lo que necesita para un negocio de ingresos recurrentes en crecimiento</p>
+                      <div className="plan-pricing-price">
+                        <span className="plan-pricing_currency">USD</span>
+                        <span className="plan-pricing_amount">$199</span>
+                        <span className="plan-pricing_period">/ mes</span>
+                      </div>
+                      <div className="plan-pricing-transaction">hasta $25k/mes en transacciones<br /> + 0.8% en transacciones adicionales</div>
+                      <div className="plan-details">
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Todo lo del plan Starter incluido</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Múltiples pasarelas de pago</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Reclamación inteligente</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Reclamación de pagos</span>
+                        </div>
+                      </div>
+                      <button className="plan-select botones boton-violeta" id="rise">Elegir plan</button>
+                    </div>
+
+                    <div className="plans-item">
+                      <h4>Scale</h4>
+                      <p>Funciones avanzadas para escalar tu negocio de ingresos recurrentes</p>
+                      <div className="plan-pricing-price">
+                        <span className="plan-pricing_currency">USD</span>
+                        <span className="plan-pricing_amount">$399</span>
+                        <span className="plan-pricing_period">/ mes</span>
+                      </div>
+                      <div className="plan-pricing-transaction">hasta $70k/mes en transacciones<br />+ 0.6% en transacciones adicionales</div>
+                      <div className="plan-details">
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Todo lo del plan Rise incluido</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Ejecutivo de cuenta dedicado</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Soporte técnico dedicado</span>
+                        </div>
+                        <div className="plan-details-item">
+                          <BsCheck /> <span>Almacenamiento de tarjetas tokenizadas para migraciones</span>
+                        </div>
+                      </div>
+                      <button className="plan-select botones boton-violeta" id="scale">Elegir actual</button>
+                    </div>
+                  </div>
                 </Modal>
               </div>
               <div className="order-box flex">
