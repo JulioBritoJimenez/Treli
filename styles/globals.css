@@ -1262,6 +1262,9 @@ span.order-qty {
   display: flex;
   justify-content: space-between;
 }
+.no-justify {
+  justify-content: normal;
+}
 .inline-flex {
   display: inline-flex;
 }
@@ -1671,12 +1674,13 @@ td.ant-table-cell.img-tabla {
 }
 .choose-type_subs h3 {
   margin: 14px 0px 20px;
+  color: var(--morado-oscuro);
 }
 .choose-type_subs p {
   margin-bottom: 0px;
   color: var(--morado-oscuro);
 }
-.choose-type_subs:hover p {
+.choose-type_subs:hover h3, .choose-type_subs:hover p {
   color: #fff;
 }
 .choose-type_subs svg {
@@ -1749,8 +1753,10 @@ a.mas-opciones svg.hidden.flex {
   font-size: 14px;
   cursor: pointer;
 }
-.ant-tooltip-inner {
+.ant-tooltip, .ant-tooltip-inner {
   min-width: 328px !important;
+}
+.ant-tooltip-inner {
   padding: 20px !important;
   border-radius: 10px !important;
   box-shadow: 0px 1px 3px 0px #d6d6e6 !important;
@@ -2020,4 +2026,63 @@ span.plan-pricing_amount {
 }
 .plan-pricing-transaction {
   margin-top: 10px;
+}
+
+/* Account - Cuenta */
+.dashboard-summary {
+  background-color: var(--violeta);
+  margin-bottom: 30px;
+  padding: 15px 15px 0px;
+  border-radius: 10px;
+  box-shadow: 0 1px 12px 0 rgb(0 0 30 / 10%), 0 2px 14px 0 rgb(0 0 30 / 10%);
+}
+.dashboard-summary-item {
+  background-color: var(--morado-oscuro);
+  flex: 1;
+  margin-left: 12px;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 100px;
+  flex-direction: column;
+  color: #fff;
+}
+.dashboard-summary-item:first-child {
+  margin-left: 0;
+}
+.summary-item_title.flex span {
+  color: #fff;
+  opacity: 0.8;
+}
+.summary-item_number {
+  font-size: var(--font-size-20px);
+  font-weight: 600;
+}
+.toggle-data {
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  padding-top: 4px;
+}
+.toggle-data svg {
+  font-size: 24px;
+}
+.toggle-data svg.up {
+  transform: rotate(180deg);
+}
+.dashboard-summary-col2 {
+  margin-top: 15px;
+}
+.dashboard-box {
+  width: calc(50% - 10px);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-empezar);
+  margin-bottom: 20px;
+}
+span.data-title {
+  margin-right: 9px;
+}
+span.data-dates {
+  margin-left: 5px;
 }
