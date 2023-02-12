@@ -1663,6 +1663,9 @@ label.input-radio input {
   flex: 0 0 35%;
   padding-right: 90px;
 }
+.settings-home-title h3 {
+  margin-bottom: 4px;
+}
 .settings-items {
   flex-grow: 1;
   background-color: white;
