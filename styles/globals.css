@@ -24,6 +24,8 @@
   --h2-font-size: 25px;
   --h2-font-weight: 600;
   --h2-letter-spacing: 0.5px;
+  --font-size-30px: 30px;
+  --font-size-28px: 28px;
   --font-size-20px: 20px;
   --font-size-18px: 18px;
   --font-size-16px: 16px;
@@ -53,8 +55,9 @@ body * {
   line-height: 1.3rem;
   letter-spacing: 0.5px;
   font-size: var(--font-size-16px);
+  color: var(--azul-oscuro);
 }
-h1, h2 {
+h1, h2, h3, h4 {
   color: var(--azul-oscuro);
 }
 h2 {
@@ -1202,6 +1205,9 @@ a.order-back:hover svg {
 .margin-bottom {
   margin-bottom: 25px;
 }
+.margin-bottom-15px {
+  margin-bottom: 15px;
+}
 .order-box, .plan-container {
   margin: 0 -25px 25px;
   padding: 0 25px 25px;
@@ -1259,6 +1265,9 @@ span.order-qty {
 }
 .inline-flex {
   display: inline-flex;
+}
+.flex-center {
+  align-items: center;
 }
 .order-total-item.flex {
   margin-bottom: 15px;
@@ -1383,7 +1392,7 @@ button.ant-modal-close:hover {
   display: block;
   font-weight: 500;
 }
-.ant-modal-content input, .ant-modal-content select {
+.ant-modal-content input, .ant-modal-content select, .formularios input, .formularios select {
   width: 100%;
   background-color: var(--input-bg);
   border: var(--input-border);
@@ -1929,4 +1938,65 @@ span.t_red {
 a.settings-head-item:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+/* Facturación */
+p.current-period {
+  margin-top: 4px;
+}
+.your-balance {
+  color: #0C6A14;
+  font-size: var(--font-size-28px);
+  padding-top: 6px;
+}
+.billing-balance svg {
+  color: var(--violeta);
+  font-size: 18px;
+  margin: 0px 4px -3px 0px;
+}
+.history-item {
+  margin-bottom: 15px;
+}
+.exp-wrapper {
+  flex: 0 0 116px;
+  justify-content: space-around;
+  position: relative;
+}
+.tcfieldssubs .exp-wrapper:after {
+  content: '/';
+  position: absolute;
+  margin-left: -4px;
+  color: var(--placeholder-color);
+  top: 11px;
+  left: 57px;
+  font-size: 22px;
+}
+.plans-container {
+  margin: -10px -10px 0px;
+}
+.plans-item {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid;
+  border-color: var(--color-borde);
+  margin: 10px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 312px;
+  justify-content: space-around;
+}
+.plans-item h4 {
+  font-size: var(--font-size-30px);
+  margin-bottom: 5px;
+}
+span.plan-pricing_currency, span.plan-pricing_period {
+  font-size: var(--font-size-18px);
+  opacity: 0.6;
+}
+span.plan-pricing_amount {
+  font-size: var(--font-size-30px);
+  font-weight: 600;
+  margin: 0px 4px;
 }
