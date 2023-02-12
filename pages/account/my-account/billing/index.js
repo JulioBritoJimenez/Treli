@@ -1,8 +1,8 @@
-import Layout from "../../../componentes/layout";
+import Layout from "../../../../componentes/layout";
 import Link from 'next/link';
 import { BsCreditCard2Back, BsX, BsCheck } from "react-icons/bs";
 import Image from "next/image";
-import VisaLogo from '../../../public/Visa-Logo.png';
+import VisaLogo from '../../../../public/Visa-Logo.png';
 import { Modal } from 'antd';
 import { useState } from 'react';
 

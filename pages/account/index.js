@@ -30,6 +30,16 @@ function Account() {
 
   const pagosTotales = <div><span>Pagos totales</span> Valor total de los pagos recibidos durante el período.</div>;
 
+  const nuevosPagos = <div><span>Nuevos pagos</span> Valor total de los primeros pagos recurrentes generados durante el período.</div>;
+
+  const suscripcionesActivasGrafica = <div><span>Número de suscripciones activas</span> Número total de suscripciones activas durante el período.</div>;
+
+  const activaciones = <div><span>Número de activaciones</span> Número total de suscripciones activadas durante el período.</div>;
+
+  const mrrGrafica = <div><span>Ingresos recurrentes mensuales totales</span> Ingresos recurrentes mensuales totales obtenidos de las suscripciones durante el período.</div>;
+
+  const arrGrafica = <div><span>Total ingreso anual recurrente</span> Ingresos recurrentes anuales totales obtenidos de las suscripciones durante el período.</div>;
+
   return (
     <>
       <Layout>
@@ -153,7 +163,7 @@ function Account() {
           </div>
         </div>
 
-        <div className="dashboard-first-row">
+        <div className="dashboard-first-row flex">
           <div className="dashboard-box dashboard-data dashboard-left">
             <div className="flex no-justify">
               <span className="data-title strong">Pagos totales (USD)</span>
@@ -165,6 +175,81 @@ function Account() {
             </div>
             <div className="flex no-justify">
               <span className="all_payments_data-totals data-totals strong">$182</span>
+              <span className="data-dates">Ene 12 - Feb 12</span>
+            </div>
+          </div>
+
+          <div className="dashboard-box dashboard-data dashboard-right">
+            <div className="flex no-justify">
+              <span className="data-title strong">Nuevos pagos (USD)</span>
+              <div className="summary-help">
+                <Tooltip title={nuevosPagos} trigger="click" placement="bottom" color="#fff">
+                  <BsInfoCircleFill className="pointer" />
+                </Tooltip>
+              </div>
+            </div>
+            <div className="flex no-justify">
+              <span className="all_payments_data-totals data-totals strong">$0</span>
+              <span className="data-dates">Ene 12 - Feb 12</span>
+            </div>
+          </div>
+
+          <div className="dashboard-box dashboard-data dashboard-left">
+            <div className="flex no-justify">
+              <span className="data-title strong">Suscripciones activas</span>
+              <div className="summary-help">
+                <Tooltip title={suscripcionesActivasGrafica} trigger="click" placement="bottom" color="#fff">
+                  <BsInfoCircleFill className="pointer" />
+                </Tooltip>
+              </div>
+            </div>
+            <div className="flex no-justify">
+              <span className="all_payments_data-totals data-totals strong">0</span>
+              <span className="data-dates">Ene 12 - Feb 12</span>
+            </div>
+          </div>
+
+          <div className="dashboard-box dashboard-data dashboard-right">
+            <div className="flex no-justify">
+              <span className="data-title strong">Activaciones</span>
+              <div className="summary-help">
+                <Tooltip title={activaciones} trigger="click" placement="bottom" color="#fff">
+                  <BsInfoCircleFill className="pointer" />
+                </Tooltip>
+              </div>
+            </div>
+            <div className="flex no-justify">
+              <span className="all_payments_data-totals data-totals strong">0</span>
+              <span className="data-dates">Ene 12 - Feb 12</span>
+            </div>
+          </div>
+
+          <div className="dashboard-box dashboard-data dashboard-left">
+            <div className="flex no-justify">
+              <span className="data-title strong">MRR Total (USD)</span>
+              <div className="summary-help">
+                <Tooltip title={mrrGrafica} trigger="click" placement="bottom" color="#fff">
+                  <BsInfoCircleFill className="pointer" />
+                </Tooltip>
+              </div>
+            </div>
+            <div className="flex no-justify">
+              <span className="all_payments_data-totals data-totals strong">$0</span>
+              <span className="data-dates">Ene 12 - Feb 12</span>
+            </div>
+          </div>
+
+          <div className="dashboard-box dashboard-data dashboard-right">
+            <div className="flex no-justify">
+              <span className="data-title strong">ARR Total (USD)</span>
+              <div className="summary-help">
+                <Tooltip title={arrGrafica} trigger="click" placement="bottom" color="#fff">
+                  <BsInfoCircleFill className="pointer" />
+                </Tooltip>
+              </div>
+            </div>
+            <div className="flex no-justify">
+              <span className="all_payments_data-totals data-totals strong">$0</span>
               <span className="data-dates">Ene 12 - Feb 12</span>
             </div>
           </div>

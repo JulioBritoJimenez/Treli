@@ -4,7 +4,7 @@ import Suscriptionitem from "../../../componentes/suscriptionItem";
 import Paginacion from "../../../componentes/paginacion";
 import { useState } from 'react';
 import { Checkbox,Table } from 'antd';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 const columns = [
   {

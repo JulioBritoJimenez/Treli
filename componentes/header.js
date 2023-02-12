@@ -19,6 +19,13 @@ export default function Header() {
         </Link>
       </div>
       <div className="macc-header-col2">
+        <div className='app-input test_mode'>
+          <span>Modo Test</span>
+          <label className='switch'>
+            <input type="checkbox" id="super_test_mode" name="super_test_mode" value="1" />
+            <span className='slider round'></span>
+          </label>
+        </div>
         <div className='macc-head_home macc-head_item'>
           <a className='new_head' href='https://treli.co/new' target='_blank'>NEW</a>
         </div>
