@@ -26,6 +26,7 @@
   --h2-letter-spacing: 0.5px;
   --font-size-30px: 30px;
   --font-size-28px: 28px;
+  --font-size-22px: 22px;
   --font-size-20px: 20px;
   --font-size-18px: 18px;
   --font-size-16px: 16px;
@@ -1674,6 +1675,44 @@ label.input-radio input {
 }
 span.settings-item-go {
   display: flex;
+}
+.settings-container .order-head-paid {
+  margin: 0px 0px 25px;
+}
+.save-footer {
+  display: flex;
+  box-shadow: 0px 1px 3px 0px #d6d6e6;
+  min-height: 55px;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: -100%;
+  transition: 0.3s;
+  background-color: #9E8DFF;
+  color: white;
+}
+.save-footer.show-footer {
+  top: 0;
+}
+.unsaved {
+  flex-grow: 1;
+  color: #fff;
+  font-size: var(--font-size-22px) !important;
+}
+.discard a {
+  background-color: #FAFAFA;
+  color: var(--gris-oscuro);
+  border: 1px solid var(--gris-oscuro);
+  margin-right: 40px;
+}
+.discard a:hover {
+  background-color: var(--boton-gris-bg);
+}
+.add-product a, .save-changes a {
+  padding: 0px 180px;
 }
 
 /* Planes */
