@@ -57,7 +57,7 @@ body * {
   letter-spacing: 0.5px;
   font-size: var(--font-size-16px);
 }
-h1, h2, h3, h4, span {
+h1, h2, h3, h4, span, label {
   color: var(--azul-oscuro);
 }
 h2 {
@@ -121,6 +121,13 @@ span.small {
   border: none;
   color: #fff !important;
 }
+.ant-btn span {
+  color: #fff;
+}
+.ant-btn.boton-gris span {
+  color: var(--gris-oscuro);
+}
+
 .boton-violeta:hover, .ant-btn:hover {
   background-color: var(--azul-oscuro) !important;
 }
@@ -191,6 +198,15 @@ span.small {
 .eliminar-btn:hover {
   background-color: #b50000;
   border-color: #b50000;
+}
+.boton-gris {
+  background-color: var(--gris-bg-claro);
+  border: 1px solid var(--gris-oscuro);
+  color: var(--gris-oscuro);
+}
+.boton-gris:hover {
+  background-color: var(--boton-gris-bg) !important;
+  border: 1px solid var(--gris-oscuro) !important;
 }
 
 /* Layout */
@@ -738,10 +754,8 @@ span.steps-completed, .steps-remaining {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-decoration: underline;
 }
 .get-started_step .check-container {
-  text-decoration: none;
   display: flex;
   font-size: 14px;
 }
@@ -767,13 +781,16 @@ span.check-container-text_title {
 }
 .checkmark {
   position: absolute;
-  top: -1px;
+  top: -2px;
   left: 0;
   height: 20px;
   width: 20px;
   background-color: white;
   border: 1px solid #808080;
   border-radius: 5px;
+}
+.ant-modal-body .checkmark {
+  top: -4px;
 }
 .check-container input:checked ~ .checkmark {
   background-color: var(--morado-oscuro);
@@ -1703,7 +1720,7 @@ span.settings-item-go {
   font-size: var(--font-size-22px) !important;
 }
 .discard a {
-  background-color: #FAFAFA;
+  background-color: var(--gris-bg-claro);
   color: var(--gris-oscuro);
   border: 1px solid var(--gris-oscuro);
   margin-right: 40px;
@@ -1714,6 +1731,7 @@ span.settings-item-go {
 .add-product a, .save-changes a {
   padding: 0px 180px;
 }
+
 
 /* Planes */
 .planes .status-filter div, .addons .status-filter div, .productos .status-filter div {
@@ -1836,7 +1854,6 @@ a.mas-opciones svg.hidden.flex {
 }
 .additional_options_cont label {
   text-decoration: none;
-  font-size: initial;
   display: flex;
   align-items: center;
 }
