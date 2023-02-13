@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { BsArrowLeftShort } from "react-icons/bs";
 import Image from "next/image";
 import LogoePayco from '../../../../public/epayco.png';
-import LogoWompi from '../../../../public/Wompi.png';
+import LogoWompi from '../../../../public/wompi-logo.png';
 import LogoPayu from '../../../../public/payu-logo.svg';
 import LogoStripe from '../../../../public/stripe.png';
 import LogoPlacetopay from '../../../../public/placetopay.svg';
