@@ -374,10 +374,9 @@ input:checked + .slider:before {
 .sidebar_top-row_items a {
   display: flex;
   align-items: center;
-  color: var(--azul-oscuro);
   text-decoration: none;
 }
-.sidebar_top-row_items a:hover {
+.sidebar_top-row_items a:hover span {
   color: var(--violeta);
 }
 .sidebar_top-row_items img {
@@ -1277,7 +1276,10 @@ a.order-back:hover svg {
   margin-bottom: 25px;
 }
 .margin-bottom-15px {
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
+}
+.space-r {
+  margin-right: 15px;
 }
 .order-box, .plan-container {
   margin: 0 -25px 25px;
@@ -1693,7 +1695,7 @@ label.input-radio input {
 span.settings-item-go {
   display: flex;
 }
-.settings-container .order-head-paid {
+.settings-container .order-head-paid, .account-appe-container .order-head-paid {
   margin: 0px 0px 25px;
 }
 .save-footer {
@@ -1730,6 +1732,12 @@ span.settings-item-go {
 }
 .add-product a, .save-changes a {
   padding: 0px 180px;
+}
+.label-flex1 span.acc-label {
+  flex-grow: 1 !important;
+}
+input#substimeframe {
+  flex: 1 !important;
 }
 
 
@@ -2210,4 +2218,58 @@ span.data-title {
 }
 span.data-dates {
   margin-left: 5px;
+}
+
+/* Configuración de pago */
+.noti-management .settings-home-title {
+  order: 2;
+}
+.flex.provider-image-text {
+  align-items: center;
+  position: relative;
+  justify-content: start;
+}
+.provider-image {
+  width: 55px;
+}
+.order-box-container.active-providers h3.semi {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+.provider-status {
+  display: flex;
+  margin-right: 20px;
+}
+span.status-circle {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: -2px 7px 0px 8px;
+  border-radius: 100%;
+}
+span.status-circle.active {
+  background-color: #17CF26;
+}
+span.status-circle.inactive {
+  background-color: red;
+}
+.payment-gateways img {
+  display: block;
+  width: 100px;
+  margin: auto;
+  max-height: 30px;
+  object-fit: contain;
+}
+.payment-gateways .flex-no-space.list-item a, .payment-gateways .flex-no-space.list-item div {
+  width: 20%;
+}
+.g-rates {
+  text-align: center;
+}
+.gmanage {
+  text-align: right;
+}
+.payment-gateways .provider-status {
+  justify-content: center;
+  margin: 0;
 }
