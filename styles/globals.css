@@ -70,6 +70,9 @@ h3, .ant-modal-title {
   font-size: var(--font-size-20px) !important;
   font-weight: 500 !important;
 }
+h4 {
+  font-weight: 500 !important;
+}
 p {
   margin-bottom: 1.5em;
   margin-top: 0px;
@@ -2481,4 +2484,17 @@ span.globito-text {
 }
 .globito-cont:hover .globito-text {
   visibility: visible;
+}
+
+/* Integraciones */
+.label-text-admin .strong {
+  flex: 0 0 140px;
+  margin-right: 40px;
+}
+.label-text-admin .flex .text {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+.usefull-links {
+  margin-top: 40px;
 }
