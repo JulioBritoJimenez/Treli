@@ -25,7 +25,7 @@ function PlantillasPago() {
     <>
       <Layout>
         <div className="account-appe-container payments-container">
-         <div className="order-head-paid">
+          <div className="order-head-paid">
             <Link href="/account/settings/payment-settings/" className="order-back"><BsArrowLeftShort /></Link>
             <h2>Plantillas de pago</h2>
           </div>
@@ -39,7 +39,7 @@ function PlantillasPago() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label">Activar plantillas de pago</span>
                     <label className="switch space-r">
-                      <input type="checkbox" id="pse" name="pse" value="1" onClick={showClic} />
+                      <input type="checkbox" id="active" name="active" value="1" onClick={showClic} />
                       <span className="slider round"></span>
                     </label>
                   </p>
@@ -47,7 +47,7 @@ function PlantillasPago() {
               </div>
 
               <div className={`order-box-container margin-bottom hidden ${show ? "active": ""}` .trimEnd()}>
-                <div className="order-box settings-box">
+                <div className="settings-box">
                   <p className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Nombre de la plantilla</span><br />
@@ -59,7 +59,7 @@ function PlantillasPago() {
                   </p>
                 </div>
 
-                <div className="order-box settings-box">
+                <div className="settings-box">
                   <div className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Fecha de vencimiento del pago</span><br />
