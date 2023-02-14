@@ -39,6 +39,7 @@
   --boton-padding: 2px 18px 0px;
   --boton-gris-bg: #EDEDED;
   --shadow-empezar: 0 1px 2px 0 rgb(0 0 20 / 8%), 0 2px 4px 0 rgb(0 0 20 / 8%);
+  --sombra-fuerte: 0 0 2px 0 rgb(0 0 30 / 10%), 0 4px 8px 0 rgb(0 0 30 / 10%), 0 8px 16px 0 rgb(0 0 30 / 10%);
 }
 
 * {
@@ -1289,7 +1290,7 @@ a.order-back:hover svg {
   padding: 0 25px 25px;
   border-bottom: 1px solid var(--color-borde);
 }
-.order-box:last-child {
+.order-box:last-child, .user-currencies .order-box:last-child {
   border: none;
   padding-bottom: 0;
   margin-bottom: 0;
@@ -2299,10 +2300,10 @@ p.app-input.hidden.active {
   margin-bottom: 20px;
   font-size: var(--font-size-22px) !important;
 }
-.desactivarPasarela .ant-modal-footer {
+.desactivarPasarela .ant-modal-footer, .desactivarPlantilla .ant-modal-footer {
   justify-content: center !important;
 }
-.desactivarPasarela button.ant-modal-close {
+.desactivarPasarela button.ant-modal-close, .desactivarPlantilla button.ant-modal-close {
   display: none;
 }
 span.routing-if {
@@ -2311,4 +2312,60 @@ span.routing-if {
 }
 span.routing-use {
   margin-right: 20px;
+}
+a.link.edit-schedule-template {
+  margin-right: 10px;
+}
+.desactivarPlantilla svg {
+  color: #f8bb86;
+}
+.settings-box .acc-label {
+  margin-right: 55px;
+}
+.weight-normal {
+  font-weight: 400;
+}
+.settings-box .app-input {
+  align-items: unset;
+}
+.user-currencies .order-box {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.s_p_container {
+  position: relative;
+}
+.s_p_value span {
+  color: var(--morado-oscuro);
+  font-weight: 500;
+}
+.s_p_value svg {
+  margin: 0px 0px -4px 5px;
+  color: var(--morado-oscuro);
+}
+.s_p_edit {
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  padding: 15px 10px;
+  box-shadow: var(--sombra-fuerte);
+  border-radius: 8px;
+  right: 0;
+  z-index: 1;
+}
+.s_p_edit span.semi-text {
+  font-size: var(--font-size-15px);
+  margin-bottom: 8px;
+  display: block;
+}
+.input-container {
+  display: flex;
+}
+.input-container_two input:first-child, .input-container_two select:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-container_two input:last-child, .input-container_two select:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
