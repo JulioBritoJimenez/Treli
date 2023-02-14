@@ -395,8 +395,10 @@ input:checked + .slider:before {
   margin: 0 -20px;
 }
 a.active-head {
-  color: var(--morado-oscuro);
   border-right: 3px solid var(--morado-oscuro);
+}
+a.active-head span {
+  color: var(--morado-oscuro);
 }
 .toggle-submenu {
   margin-bottom: 15px;
@@ -1981,6 +1983,9 @@ span.radio-buttons-container label.check-container {
   text-decoration: none;
   margin-bottom: 15px;
 }
+span.radio-buttons-container label.check-container:last-child {
+  margin-bottom: 0px;
+}
 .h3-borde.margin-bottom {
   margin-bottom: 24px !important;
   padding-bottom: 16px;
@@ -2406,4 +2411,74 @@ input#factura_expiration_custom {
   min-height: 195px;
   max-width: 400px;
   margin: auto;
+}
+
+/* Envíos */
+.shipping-head {
+  display: flex;
+  align-items: center;
+}
+.shipping-head a {
+  margin-left: 30px
+}
+.shipping-zones-table {
+  background-color: white;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.zone-table-row, .zone-table-head {
+  display: flex;
+  padding: 0 30px;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.zone-head-item {
+  padding: 15px;
+}
+.zone-head-item.table-zone-name {
+  flex: 0 0 20%;
+}
+.zone-head-item.table-zone-region {
+  flex: 0 0 40%;
+}
+.zone-head-item.table-zone-method, .zone-head-item.table-zone-price, .zone-head-item.table-zone-active {
+  flex: 0 0 13.33333%;
+}
+.zone-table-row:nth-child(even) {
+  background-color: var(--gris-bg-claro);
+}
+.settings-head {
+  box-sizing: border-box;
+  text-align: center;
+}
+a.settings-head-item {
+  flex: 0 0 16.6666667%;
+}
+.shipping-zone-container span.globito {
+  position: absolute;
+  top: 8px;
+  left: 70px;
+}
+.shipping-zone-container span.globito svg {
+  font-size: 18px;
+}
+span.globito-text {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  left: 50%;
+  text-align: center;
+  top: -100px;
+  transform: translate(-50%, 0);
+  border-radius: 8px;
+  box-shadow: var(--shadow-empezar);
+  padding: 10px;
+}
+.shipping-zone-container .globito-text {
+  top: -35px;
+}
+.globito-cont:hover .globito-text {
+  visibility: visible;
 }
