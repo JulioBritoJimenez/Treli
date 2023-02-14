@@ -70,7 +70,7 @@ function Epayco() {
                   <span className="strong">2.</span> <Link href="https://dashboard.epayco.com/login" target="_blanck" className="texto-link">Inicia sesión en tu cuenta de ePayco</Link>
                 </p>
                 <p className="margin-bottom-15px">
-                  <span className="strong">3.</span> Haz click en la pestaña &quot;Integraciones&quot;, luego en "Llaves API" y abre la pestaña "Llaves secretas".
+                  <span className="strong">3.</span> Haz click en la pestaña &quot;Integraciones&quot;, luego en &quot;Llaves API&quot; y abre la pestaña &quot;Llaves secretas&quot;.
                 </p>
                 <p className="margin-bottom-15px">
                   <span className="strong">4.</span> Copia y pega los valores de &quot;Public Key&quot; y &quot;Private Key&quot;.

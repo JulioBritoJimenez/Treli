@@ -85,13 +85,13 @@ function PayuCo() {
                   <span className="strong">2.</span> <Link href="https://merchants.payulatam.com/login/auth" target="_blanck" className="texto-link">Inicia sesión en tu cuenta de PayU</Link>
                 </p>
                 <p className="margin-bottom-15px">
-                  <span className="strong">3.</span> Haz clic en "configuración" en la esquina superior derecha y haz clic en "Configuración técnica".
+                  <span className="strong">3.</span> Haz clic en &quot;configuración&quot; en la esquina superior derecha y haz clic en &quot;Configuración técnica&quot;.
                 </p>
                 <p className="margin-bottom-15px">
-                  <span className="strong">4.</span> Copia y pega el "API key" y "API login" ubicados en la barra lateral derecha.
+                  <span className="strong">4.</span> Copia y pega el &quot;API key&quot; y &quot;API login&quot; ubicados en la barra lateral derecha.
                 </p>
                 <p className="margin-bottom-15px">
-                  <span className="strong">5.</span> Copia y pega el "Merchant ID" y "Cuenta ID" ubicados en la barra lateral izquierda.
+                  <span className="strong">5.</span> Copia y pega el &quot;Merchant ID&quot; y &quot;Cuenta ID&quot; ubicados en la barra lateral izquierda.
                 </p>
                 <p>
                   Para obtener instrucciones más detalladas, sigue esta <Link href="https://treli.readme.io/docs/pay-u" target="_blanck" className="texto-link">guía</Link>.
