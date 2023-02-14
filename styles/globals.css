@@ -113,7 +113,7 @@ span.small {
   border-radius: var(--boton-radius);
   font-weight: var(--boton-font-weight);
   font-size: var(--boton-font-size);
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
 }
@@ -1285,6 +1285,9 @@ a.order-back:hover svg {
 .space-r {
   margin-right: 15px;
 }
+.space-l {
+  margin-left: 15px;
+}
 .order-box, .plan-container {
   margin: 0 -25px 25px;
   padding: 0 25px 25px;
@@ -2391,4 +2394,16 @@ input#factura_expiration_custom {
   margin-bottom: 10px;
   position: relative;
   justify-content: start;
+}
+
+/* Monedas */
+.no-multi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 195px;
+  max-width: 400px;
+  margin: auto;
 }
