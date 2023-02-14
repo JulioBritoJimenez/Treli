@@ -2305,3 +2305,10 @@ p.app-input.hidden.active {
 .desactivarPasarela button.ant-modal-close {
   display: none;
 }
+span.routing-if {
+  margin-right: 20px;
+  min-width: 64px;
+}
+span.routing-use {
+  margin-right: 20px;
+}
