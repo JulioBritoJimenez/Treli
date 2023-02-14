@@ -121,10 +121,10 @@ function Wompi() {
                   <span className="strong">2.</span> <Link href="https://comercios.wompi.co/login" target="_blanck" className="texto-link">Inicia sesión en tu cuenta de Wompi</Link>
                 </p>
                 <p className="margin-bottom-15px">
-                  <span className="strong">3.</span> Haz click en la pestaña "desarrolladores".
+                  <span className="strong">3.</span> Haz click en la pestaña &quot;desarrolladores&quot;.
                 </p>
                 <p className="margin-bottom-15px">
-                  <span className="strong">4.</span> Copia y pega los valores de "Llave Publica" y "Llave Privada".
+                  <span className="strong">4.</span> Copia y pega los valores de &quot;Llave Publica&quot; y &quot;Llave Privada&quot;.
                 </p>
                 <p>
                   Para obtener instrucciones más detalladas, sigue esta <Link href="https://treli.readme.io/docs/wompi" target="_blanck" className="texto-link">guía</Link>.
