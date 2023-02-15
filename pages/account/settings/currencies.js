@@ -20,7 +20,7 @@ function Monedas() {
       <Layout>
         <div className="account-appe-container settings-container">
           <div className="order-head-paid">
-            <Link href="/account/settings/invoices/" className="order-back"><BsArrowLeftShort /></Link>
+            <Link href="/account/settings/" className="order-back"><BsArrowLeftShort /></Link>
             <h2>Monedas</h2>
           </div>
           <GuardarCambios />

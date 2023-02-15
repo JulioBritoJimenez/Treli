@@ -2565,4 +2565,5 @@ select#phonecountry, select#wacountry {
 }
 span.acc-label-sub {
   display: block;
+  padding-right: 20px;
 }
