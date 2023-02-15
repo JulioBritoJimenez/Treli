@@ -2586,3 +2586,13 @@ span.acc-label-sub {
   border-bottom-left-radius: 0 !important;
   margin: 0px !important;
 }
+
+/* Api */
+.api-keys div {
+  flex: 0 0 49%;
+}
+.toggle-password {
+  position: absolute;
+  top: 11px;
+  right: 18px;
+}
