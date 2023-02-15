@@ -131,7 +131,6 @@ span.small {
 .ant-btn.boton-gris span {
   color: var(--gris-oscuro);
 }
-
 .boton-violeta:hover, .ant-btn:hover {
   background-color: var(--azul-oscuro) !important;
 }
@@ -1280,6 +1279,9 @@ a.order-back:hover svg {
 }
 .margin-bottom {
   margin-bottom: 25px !important;
+}
+.margin-bottom-30px {
+  margin-bottom: 30px !important;
 }
 .margin-bottom-20px {
   margin-bottom: 20px !important;
@@ -2500,4 +2502,55 @@ span.globito-text {
 }
 .usefull-links {
   margin-top: 40px;
+}
+
+/* Estilos de marca */
+span.label-desc {
+  display: block;
+  color: var(--gris-oscuro);
+}
+.business-logo-show {
+  flex: 0 0 120px;
+  background-color: white;
+  border-radius: 50%;
+}
+.business-logo-show img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid var(--color-borde);
+  object-fit: cover;
+}
+p.image-choose {
+  margin: 0;
+  flex-grow: 1;
+  padding-left: 40px;
+  flex-wrap: wrap;
+}
+label.choose-image {
+  margin: 0px 10px 10px 0px;
+}
+input#colorpicker {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0;
+}
+input#hexcolor {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+select#wacountry, select#phonecountry {
+  flex-grow: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+input#buwha, input#buphone {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+select#phonecountry, select#wacountry {
+  width: auto;
+}
+.align-right {
+  text-align: right;
 }
