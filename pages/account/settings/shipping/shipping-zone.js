@@ -57,11 +57,11 @@ function ZonaEnvio() {
                   <div className="app-input zone_method">
                     <span className="acc-label">Método</span>
                     <span className="radio-buttons-container">
-                      <label className="check-container strong">Costo fijo
+                      <label className="check-container">Costo fijo
                         <input type="radio" className="zone-method" id="fixed" name="zone_method" value="fixed" />
                         <span className="checkmark"></span>
                       </label>
-                      <label className="check-container strong">Envío gratis
+                      <label className="check-container">Envío gratis
                         <input type="radio" className="zone-method" id="free" name="zone_method" value="free" />
                         <span className="checkmark"></span>
                       </label>
@@ -81,12 +81,15 @@ function ZonaEnvio() {
               <div className="order-box-container">
                 <h3 className="margin-bottom">Estado</h3>
                 <p className="app-input zone-active-status input">
-                  <span className="acc-label">Estado</span>
+                  <span className="acc-label flex no-justify">Estado
+                    <span className="status-circle active"></span>
+                  </span>
                   <select name="zone_active" id="zone_active">
                     <option value="active">Activo</option>
                     <option value="inactive">Inactivo</option>
                   </select>
                 </p>
+                <div className="remove-zone delete-style texto-link"><a>Eliminar zona de envío</a></div>
               </div>
             </div>
           </div>

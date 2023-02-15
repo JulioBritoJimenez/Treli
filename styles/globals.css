@@ -2485,6 +2485,9 @@ span.globito-text {
 .globito-cont:hover .globito-text {
   visibility: visible;
 }
+.delete-style {
+  text-align: right;
+}
 
 /* Integraciones */
 .label-text-admin .strong {
