@@ -33,7 +33,7 @@ function PortalAutoservicio() {
                 <h3 className="margin-bottom">URL de retorno</h3>
                 <div className="order-box">
                   <div className="input">
-                    <div className="margin-bottom-10px">Ingresa la URL en la que vas a integrar el portal de autoservicio. Esto es útil para los botones `&quot;`ver mi cuenta`&quot;` en los correos electrónicos y página de pago para que sus clientes regresen a tu sitio web.</div>
+                    <div className="margin-bottom-10px">Ingresa la URL en la que vas a integrar el portal de autoservicio. Esto es útil para los botones &quot;ver mi cuenta&quot; en los correos electrónicos y página de pago para que sus clientes regresen a tu sitio web.</div>
                     <div className="flex">
                       <span className="treli-place">https://</span> 
                       <input className="radius-left0" type="text" id="call_back" name="call_back" placeholder="URL de retorno" />
@@ -63,7 +63,7 @@ function PortalAutoservicio() {
                   <div>Copia y pega el código en el encabezado HTML de tu sitio web/aplicación. Necesitas hacer esto solo una vez.</div>
                   <div className="url-code-box-container">
                     <div className="url-code-box">
-                      <span className="t_blue">&lt;script <span><span className="t_red">src</span><span className="t_blue">=</span><span className="t_blue">`&quot;`https://treli.co/js/v1/treli.js`&quot;`</span></span><span> <span className="t_red">data-treli-user</span><span className="t_blue">=</span><span className="t_blue">`&quot;`demo`&quot;`</span></span>&gt;&lt;/script&gt;</span>
+                      <span className="t_blue">&lt;script <span><span className="t_red">src</span><span className="t_blue">=</span><span className="t_blue">&quot;https://treli.co/js/v1/treli.js&quot;</span></span><span> <span className="t_red">data-treli-user</span><span className="t_blue">=</span><span className="t_blue">&quot;demo&quot;</span></span>&gt;&lt;/script&gt;</span>
                     </div>
                     <div className="copy-code botones boton-violeta button-full pointer">Copiar</div>
                   </div>
@@ -74,7 +74,7 @@ function PortalAutoservicio() {
                   <div>Utiliza este código para que tus clientes accedan al portal de autoservicio de Treli desde tu sitio web/aplicación.</div>
                   <div className="url-code-box-container">
                     <div className="url-code-box">
-                      <span className="t_blue">&lt;a <span><span className="t_red">href</span><span className="t_blue">=</span><span className="t_blue">`&quot;`javascript:void(0)`&quot;`</span></span><span> <span className="t_red">data-t-type</span><span className="t_blue">=</span><span className="t_blue">`&quot;`account`&quot;`</span></span>&gt;Gestionar cuenta&lt;/a&gt;</span>
+                      <span className="t_blue">&lt;a <span><span className="t_red">href</span><span className="t_blue">=</span><span className="t_blue">&quot;javascript:void(0)&quot;</span></span><span> <span className="t_red">data-t-type</span><span className="t_blue">=</span><span className="t_blue">&quot;account&quot;</span></span>&gt;Gestionar cuenta&lt;/a&gt;</span>
                     </div>
                     <div className="copy-code botones boton-violeta button-full pointer">Copiar</div>
                   </div>
