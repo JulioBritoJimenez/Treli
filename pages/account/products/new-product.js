@@ -70,9 +70,9 @@ function NuevoProducto() {
                     </p>
                     <div className="url-code-box-container">
                       <div className="url-code-box">
-                        <span className="t_blue">https://treli.co/payment-page/?<span className="t_red">username</span>=demo&<span className="t_red">product_id</span>=29038&<span className="t_red">quantity</span>=<span className="ch-link-qty">1</span>&<span className="t_red">currency</span>=<span className="checkout-plan-currency">COP</span></span>
+                        <span className="t_blue">https://treli.co/payment-page/?<span className="t_red">username</span>=demo&<span className="t_red">product_id</span>=29038&<span className="t_red">quantity</span>=<span className="ch-link-qty t_blue">1</span>&<span className="t_red">currency</span>=<span className="checkout-plan-currency t_blue">COP</span></span>
                       </div>
-                      <div className="copy-code botones boton-violeta pointer">Copiar</div>
+                      <div className="copy-code botones boton-violeta button-full pointer">Copiar</div>
                     </div>
                   </Modal>
                 </div>

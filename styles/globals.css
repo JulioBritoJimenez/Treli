@@ -164,6 +164,7 @@ span.small {
 }
 .btn100 {
   width: 100%;
+  text-align: center;
 }
 .order-action {
   margin-left: 20px;
@@ -2031,6 +2032,8 @@ span.planinfo-label {
   padding: var(--input-padding);
   margin-top: 10px;
   font-size: var(--input-font-size);
+  min-height: 30px;
+  line-height: 26px;
 }
 .url-code-box-container span.t_blue {
   color: #00f;
@@ -2574,4 +2577,12 @@ span.acc-label-sub {
 /* Página de pago - Checkout */
 .self-serve-portal .new-product-col1 {
   flex: 0 0 50%;
+}
+.width50 {
+  width: 50% !important;
+}
+.radius-left0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  margin: 0px !important;
 }

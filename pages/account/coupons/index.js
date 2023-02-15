@@ -81,7 +81,7 @@ function Coupons() {
               <h2>Cupones</h2>
             </div>
             <div className="plist-head-titlecol1">
-              <Link className="botones boton-violeta" href="/account/coupons/coupon">Agregar cupón</Link>
+              <Link className="botones boton-violeta button-full" href="/account/coupons/coupon">Agregar cupón</Link>
             </div>
           </div>
 

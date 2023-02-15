@@ -97,7 +97,7 @@ function Addons() {
               <h2>Addons</h2>
             </div>
             <div className="plist-head-titlecol1">
-              <Link className="botones boton-violeta" href="/account/addons/create">Agregar addon</Link>
+              <Link className="botones boton-violeta button-full" href="/account/addons/create">Agregar addon</Link>
             </div>
           </div>
 

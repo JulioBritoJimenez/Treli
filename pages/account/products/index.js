@@ -119,7 +119,7 @@ function Products() {
               <h2>Planes</h2>
             </div>
             <div className="plist-head-titlecol1">
-              <Link className="botones boton-violeta" href="/account/products/add-product/">Agregar plan</Link>
+              <Link className="botones boton-violeta button-full" href="/account/products/add-product/">Agregar plan</Link>
             </div>
           </div>
 
