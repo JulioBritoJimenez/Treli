@@ -2554,3 +2554,15 @@ select#phonecountry, select#wacountry {
 .align-right {
   text-align: right;
 }
+
+/* Notificaciones */
+.settings-emails p.app-input {
+  align-items: start;
+}
+.settings-emails span.acc-label {
+  flex: 0 0 30%;
+  max-width: 300px;
+}
+span.acc-label-sub {
+  display: block;
+}
