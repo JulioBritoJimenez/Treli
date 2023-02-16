@@ -25,7 +25,7 @@ function Checkout() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label weight-normal">Permitir a tus clientes agregar / quitar cupones</span>
                     <label className="switch space-r">
-                        <input type="checkbox" id="coupons" name="coupons" value="1" />
+                      <input type="checkbox" id="coupons" name="coupons" value="1" />
                       <span className="slider round"></span>
                     </label>
                   </p>
@@ -35,7 +35,7 @@ function Checkout() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label weight-normal">Solicitar información de la empresa</span>
                     <label className="switch space-r">
-                        <input type="checkbox" id="company" name="company" value="1" />
+                      <input type="checkbox" id="company" name="company" value="1" />
                       <span className="slider round"></span>
                     </label>
                   </p>
@@ -45,7 +45,7 @@ function Checkout() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label weight-normal">Mostrar la descripción de los productos</span>
                     <label className="switch space-r">
-                        <input type="checkbox" id="display_description" name="display_description" value="1" />
+                      <input type="checkbox" id="display_description" name="display_description" value="1" />
                       <span className="slider round"></span>
                     </label>
                   </p>
