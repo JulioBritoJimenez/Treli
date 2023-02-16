@@ -2396,6 +2396,17 @@ a.link.edit-schedule-template {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+.missing_field {
+  background-color: #fce8e5;
+  border-top: 2px solid #ed6347;
+  margin-top: 10px;
+  padding: 5px 8px 2px;
+}
+.missing_field svg {
+  color: #ed6347;
+  margin: 0px 10px -2px 0px;
+  font-size: 14px;
+}
 
 /* Facturación */
 input#factura_expiration_custom {
