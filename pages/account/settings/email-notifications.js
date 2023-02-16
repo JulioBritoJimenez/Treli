@@ -19,7 +19,7 @@ function NotificacionesCorreo() {
               <p>Envía correos electrónicos atractivos a lo largo del ciclo de vida de sus clientes.</p>
             </div>
             <div className="settings-items">
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/subs-renewal" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Renovación de suscripción</div>
                   <div>Notifica a tus clientes cuando se renueva una suscripción</div>
@@ -27,7 +27,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/subs-renewal-reminder" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Recordatorio de renovación de suscripción</div>
                   <div>Recordar a los clientes dos días antes de la renovación de una suscripción</div>
@@ -99,7 +99,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/payment-request" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Solicitud de pago</div>
                   <div>Notificar a los clientes para solicitar pagos únicos</div>

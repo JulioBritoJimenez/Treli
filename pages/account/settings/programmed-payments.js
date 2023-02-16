@@ -66,7 +66,7 @@ function PlantillasPago() {
                       <span className="weight-normal">Introduce el nombre de la plantilla. Este nombre es interno y te ayuda a reconocer esta plantilla al crear un pago.</span>
                     </span>
                     <span>
-                      <input type="text" className="n-required" name="template_name" id="template_name" placeholder="Nombre plantilla" />
+                      <input type="text" className="n-required" name="template_name" id="template_name" placeholder="Nueva plantilla" />
                     </span>
                   </p>
                 </div>
