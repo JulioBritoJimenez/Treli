@@ -19,7 +19,7 @@ function NotificacionesWhatsapp() {
               <p>Reduce la rotación y recupera los pagos fallidos. Configura recordatorios de pago para tus clientes.</p>
             </div>
             <div className="settings-items">
-              <Link href="/account/settings/notifications/whatsapp" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/whatsapp-recovery-failed" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Renovación de suscripción fallida</div>
                   <div>Notifica a tus clientes cuando falle la renovación de una suscripción</div>
@@ -27,7 +27,7 @@ function NotificacionesWhatsapp() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/whatsapp" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/whatsapp-payment-request" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Solicitud de pago</div>
                   <div>Notificar a los clientes para solicitar un pago</div>
@@ -35,7 +35,7 @@ function NotificacionesWhatsapp() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/whatsapp" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/whatsapp-recovery-request" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Renovación manual de suscripción</div>
                   <div>Notificar a los clientes para solicitar pagos por renovaciones manuales de suscripción</div>
@@ -43,7 +43,7 @@ function NotificacionesWhatsapp() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/whatsapp" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/whatsapp-recovery-activate" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Activación de suscripción</div>
                   <div>Notifica a tus clientes para solicitar que completen un pago para activar las suscripciones creadas manualmente</div>

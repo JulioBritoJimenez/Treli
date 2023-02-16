@@ -3,17 +3,17 @@ import GuardarCambios from "../../../../componentes/guardarCambios";
 import { BsArrowLeftShort } from "react-icons/bs";
 import Link from 'next/link';
 
-function WhatsApp() {
+function WhatsAppSolicitudPago() {
   return (
     <>
       <Layout>
         <div className="account-appe-container payments-container">
           <div className="order-head-paid">
             <Link href="/account/settings/whatsapp-notifications/" className="order-back"><BsArrowLeftShort /></Link>
-            <h2>Renovación de suscripción fallida</h2>
+            <h2>Solicitud de pago</h2>
           </div>
           <GuardarCambios  />
-          <p>Notifica a tus clientes cuando falla la renovación de una suscripción con opciones para procesar la renovación manualmente.</p>
+          <p>Notificar a los clientes para solicitar un pago.</p>
 
           <div className="new-product-cols settings-cols">
             <div className="new-product-col1">
@@ -22,7 +22,7 @@ function WhatsApp() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label">Activar / Desactivar</span>
                     <label className="switch space-r">
-                        <input type="checkbox" notification_id="recovery_failed" id="activate" name="activate" value="1" />
+                        <input type="checkbox" notification_id="payment_request" id="activate" name="activate" value="1" />
                       <span className="slider round"></span>
                     </label>
                   </p>
@@ -38,4 +38,4 @@ function WhatsApp() {
   )
 }
 
-export default WhatsApp;
+export default WhatsAppSolicitudPago;

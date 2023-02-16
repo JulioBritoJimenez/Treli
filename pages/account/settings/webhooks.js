@@ -26,6 +26,16 @@ function Webhooks() {
           <GuardarCambios  />
           <p>Los webhooks notifican a tu aplicación sobre eventos que ocurren en Treli, como pagos y renovaciones de suscripciones. Treli espera una respuesta HTTP 2XX al POST</p>
 
+          <div className="order-box-container margin-bottom-30px">
+            <div className="order-box">
+              <div className="flex">
+                <div className="strong wh-name">Prueba</div>
+                <div className="text wh-url">treli.co</div>
+                <a onClick={showWebhook}>Editar</a>
+              </div>
+            </div>
+          </div>
+
           <button className="botones boton-violeta button-full" onClick={showWebhook}>+ Agregar webhook</button>
           <Modal 
             title="Crea un webhook"
@@ -33,7 +43,8 @@ function Webhooks() {
             onCancel={handleWebhook}
             footer={[
               <Button className="boton-gris" onClick={handleWebhook} key="cancelar">Cancelar</Button>,
-              <Button onClick={handleWebhook} key="guardar">Guardar ajustes</Button>
+              <Button onClick={handleWebhook} key="guardar">Guardar ajustes</Button>,
+              <Button className="eliminar-btn" onClick={handleWebhook} key="eliminar">Eliminar</Button>
             ]} closeIcon={<BsX />} 
             centered width={700}
           >

@@ -2605,6 +2605,15 @@ span.acc-label-sub {
   right: 18px;
 }
 
+/* webhooks */
+.wh-name {
+  margin-right: 40px;
+}
+.wh-url {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
 /* Treli tienda */
 .account-appe-col1 {
   width: calc(100% - 450px);
