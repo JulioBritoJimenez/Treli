@@ -209,7 +209,7 @@ function Billing() {
                           <BsCheck /> <span>Almacenamiento de tarjetas tokenizadas para migraciones</span>
                         </div>
                       </div>
-                      <button className="plan-select botones boton-violeta" id="scale">Elegir actual</button>
+                      <button className="plan-select botones boton-violeta" id="scale">Plan actual</button>
                     </div>
                   </div>
                 </Modal>
