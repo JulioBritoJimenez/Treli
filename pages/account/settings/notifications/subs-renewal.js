@@ -53,8 +53,8 @@ function RenovacionSuscripcion() {
 
                   <div className="t_email-cont">
                     <div className="t_email-small margin-bottom-15px">Hola Cliente,</div>
-                    <div>Completa el pago 5710 para renovar tu suscripción</div>
-                    <div className="t_email-lbutton pago botones boton-violeta btn100">Ir a pagar</div>
+                    <div className="">Completa el pago 5710 para renovar tu suscripción</div>
+                    <div className="t_email-border"></div>
                     <div className="t_email-med">Pago #5710</div>
                     <div className="flex">
                       <div className="t_email-semi">Suscripción Demo</div>
