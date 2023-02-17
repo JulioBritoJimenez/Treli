@@ -6,17 +6,17 @@ import Image from "next/image";
 import Logo from '../../../../public/icono-treli.png';
 import Visa from '../../../../public/Visa-Logo.png';
 
-function RenovacionSuscripcion() {
+function PagoAprovado() {
   return (
     <>
       <Layout>
         <div className="account-appe-container payments-container">
           <div className="order-head-paid">
             <Link href="/account/settings/email-notifications/" className="order-back"><BsArrowLeftShort /></Link>
-            <h2>Renovación de suscripción</h2>
+            <h2>Pago aprobado</h2>
           </div>
           <GuardarCambios  />
-          <p>Recuerde a los clientes dos días antes de la renovación de la suscripción.</p>
+          <p>Notifica a tus clientes cuando se aprueba un pago. Este correo electrónico se envía solo en pagos únicos y pagos de activación de suscripción. Para enviar correos electrónicos cuando se aprueba la renovación de una suscripción, haga clic <Link href="http://localhost:3000/account/settings/notifications/subs-renewal">aquí</Link></p>
 
           <div className="new-product-cols settings-cols">
             <div className="new-product-col1">
@@ -53,7 +53,7 @@ function RenovacionSuscripcion() {
 
                   <div className="t_email-cont">
                     <div className="t_email-small margin-bottom-15px">Hola Cliente,</div>
-                    <div className="">Tu suscripción se ha renovado exitosamente.</div>
+                    <div className="">Hemos recibido tu pago #5710 de manera exitosa.</div>
                     <div className="t_email-border"></div>
                     <div className="t_email-med">Pago #5710</div>
                     <div className="flex">
@@ -114,4 +114,4 @@ function RenovacionSuscripcion() {
   )
 }
 
-export default RenovacionSuscripcion;
+export default PagoAprovado;

@@ -53,7 +53,7 @@ function SolicitudPagoR() {
 
                   <div className="t_email-cont">
                     <div className="t_email-small margin-bottom-15px">Hola Cliente,</div>
-                    <div>Completa el pago 5710 para renovar tu suscripción</div>
+                    <div>Completa el pago 5710 para renovar tu suscripción.</div>
                     <div className="t_email-lbutton pago botones boton-violeta btn100">Ir a pagar</div>
                     <div className="t_email-med">Pago #5710</div>
                     <div className="flex">
@@ -87,31 +87,18 @@ function SolicitudPagoR() {
                       <div className="t_email-semi">Estado:</div>
                       <div className="t_email-semi color-green">Aprobado</div>
                     </div>
-                  </div>
-
-                  <div className="t_email-cont">
+                    <div className="t_email-border"></div>
                     <div className="flex">
                       <div className="t_email-semi">Método de pago:	</div>
                       <div className="t_email-semi">Tarjeta de crédito</div>
                     </div>
-                    <div className="t_email-border"></div>
+                  </div>
+
+                  <div className="t_email-cont">
                     <div className="flex">
                       <div className="t_email-semi">Total:</div>
                       <div className="t_email-semi">$10,000</div>
                     </div>
-                  </div>
-
-                  <div className="t_email-cont">
-                    <div className="t_email-small margin-bottom-10px">Dirección de facturación</div>
-                    <div className="direccion">
-                      Cliente Demo<br></br>
-                      Calle 1236<br></br>
-                      1<br></br>
-                      Barranquilla<br></br>
-                      Atlántico<br></br>
-                      080002<br></br>
-                      <a className="texto-link">31111111111</a><br></br>
-                      gabriel+demo@treli.co</div>
                   </div>
 
                   <div className="t_email-cont">

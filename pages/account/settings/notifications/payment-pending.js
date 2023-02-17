@@ -1,22 +1,22 @@
 import Layout from "../../../../componentes/layout";
 import GuardarCambios from "../../../../componentes/guardarCambios";
-import { BsArrowLeftShort } from "react-icons/bs";
+import { BsArrowLeftShort, BsArrowDownShort } from "react-icons/bs";
 import Link from 'next/link';
 import Image from "next/image";
 import Logo from '../../../../public/icono-treli.png';
 import Visa from '../../../../public/Visa-Logo.png';
 
-function RenovacionSuscripcion() {
+function SolicitudPagoR() {
   return (
     <>
       <Layout>
         <div className="account-appe-container payments-container">
           <div className="order-head-paid">
             <Link href="/account/settings/email-notifications/" className="order-back"><BsArrowLeftShort /></Link>
-            <h2>Renovación de suscripción</h2>
+            <h2>Pago pendiente</h2>
           </div>
           <GuardarCambios  />
-          <p>Recuerde a los clientes dos días antes de la renovación de la suscripción.</p>
+          <p>Notifica a tus clientes cuando un pago está pendiente de confirmación del banco.</p>
 
           <div className="new-product-cols settings-cols">
             <div className="new-product-col1">
@@ -25,7 +25,7 @@ function RenovacionSuscripcion() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label">Activar / Desactivar</span>
                     <label className="switch space-r">
-                      <input type="checkbox" notification_id="subs_renewal_reminder" id="activate" name="activate" value="1" />
+                      <input type="checkbox" notification_id="payment_pending" id="activate" name="activate" value="1" />
                       <span className="slider round"></span>
                     </label>
                   </p>
@@ -53,8 +53,8 @@ function RenovacionSuscripcion() {
 
                   <div className="t_email-cont">
                     <div className="t_email-small margin-bottom-15px">Hola Cliente,</div>
-                    <div className="">Tu suscripción se ha renovado exitosamente.</div>
-                    <div className="t_email-border"></div>
+                    <div>Tu pago está en espera de confirmación por parte de la entidad bancaria. Te confirmaremos cuanto antes con la actualización del estado de tu pago. Gracias por la espera.</div>
+                    <div className="t_email-lbutton pago botones boton-violeta btn100">Ver pago</div>
                     <div className="t_email-med">Pago #5710</div>
                     <div className="flex">
                       <div className="t_email-semi">Suscripción Demo</div>
@@ -90,7 +90,7 @@ function RenovacionSuscripcion() {
                     <div className="t_email-border"></div>
                     <div className="flex">
                       <div className="t_email-semi">Método de pago:	</div>
-                      <div>Tarjeta de crédito</div>
+                      <div className="t_email-semi">Tarjeta de crédito</div>
                     </div>
                   </div>
 
@@ -114,4 +114,4 @@ function RenovacionSuscripcion() {
   )
 }
 
-export default RenovacionSuscripcion;
+export default SolicitudPagoR;

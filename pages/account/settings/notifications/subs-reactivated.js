@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Logo from '../../../../public/icono-treli.png';
 
-function SuscripcionPausada() {
+function SuscripcionReactivada() {
   return (
     <>
       <Layout>
@@ -70,4 +70,4 @@ function SuscripcionPausada() {
   )
 }
 
-export default SuscripcionPausada;
+export default SuscripcionReactivada;

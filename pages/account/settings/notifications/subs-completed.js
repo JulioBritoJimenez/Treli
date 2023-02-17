@@ -6,17 +6,17 @@ import Image from "next/image";
 import Logo from '../../../../public/icono-treli.png';
 import Visa from '../../../../public/Visa-Logo.png';
 
-function RenovacionSuscripcion() {
+function SuscripcionCompletada() {
   return (
     <>
       <Layout>
         <div className="account-appe-container payments-container">
           <div className="order-head-paid">
             <Link href="/account/settings/email-notifications/" className="order-back"><BsArrowLeftShort /></Link>
-            <h2>Renovación de suscripción</h2>
+            <h2>Pedido de suscripción completado</h2>
           </div>
           <GuardarCambios  />
-          <p>Recuerde a los clientes dos días antes de la renovación de la suscripción.</p>
+          <p>Notifica a tus clientes si vendes productos físicos y su pedido de suscripción está completo. Funciona muy bien para realizar un seguimiento de los pedidos que ya enviaste.</p>
 
           <div className="new-product-cols settings-cols">
             <div className="new-product-col1">
@@ -25,7 +25,7 @@ function RenovacionSuscripcion() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label">Activar / Desactivar</span>
                     <label className="switch space-r">
-                      <input type="checkbox" notification_id="subs_renewal_reminder" id="activate" name="activate" value="1" />
+                      <input type="checkbox" notification_id="subs_completed" id="activate" name="activate" value="1" />
                       <span className="slider round"></span>
                     </label>
                   </p>
@@ -53,7 +53,7 @@ function RenovacionSuscripcion() {
 
                   <div className="t_email-cont">
                     <div className="t_email-small margin-bottom-15px">Hola Cliente,</div>
-                    <div className="">Tu suscripción se ha renovado exitosamente.</div>
+                    <div className="">Hemos completado tu pedido #5710 exitosamente.</div>
                     <div className="t_email-border"></div>
                     <div className="t_email-med">Pago #5710</div>
                     <div className="flex">
@@ -114,4 +114,4 @@ function RenovacionSuscripcion() {
   )
 }
 
-export default RenovacionSuscripcion;
+export default SuscripcionCompletada;

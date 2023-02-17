@@ -59,7 +59,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/subs-completed" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Pedido de suscripción completado</div>
                   <div>Notifica a tus clientes si vende productos físicos y su pedido de suscripción está completo</div>
@@ -75,7 +75,7 @@ function NotificacionesCorreo() {
               <p>Mantén a tus clientes informados sobre iniciaciones de pago, pagos exitosos y fallidos.</p>
             </div>
             <div className="settings-items">
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/payment-pending" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Pago pendiente</div>
                   <div>Notifica a tus clientes cuando un pago está pendiente de confirmación del banco</div>
@@ -83,7 +83,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/payment-approved" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Pago aprobado</div>
                   <div>Notifica a tus clientes cuando se aprueba un pago</div>
@@ -91,7 +91,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/payment-failed" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Pago rechazado</div>
                   <div>Notifica a tus clientes clientes cuando falla un pago</div>
@@ -115,7 +115,7 @@ function NotificacionesCorreo() {
               <p>Reduce la rotación y recupera los pagos fallidos. Configura recordatorios de pago para tus clientes.</p>
             </div>
             <div className="settings-items">
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/recovery-failed" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Renovación de suscripción fallida</div>
                   <div>otifica a tus clientes cuando falle la renovación de una suscripción</div>
@@ -131,7 +131,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/recovery-activate" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Activación de suscripción</div>
                   <div>Notifica a tus clientes para solicitar que completen un pago para activar las suscripciones creadas manualmente</div>
