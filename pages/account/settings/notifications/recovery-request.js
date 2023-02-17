@@ -52,7 +52,7 @@ function SolicitudPagoR() {
                   </div>
 
                   <div className="t_email-cont">
-                    <div className="t_email-small">Hola Cliente,</div>
+                    <div className="t_email-small margin-bottom-15px">Hola Cliente,</div>
                     <div>Completa el pago 5710 para renovar tu suscripción</div>
                     <div className="t_email-lbutton pago botones boton-violeta btn100">Ir a pagar</div>
                     <div className="t_email-med">Pago #5710</div>

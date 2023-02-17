@@ -37,6 +37,26 @@ function Monedas() {
 
               <div className="order-box-container margin-bottom">
                 <h3 className="margin-bottom">Monedas adicionales</h3>
+
+                <div className="user-currencies">
+                  <div className="order-box">
+                    <div className="flex">
+                      <div className="text">
+                        <span className="strong">USD</span> - Dólar de los Estados Unidos
+                      </div>
+                      <a className="delete-currency">Eliminar</a>
+                    </div>
+                  </div>
+                  <div className="order-box">
+                    <div className="flex">
+                      <div className="text">
+                        <span className="strong">MXN</span> - Peso mexicano
+                      </div>
+                      <a className="delete-currency">Eliminar</a>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="no-multi">
                   <h3 className="margin-bottom-15px">Agregar más monedas</h3>
                   <p>Además de la moneda base, puedes procesar transacciones en monedas extranjeras al habilitar multi-monedas.</p>
@@ -62,6 +82,8 @@ function Monedas() {
                   </Modal>
                 </div>
               </div>
+
+              <a className="botones boton-violeta button-full" onClick={showMonedas}>+ Agregar monedas</a>
             </div>
 
             <div className="new-product-col2">

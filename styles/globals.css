@@ -2668,6 +2668,7 @@ span.t_email-logo_text {
 .t_email-semi.flex img {
   width: 40px;
   border: 1px solid var(--color-borde);
+  background-color: #fff;;
   border-radius: 4px;
   padding: 4px;
   margin: -3px 20px 0px 0px;
