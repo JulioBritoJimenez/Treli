@@ -43,7 +43,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/subs-paused" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Suscripción pausada</div>
                   <div>Notifica a tus clientes cuando una suscripción está en pausa</div>
@@ -51,7 +51,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/subs-reactivated" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Suscripción reactivada</div>
                   <div>Notifica a tus clientes cuando se reactiva una suscripción</div>

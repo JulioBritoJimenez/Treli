@@ -2655,9 +2655,10 @@ span.t_email-logo_text {
   color: #7a7a7a;
 }
 .t_email-lbutton {
-  padding: 13px 0px 36px;
+  padding: 11px 0px 34px;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 .t_email-lbutton.pago {
   margin: 26px 0px;
