@@ -2595,6 +2595,7 @@ span.acc-label-sub {
 .t_email-cont * {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Ubuntu, sans-serif;
   letter-spacing: 0px;
+  font-size: 14px;
 }
 .t_email-logo {
   width: 520px;
@@ -2619,18 +2620,63 @@ span.t_email-logo_text {
   margin: 0px auto 20px;
 }
 .t_email-small {
-  font-size: 14px;
-  font-weight: 500;
   color: #7a7a7a;
+}
+.t_email-small, .t_email-semi {
+  font-weight: 500;
+}
+.t_email-small svg {
+  font-size: 24px;
+  margin: 0px 0px -7px;
 }
 .t_email-big {
   font-size: 36px;
   font-weight: 600;
   padding: 20px 0px 30px;
 }
+.t_email-med {
+  font-size: 26px;
+  font-weight: 600;
+  padding: 0px 0px 20px;
+}
 .t_email-border {
   border-top: 1px solid var(--color-borde);
   margin: 15px 0px;
+}
+.t_email-border.pago {
+  margin: 22px 0px 26px;
+}
+.t_email-from {
+  padding: 20px 0px;
+}
+.t_email-from div span:first-child {
+  width: 50px;
+  display: inline-block;
+  color: #7a7a7a;
+}
+.t_email-lbutton {
+  padding: 13px 0px 36px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.t_email-lbutton.pago {
+  margin: 26px 0px;
+}
+.soporte, .soporte a {
+  font-size: 13px;
+}
+.t_email-semi.flex img {
+  width: 40px;
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  padding: 4px;
+  margin: -3px 20px 0px 0px;
+}
+.metodo-pago {
+  background-color: #F9F9F9;
+}
+.direccion {
+  font-style: italic;
 }
 
 /* Página de pago - Checkout */

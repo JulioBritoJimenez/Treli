@@ -1,6 +1,6 @@
 import Layout from "../../../../componentes/layout";
 import GuardarCambios from "../../../../componentes/guardarCambios";
-import { BsArrowLeftShort } from "react-icons/bs";
+import { BsArrowLeftShort, BsArrowDownShort } from "react-icons/bs";
 import Link from 'next/link';
 import Image from "next/image";
 import Logo from '../../../../public/icono-treli.png';
@@ -55,17 +55,36 @@ function SolicitudPago() {
                     <div className="t_email-big">$10,000</div>
                     <div className="t_email-small">Vence en febrero 16, 2023</div>
                     <div className="t_email-border"></div>
+                    <div className="t_email-small"><BsArrowDownShort />Descargar factura</div>
                     <div className="t_email-from">
                       <div>
                         <span>De</span>
                         <span>Treli</span>
                       </div>
+                      <div>
+                        <span>Para</span>
+                        <span>Cliente Demo</span>
+                      </div>
+                    </div>
+                    <div className="t_email-lbutton botones boton-violeta btn100">Ir a pagar</div>
+                  </div>
+
+                  <div className="t_email-cont">
+                    <div className="flex">
+                      <div className="t_email-semi">Suscripción Demo</div>
+                      <div className="t_email-semi">$10,000</div>
+                    </div>
+                    <div className="t_email-small">Cantidad: 1</div>
+                    <div className="t_email-border"></div>
+                    <div className="flex">
+                      <div className="t_email-semi">Total</div>
+                      <div className="t_email-semi">$10,000</div>
                     </div>
                   </div>
 
-                  <div className="t_email-cont"></div>
-
-                  <div className="t_email-cont"></div>
+                  <div className="t_email-cont">
+                    <span className="soporte">¿Tienes alguna duda? Contáctanos a través de <a className="texto-link">soporte@treli.co</a></span>
+                  </div>
                 </div>
               </div>
             </div>

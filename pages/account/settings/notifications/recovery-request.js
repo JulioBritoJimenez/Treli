@@ -1,22 +1,22 @@
 import Layout from "../../../../componentes/layout";
 import GuardarCambios from "../../../../componentes/guardarCambios";
-import { BsArrowLeftShort } from "react-icons/bs";
+import { BsArrowLeftShort, BsArrowDownShort } from "react-icons/bs";
 import Link from 'next/link';
 import Image from "next/image";
 import Logo from '../../../../public/icono-treli.png';
 import Visa from '../../../../public/Visa-Logo.png';
 
-function RenovacionSuscripcion() {
+function SolicitudPagoR() {
   return (
     <>
       <Layout>
         <div className="account-appe-container payments-container">
           <div className="order-head-paid">
             <Link href="/account/settings/email-notifications/" className="order-back"><BsArrowLeftShort /></Link>
-            <h2>Renovación de suscripción</h2>
+            <h2>Solicitud de pago</h2>
           </div>
           <GuardarCambios  />
-          <p>Recuerde a los clientes dos días antes de la renovación de la suscripción.</p>
+          <p>Notifica a tus clientes para solicitar pagos de renovaciones de suscripción. Este correo electrónico se envía automáticamente cuando es momento de renovar una suscripción que requiere pagos manuales. También se puede enviar manualmente desde el botón de recuperación de pago ubicado en el pago.</p>
 
           <div className="new-product-cols settings-cols">
             <div className="new-product-col1">
@@ -25,7 +25,7 @@ function RenovacionSuscripcion() {
                   <p className="app-input input label-flex1">
                     <span className="acc-label">Activar / Desactivar</span>
                     <label className="switch space-r">
-                      <input type="checkbox" notification_id="subs_renewal_reminder" id="activate" name="activate" value="1" />
+                      <input type="checkbox" notification_id="recovery_request" id="activate" name="activate" value="1" />
                       <span className="slider round"></span>
                     </label>
                   </p>
@@ -127,4 +127,4 @@ function RenovacionSuscripcion() {
   )
 }
 
-export default RenovacionSuscripcion;
+export default SolicitudPagoR;

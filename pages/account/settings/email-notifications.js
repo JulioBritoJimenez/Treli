@@ -123,7 +123,7 @@ function NotificacionesCorreo() {
                 <span className="settings-item-go"><BsChevronRight /></span>
               </Link>
 
-              <Link href="/account/settings/notifications/notificacion" className="flex-no-space list-item">
+              <Link href="/account/settings/notifications/recovery-request" className="flex-no-space list-item">
                 <div className="text">
                   <div className="strong">Solicitud de pago</div>
                   <div>Notifica a tus clientes para solicitar pagos de renovaciones de suscripción</div>
