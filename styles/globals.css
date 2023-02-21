@@ -2804,3 +2804,98 @@ span.t_email-logo_text {
   border-radius: 50px;
   margin-top: 5px;
 }
+
+/* My Account - Mi cuenta */
+@media only screen and (min-width: 1024px) {
+  .account-container {
+    max-width: 1140px;
+    margin: auto;
+  }
+}
+.account-container {
+  padding: 60px 20px 79px;
+  color: var(--azul-oscuro);
+}
+.account-header.flex.flex-center {
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.account-header button {
+  background-color: var(--input-bg);
+  color: var(--azul-oscuro);
+}
+.account-header button:hover {
+  background-color: var(--azul-oscuro);
+  color: #fff;
+}
+.account-header button svg {
+  font-size: 22px;
+  margin: 0px 7px -6px 0px;
+}
+.account-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+a.account-menu_item {
+  background-color: var(--input-bg);
+  color: var(--azul-oscuro);
+  text-decoration: none;
+  padding: 10px 30px;
+  height: 100px;
+  border-radius: var(--boton-radius);
+  display: flex;
+  align-items: center;
+  transition: .2s;
+}
+a.account-menu_item span {
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+a.account-menu_item:hover {
+  background-color: var(--azul-oscuro);
+  color: #fff;
+  transition: .2s;
+}
+a.account-menu_item svg {
+  color: var(--azul-oscuro);
+  font-size: 26px;
+}
+.account-header a.order-back {
+  background-color: var(--input-bg);
+  border: none;
+}
+.account-header a.order-back:hover {
+  background-color: var(--azul-oscuro);
+  color: #fff;
+}
+.account-header a.order-back svg {
+  color: var(--azul-oscuro);
+}
+.account-header a.order-back:hover svg {
+  color: #fff;
+}
+.account-container .status-filter {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0px;
+  background-color: var(--input-bg);
+  border-radius: 15px;
+}
+.account-container .status-filter div {
+  flex: 0 0 33%;
+  text-align: center;
+  background-color: var(--input-bg);
+  color: var(--azul-oscuro);
+}
+.account-container .status-filter .plist-activestyle {
+  background-color: var(--azul-oscuro);
+  color: #fff;
+}

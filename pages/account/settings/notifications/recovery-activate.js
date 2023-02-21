@@ -15,7 +15,7 @@ function ActivacionSuscripcion() {
             <Link href="/account/settings/email-notifications/" className="order-back"><BsArrowLeftShort /></Link>
             <h2>Activación de suscripción</h2>
           </div>
-          <GuardarCambios  />
+          <GuardarCambios />
           <p>Notifica a tus clientes para solicitar que completen un pago para activar las suscripciones creadas manualmente.</p>
 
           <div className="new-product-cols settings-cols">
