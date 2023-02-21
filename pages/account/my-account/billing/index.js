@@ -58,11 +58,11 @@ function Billing() {
               <h3 className="margin-bottom">Historial de facturación</h3>
               <div className="order-box">
                 <div className="flex flex-center history-item">
-                  <Link className="history-date texto-link" href="http://localhost:3000/account/my-account/billing/cycle">Febrero 11, 2023 - Marzo 11, 2023</Link>
+                  <Link className="history-date texto-link" href="/account/my-account/billing/cycle">Febrero 11, 2023 - Marzo 11, 2023</Link>
                   <div className="history-total">USD $0.00</div>
                 </div>
                 <div className="flex flex-center history-item">
-                  <Link className="history-date texto-link" href="http://localhost:3000/account/my-account/billing/cycle">Febrero 11, 2023 - Marzo 11, 2023</Link>
+                  <Link className="history-date texto-link" href="/account/my-account/billing/cycle">Febrero 11, 2023 - Marzo 11, 2023</Link>
                   <div className="history-total">USD $0.00</div>
                 </div>
               </div>
