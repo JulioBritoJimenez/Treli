@@ -1050,11 +1050,11 @@ li.ant-pagination-prev button, li.ant-pagination-next button {
   border-color: #763b24;
   border: 1px solid;
 }
-.estado.status-cancelled span, .head-status.status-cancelled {
+.estado.status-cancelled span, .head-status.status-cancelled, .estado-order-info.rechazado {
   background-color: #FF9494;
   color: #510B0B;
 }
-.estado.status-hold span, .head-status.status-hold {
+.estado.status-hold span, .head-status.status-hold, .estado-order-info.pendiente {
   background-color: #FFE494;
   color: #51390B;
 }
@@ -2895,6 +2895,9 @@ a.account-menu_item svg {
   background-color: var(--input-bg);
   color: var(--azul-oscuro);
 }
+.account-container.pagos .status-filter div {
+  flex: 0 0 33%;
+}
 .account-container .status-filter .plist-activestyle {
   background-color: var(--azul-oscuro);
   color: #fff;
@@ -2915,7 +2918,7 @@ a.account-menu_item svg {
   border-radius: 14px;
   border: 1px solid var(--color-borde);
 }
-.active-subs .subs-item, .order-info.order-row {
+.active-subs .subs-item, .order-info.order-row, .order-processing .subs-item {
   background-color: #F0FFF2;
   border: 1px solid #f0fff2;
 }
@@ -2959,7 +2962,7 @@ a.account-menu_item svg {
   font-size: 20px;
   color: var(--azul-oscuro);
 }
-.active-subs .subs-link svg {
+.active-subs .subs-link svg, .order-processing .subs-link svg {
   color: #00b40a;
 }
 .order-header_logo img {
@@ -3021,7 +3024,7 @@ a.qr-link-subs span {
   position: relative;
   float: right;
 }
-.estado-order-info.activo {
+.estado-order-info.activo, .estado-order-info.aprobado {
   color: #00B312;
   background-color: #B3F5BA;
 }
@@ -3065,4 +3068,24 @@ a.qr-link-subs span {
 }
 .qrcode .order-product-name {
   font-size: 20px;
+}
+.image-name {
+  width: 40%;
+}
+.estado-pago {
+  width: 30%;
+}
+.valor-total {
+  width: 20%;
+  padding-top: 8px;
+}
+.image-name img {
+  width: 80px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.estado-pago .estado-order-info {
+  position: unset;
+  float: left;
+  margin-bottom: 0px;
 }
