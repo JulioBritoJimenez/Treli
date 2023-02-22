@@ -1679,7 +1679,7 @@ label.input-radio input {
   margin: 10px 0px 20px;
   font-weight: 600;
 }
-.create-new-customer .input {
+.input {
   margin-bottom: 10px;
 }
 .product-list-items {
@@ -3088,4 +3088,42 @@ a.qr-link-subs span {
   position: unset;
   float: left;
   margin-bottom: 0px;
+}
+.dir-defecto svg {
+  margin: 2px 0px 0px 8px;
+}
+h3.mis-direcciones {
+  margin-top: 60px;
+}
+.editar_direccion_wrap {
+  padding: 2% 14% 0;
+}
+.contrasena-eliminar h3.eliminar-cuenta {
+  margin: 46px 0px 15px;
+}
+.contrasena-eliminar.col2 {
+  background-color: var(--gris-bg-claro);
+  padding: 30px;
+  border-radius: 20px;
+}
+.contrasena-eliminar.col2 button {
+  min-width: 140px;
+}
+.profile-information.col1 {
+  width: 48%;
+}
+.profile-information.col1 h3 {
+  margin: 30px 0px 16px;
+}
+.profile-information input#user_email {
+  margin: 0px;
+}
+.item-delete.texto-link {
+  color: var(--azul-oscuro);
+}
+.item-delete.texto-link:hover {
+  color: var(--morado-oscuro);
+}
+.payment-methods-container {
+  margin-bottom: 40px;
 }
