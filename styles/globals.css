@@ -2975,10 +2975,10 @@ a.account-menu_item svg {
   font-size: var(--font-size-22px);
   margin-left: 20px;
 }
-.qr-subs-container {
+.qr-subs-container, .qrcode .estado {
   display: flex;
   flex-grow: 1;
-  justify-content: end;
+  justify-content: flex-end;
 }
 a.qr-link-subs {
   width: 61px;
@@ -3027,4 +3027,42 @@ a.qr-link-subs span {
 }
 .order-info-col2 {
   text-align: right;
+}
+.order-payment.order-row {
+  background-color: #F9F9F9;
+}
+.payment-expire {
+  color: var(--gris-oscuro);
+}
+.order-payment.order-row {
+  padding: 20px 17px;
+}
+.order-payment.order-row.metodo-pago {
+  margin-bottom: 0px;
+  border-bottom: none;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.order-payment.order-row.facturacion {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.qr-qr {
+  text-align: center;
+  border-bottom: 1px solid var(--color-borde);
+  margin-bottom: 35px;
+  padding-bottom: 10px;
+}
+#qrcode {
+  padding: 10px 20px 30px;
+}
+.qrcode .estado-order-info {
+  margin: 0px;
+}
+.qrcode .order-info {
+  align-items: center;
+  background-color: var(--gris-bg);
+}
+.qrcode .order-product-name {
+  font-size: 20px;
 }

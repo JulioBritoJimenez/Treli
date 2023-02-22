@@ -5,7 +5,7 @@ function MyAccountCreditCards() {
   return (
     <div className="account-container">
       <div className="account-header flex no-justify flex-center">
-      <Link href="/my-account/" className="order-back"><BsArrowLeftShort /></Link>
+        <Link href="/my-account/" className="order-back"><BsArrowLeftShort /></Link>
         <h2>Métodos de pago</h2>
       </div>
     </div>

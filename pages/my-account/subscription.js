@@ -1,11 +1,32 @@
 import Link from "next/link";
-import { BsArrowLeftShort } from "react-icons/bs";
+import { BsArrowLeftShort, BsX } from "react-icons/bs";
+import { Button, Modal } from 'antd';
+import { useState } from 'react';
 import Image from "next/image";
 import Treli from "../../public/t-treli.jpg";
 import CodigoQR from "../../public/codigoQR.png";
 import ImagenSuscripcion from "../../public/Treli-Product-Placeholder.jpg";
+import Tarjeta from "../../public/Visa-Logo.png";
+import FormDirFacturacion from "../../componentes/formDireccionFacturacion";
 
 function MyAccountSubs() {
+
+  const [isCambiarOpen, setIsCambiarOpen] = useState(false);
+  const showCambiar = () => {
+    setIsCambiarOpen(true);
+  };
+  const handleCambiar = () => {
+    setIsCambiarOpen(false);
+  };
+
+  const [isEditarDireccionOpen, setIsEditarDireccionOpen] = useState(false);
+  const showEditarDireccion = () => {
+    setIsEditarDireccionOpen(true);
+  };
+  const handleEditarDireccion = () => {
+    setIsEditarDireccionOpen(false);
+  };
+
   return (
     <div className="account-container">
       <div className="account-header flex no-justify flex-center">
@@ -64,6 +85,44 @@ function MyAccountSubs() {
         <div className="order-next flex">
           <div className="dates-title strong">Siguiente pago</div>
           <div className="dates-last">21 de marzo del 2023</div>
+        </div>
+      </div>
+
+      <div className="order-payment order-row metodo-pago">
+        <div className="payment-head flex margin-bottom-15px">
+          <div className="payment-title strong">Método de pago</div>
+          <div className="payment-change texto-link pointer" onClick={showCambiar}>Cambiar</div>
+          <Modal 
+            title={null}
+            open={isCambiarOpen}
+            onCancel={handleCambiar} 
+            footer={null} closeIcon={<BsX />} 
+            centered width={700}
+          >
+            <p>Form Tarjeta de crédito y Dirección de facturación</p>
+          </Modal>
+        </div>
+        <div className="payment-cart flex">
+          <div className="payment-title strong"><Image src={Tarjeta} alt="Logo Tarjeta" /> Terminada en 0326</div>
+          <div className="payment-expire">Expira 12/2025</div>
+        </div>
+      </div>
+      <div className="order-payment order-row facturacion">
+        <div className="payment-head flex margin-bottom-15px">
+          <div className="payment-title strong">Facturación</div>
+          <div className="facturacion-change texto-link pointer" onClick={showEditarDireccion}>Cambiar</div>
+          <Modal 
+            title="Dirección de facturación" 
+            open={isEditarDireccionOpen}
+            onCancel={handleEditarDireccion} 
+            footer={null} closeIcon={<BsX />} 
+            centered width={700}
+          >
+            <FormDirFacturacion />
+          </Modal>
+        </div>
+        <div className="payment-cart flex">
+          <div className="dir-title">Cra 1 1 1, Barranquilla, CO</div>
         </div>
       </div>
     </div>
