@@ -24,6 +24,16 @@ function Manual() {
               </div>
             </div>
           </div>
+
+          <div className="order-box-container label-text-admin margin-bottom">
+            <div className="order-box">
+              <div className="flex flex-center">
+                <div className="strong">Transferencia bancaria</div>
+                <div className="text">Permite que tus clientes paguen mediante transferencia bancaria.</div>
+                <Link href="/account/settings/payments/transfer/" className="changecod" action="activate">Configurar</Link>
+              </div>
+            </div>
+          </div>
         </div>
       </Layout>
     </>
