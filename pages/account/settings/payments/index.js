@@ -7,6 +7,7 @@ import IconWompi from '../../../../public/icon-wompi.png';
 import IconPayu from '../../../../public/icon-payu.png';
 import IconStripe from '../../../../public/icon-stripe.png';
 import IconPlacetopay from '../../../../public/icon-placetopay.svg';
+import IconPaymentsWay from '../../../../public/PaymentsWay.png';
 
 function Payments() {
   return(
@@ -95,6 +96,19 @@ function Payments() {
                       <span className="status-circle inactive"></span> Inactivo
                     </div>
                     <Link href="/account/settings/payments/place-to-pay" className="botones boton-border">Administrar</Link>
+                  </div>
+                </div>
+
+                <div className="order-box">
+                  <div className="flex provider-image-text">
+                    <div className="provider-image flex">
+                      <Image src={IconPaymentsWay} alt="Logo pasarela" />
+                    </div>
+                    <h3 className="semi">Payments Way</h3>
+                    <div className="provider-status">
+                      <span className="status-circle inactive"></span> Inactivo
+                    </div>
+                    <Link href="/account/settings/payments/payments-way" className="botones boton-border">Administrar</Link>
                   </div>
                 </div>
               </div>
