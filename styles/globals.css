@@ -2693,6 +2693,12 @@ span.t_email-logo_text {
   border-bottom-left-radius: 0 !important;
   margin: 0px !important;
 }
+#custom-fields {
+  margin: 10px 0px;
+}
+.custom-fields-container span.acc-label {
+  flex: 0 0 209px;
+}
 
 /* Api */
 .api-keys div {
@@ -3094,9 +3100,6 @@ a.qr-link-subs span {
 }
 h3.mis-direcciones {
   margin-top: 60px;
-}
-.editar_direccion_wrap {
-  padding: 2% 14% 0;
 }
 .contrasena-eliminar h3.eliminar-cuenta {
   margin: 46px 0px 15px;

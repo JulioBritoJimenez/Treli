@@ -26,7 +26,7 @@ function TransferenciaBancaria() {
           </div>
           <GuardarCambios  />
           <div className="provider-status margin-bottom">
-            <span className="status-circle inactive"></span> Inactivo
+            <span className="status-circle active"></span> Activo
           </div>
 
           <div className="new-product-cols payment-provider">
@@ -67,7 +67,7 @@ function TransferenciaBancaria() {
               </div>
 
               <div className="gateway-buttons">
-                <button className="botones boton-violeta btn100 button-full margin-bottom-20px">Activar</button>
+                <button className="botones boton-violeta btn100 button-full margin-bottom-20px">Guardar ajustes</button>
                 <button className="botones eliminar-btn btn100 button-full" onClick={showDesactivar}>Desactivar</button>
                 <Modal 
                   title={null}
