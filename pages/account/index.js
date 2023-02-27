@@ -97,7 +97,7 @@ function Account() {
               <div className="summary-item_title flex">
                 <span>Total clientes activos</span>
                 <div className="summary-help">
-                  <Tooltip title={clientesActivos} trigger="click" className="totalclientesactivos" placement="bottom" color="#fff">
+                  <Tooltip title={clientesActivos} trigger="click" className="totalclientesactivos" placement="bottomRight" color="#fff">
                     <BsInfoCircleFill className="pointer" />
                   </Tooltip>
                 </div>
@@ -148,7 +148,7 @@ function Account() {
                 <div className="summary-item_title flex">
                   <span>Suscripciones canceladas</span>
                   <div className="summary-help">
-                    <Tooltip title={suscripcionesCanceladas} trigger="click" placement="bottom" color="#fff">
+                    <Tooltip title={suscripcionesCanceladas} trigger="click" placement="bottomRight" color="#fff">
                       <BsInfoCircleFill className="pointer" />
                     </Tooltip>
                   </div>
