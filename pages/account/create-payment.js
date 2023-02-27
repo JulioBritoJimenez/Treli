@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { BsArrowLeftShort, BsChevronRight } from "react-icons/bs";
 import { useState } from 'react';
 import CrearCliente from "../../componentes/crearCliente";
+import Image from "next/image";
+import InvoicePreview from '../../public/invoice-preview.png';
 
 function CreatePayment() {
 
@@ -29,6 +31,11 @@ function CreatePayment() {
   const [selectedInput, setSelectedInput] = useState({checked: null})
   const cobroPago = e => {
     setSelectedInput({checked: e.target.value});
+  }
+
+  const [selectedInputFactura, setSelectedInputFactura] = useState({checked: null})
+  const facturacion = e => {
+    setSelectedInputFactura({checked: e.target.value});
   }
 
   return (
@@ -218,6 +225,59 @@ function CreatePayment() {
                 <p>Cobrar automáticamente un método de pago registrado</p>
                 <p className="app-input input">
                   <input type="text" placeholder="Seleccionar método de pago" id="payment-search" name="payment-search" token="0" gateway="wompidirect" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="settings-home-container payment-settings">
+          <div className="settings-home-title">
+            <h3>Facturación</h3>
+            <p>Crear, adjuntar o conectar una factura para este pago</p>
+          </div>
+          <div className="settings-items payment-settings-r create-new-customer">
+            <div className="payment-collection_schedule">
+              <p className="app-input">
+                <span className="radio-buttons-container">
+                  <label className="check-container strong">Conectar una factura
+                    <input type="radio" className="takeval show_next payment_invoice" id="connect" name="payment_invoice" value="connect" checked={selectedInputFactura.checked === "connect"} onChange={facturacion} />
+                    <span className="checkmark"></span>
+                  </label>
+                </span>
+              </p>
+              <div className="payment_invoice-toggle">
+                <p>Conecta un número de factura ya creado en tu proveedor de facturación</p>
+                <p className="app-input input">
+                  <span className="acc-label">Número de factura</span>
+                  <input type="text" name="invoice_number" id="invoice_number" placeholder="FV-12-4" />
+                </p>
+              </div>
+            </div>
+
+            <div className="payment-collection_request-now">
+              <p className="app-input">
+                <span className="radio-buttons-container">
+                  <label className="check-container strong">Adjuntar una factura
+                    <input type="radio" className="takeval show_next payment_invoice" id="upload" name="payment_invoice" value="upload" checked={selectedInputFactura.checked === "upload"} onChange={facturacion} />
+                    <span className="checkmark"></span>
+                  </label>
+                </span>
+              </p>
+              <div className="payment_invoice-toggle">
+                <p className="margin-bottom-20px">La factura adjuntada se mostrará a tu cliente en las notificaciones y página de pago</p>
+                <p className="invoice-upload flex">
+                  <input className="hidden" type="file" accept="image/gif, image/jpeg, image/png, application/pdf" name="upload-invoice" id="upload-invoice" />
+                  <input type="hidden" className="changeinputr" name="upload-invoice-id" id="upload-invoice-id" />
+                  <label className="choose-image botones boton-border">Adjuntar factura</label>
+                  <label className="remove-image remove-invoice botones boton-gris button-full pointer hidden">Eliminar</label>
+                  <span className="invoice-preview">
+                    <Image className="invoice-ph" src={InvoicePreview} alt="Factura" />
+                  </span>
+                </p>
+                <p className="app-input input">
+                  <span className="acc-label">Número de factura</span>
+                  <input type="text" name="invoice_number_u" id="invoice_number_u" placeholder="FV-12-4" />
                 </p>
               </div>
             </div>

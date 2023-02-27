@@ -405,7 +405,7 @@ input:checked + .slider:before {
 a.active-head {
   border-right: 3px solid var(--morado-oscuro);
 }
-a.active-head span {
+a.active-head {
   color: var(--morado-oscuro);
 }
 .toggle-submenu {
@@ -1174,6 +1174,15 @@ table.payment-history {
   border: none;
   padding-bottom: 0px;
   margin-bottom: 0px;
+}
+span.invoice-preview {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+img.invoice-ph {
+  margin-bottom: -30px;
+  max-width: unset !important;
 }
 
 /* Suscripciones */
