@@ -3143,6 +3143,31 @@ h3.mis-direcciones {
 }
 
 /***************** Responsive *****************/
+@media (min-width: 1001px) and (max-width: 1350px) {
+  .macc-content, .macc-sidebar .macc-sidebar a span {
+    transition: all 0.5s;
+  }
+  .macc-sidebar {
+    min-width: 64px;
+  }
+  .macc-sidebar.mobile-side-hover {
+    min-width: 190px;
+  }
+  .macc-sidebar a span {
+    display: none;
+    opacity: 0;
+  }
+  .macc-sidebar:hover a span {
+    display: block;
+    opacity: 1;
+  }
+  .macc-content {
+    margin-left: 64px;
+  }
+  .macc-content.mobile-side-hover {
+    margin-left: 190px;
+  }
+}
 @media (max-width: 600px) {
   h2 {
     font-size: var(--h2-font-size-resp);
