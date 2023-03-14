@@ -24,6 +24,7 @@
   --h2-font-size: 25px;
   --h2-font-weight: 600;
   --h2-letter-spacing: 0.5px;
+  --h2-font-size-resp: 22px;
   --font-size-30px: 30px;
   --font-size-28px: 28px;
   --font-size-22px: 22px;
@@ -466,6 +467,7 @@ a.active-head {
 .login-content h2 {
   text-align: center;
   margin-bottom: 30px;
+  line-height: 1.2em;
 }
 .login-content input, .register-container input, .register-container select, .input input, .input select, .input textarea, .tabla-codigo td span {
   width: 100%;
@@ -3138,4 +3140,14 @@ h3.mis-direcciones {
 }
 .payment-methods-container {
   margin-bottom: 40px;
+}
+
+/***************** Responsive *****************/
+@media (max-width: 600px) {
+  h2 {
+    font-size: var(--h2-font-size-resp);
+  }
+  .login-content {
+    padding: 40px 30px;
+  }
 }
