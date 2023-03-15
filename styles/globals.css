@@ -242,6 +242,7 @@ span.small {
 }
 .macc-header-col1 span {
   font-size: 22px;
+  padding-top: 6px;
 }
 .macc-header-col1 img {
   margin-right: 15px;
@@ -405,7 +406,7 @@ input:checked + .slider:before {
 a.active-head {
   border-right: 3px solid var(--morado-oscuro);
 }
-a.active-head {
+a.active-head, a.active-head span {
   color: var(--morado-oscuro);
 }
 .toggle-submenu {
@@ -3191,6 +3192,7 @@ h3.mis-direcciones {
   }
   .macc-sidebar.show-sidebar {
     left: 0;
+    box-shadow: 0px 0px 50px #00000070;
   }
   .macc-content, .macc-content.mobile-side-hover {
     margin-left: 0;
@@ -3227,6 +3229,9 @@ h3.mis-direcciones {
   }
   .close-sidebar:hover svg {
     color: var(--morado-oscuro);
+  }
+  .dashboard-box {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 600px) {
