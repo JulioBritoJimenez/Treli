@@ -3261,4 +3261,21 @@ h3.mis-direcciones {
   .macc-header-col1 span {
     display: none;
   }
+  .macc-header-col2 {
+    flex: 0 0 74%;
+    justify-content: space-between;
+  }
+  .app-input.test_mode > span {
+    font-size: 14px;
+  }
+  .app-input.test_mode, a.new_head {
+    margin-right: 18px;
+  }
+  .macc-header-col1 img {
+    margin-right: 0px;
+  }
+  a.new_head {
+    top: 2px;
+    position: relative;
+  }
 }
