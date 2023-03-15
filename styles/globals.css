@@ -3177,6 +3177,9 @@ h3.mis-direcciones {
   .hide-mobile {
 		display: none !important;
 	}
+  .macc-header {
+    padding: 0px 16px;
+  }
   .macc-body {
     overflow-x: hidden;
     display: block;
@@ -3277,5 +3280,29 @@ h3.mis-direcciones {
   a.new_head {
     top: 2px;
     position: relative;
+  }
+  .get-started-img-cont {
+    margin: 18px 20px 0px;
+  }
+  .get-started-img-text {
+    max-width: 380px;
+    float: none;
+    margin: 0px;
+    position: absolute;
+  }
+  .get-started-img-cont img {
+    margin: 40px 0px 0px !important;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .get-started-img-cont img {
+    margin: 120px 0px 0px !important;
+    position: relative;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .get-started-img-cont img {
+    margin: 140px 0px 0px !important;
   }
 }
