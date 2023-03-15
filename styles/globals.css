@@ -3253,6 +3253,17 @@ h3.mis-direcciones {
   h4.step-title_name, span.check-container-text_title {
     font-size: var(--font-size-18px);
   }
+  .plist-head-row1, .plist-head-row2 {
+    flex-wrap: wrap;
+  }
+  .plist-status, .status-filter, .plist-actions {
+    flex: 0 0 100%;
+    padding-right: 0px;
+  }
+  .plist-search {
+    padding-left: 0px;
+    margin-top: 14px;
+  }
 }
 @media only screen and (max-width: 600px) {
   h2 {
