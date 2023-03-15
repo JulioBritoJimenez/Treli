@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import iconoTreli from '../public/icono-treli.png';
 import iconoHome from '../public/home.png';
-import iconoTienda from '../public/icon-tienda.png';
+import iconoMenu from '../public/menu.png';
 
 export default function Header() {
 
@@ -29,17 +29,15 @@ export default function Header() {
         <div className='macc-head_home macc-head_item'>
           <a className='new_head' href='https://treli.co/new' target='_blank'>NEW</a>
         </div>
-        <div className='macc-head_home macc-head_item'>
-          <Link className='hide_mobile' href='/account'>
+        <div className='macc-head_home macc-head_item hide-mobile'>
+          <Link href='/account'>
             <Image src={iconoHome} title="Home" alt="Icono Home Treli" />
           </Link>
         </div>
-        <div className='macc-head_analytics macc-head_item'>
-          <Link className='hide_mobile' href='/'>
-            <Image src={iconoTienda} title="Tienda" alt="Icono Tienda Treli" />
-          </Link>
+        <div className='macc-head-menumobile macc-head_item hide-desktop'>
+          <Image src={iconoMenu} title="Tienda" alt="Menú móvil Treli" />
         </div>
-        <div className="macc-head_create">
+        <div className="macc-head_create hide-mobile">
           <Link href="/account/products/add-product/" className="create-butt">Crear +</Link>
         </div>
       </div>
