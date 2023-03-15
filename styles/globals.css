@@ -229,7 +229,7 @@ span.small {
   padding: 0 20px;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   background: var(--blanco);
 }
 .macc-header-col1 a {
@@ -3250,6 +3250,9 @@ h3.mis-direcciones {
     min-width: 270px;
     min-height: 80px;
   }
+  h4.step-title_name, span.check-container-text_title {
+    font-size: var(--font-size-18px);
+  }
 }
 @media only screen and (max-width: 600px) {
   h2 {
@@ -3293,12 +3296,38 @@ h3.mis-direcciones {
   .get-started-img-cont img {
     margin: 40px 0px 0px !important;
   }
+  .get-started_step-title {
+    display: block;
+    padding: 14px 20px;
+  }
+  .step-title_col1 {
+    justify-content: left;
+  }
+  span.step-toggle {
+    position: relative;
+    top: 13px;
+    min-width: 23px;
+    min-height: 23px;
+  }
+  .step-title_col2 {
+    padding: 0px 0px 0px 43px;
+    margin-top: 6px;
+  }
 }
 @media only screen and (max-width: 425px) {
   .get-started-img-cont img {
     margin: 120px 0px 0px !important;
     position: relative;
     z-index: 1;
+  }
+  .get-started_step-title {
+    padding: 14px 20px 14px;
+  }
+  span.step-toggle {
+    top: 10px;
+  }
+  .step-title_col2 {
+    margin-top: 2px;
   }
 }
 @media only screen and (max-width: 375px) {
