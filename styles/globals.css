@@ -3177,6 +3177,10 @@ h3.mis-direcciones {
   .hide-mobile {
 		display: none !important;
 	}
+  .macc-body {
+    overflow-x: hidden;
+    display: block;
+  }
   .macc-head-menumobile img {
     margin-bottom: -6px;
   }
@@ -3193,6 +3197,9 @@ h3.mis-direcciones {
   .macc-sidebar.show-sidebar {
     left: 0;
     box-shadow: 0px 0px 50px #00000070;
+  }
+  .macc-content {
+    padding: 20px;
   }
   .macc-content, .macc-content.mobile-side-hover {
     margin-left: 0;
@@ -3233,6 +3240,13 @@ h3.mis-direcciones {
   .dashboard-box {
     width: 100%;
   }
+  .dashboard-summary-col {
+    overflow: auto;
+  }
+  .dashboard-summary-item {
+    min-width: 270px;
+    min-height: 80px;
+  }
 }
 @media only screen and (max-width: 600px) {
   h2 {
@@ -3240,5 +3254,11 @@ h3.mis-direcciones {
   }
   .login-content {
     padding: 40px 30px;
+  }
+  .dashboard-summary-item {
+    min-width: 250px;
+  }
+  .macc-header-col1 span {
+    display: none;
   }
 }
