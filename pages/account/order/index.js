@@ -32,7 +32,7 @@ function OrderPagos() {
           <div className="order-head-paid">
             <Link href="/account/orders" className="order-back"><BsArrowLeftShort /></Link>
             <div className="paid-on">Pagado en 31 de enero del 2023 - 18:05</div>
-            <button className="order-action primary-action botones">Recuperación de pago</button>
+            <button className="order-action primary-action botones hidden">Recuperación de pago</button>
           </div>
 
           <div className="new-product-cols">
