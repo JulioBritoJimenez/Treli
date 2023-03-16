@@ -5,6 +5,7 @@ import Paginacion from "../../../componentes/paginacion";
 import { useState } from 'react';
 import { Checkbox,Table } from 'antd';
 import { useRouter } from 'next/router';
+import { BsX, BsPlus } from "react-icons/bs";
 
 const columns = [
   {
@@ -179,6 +180,39 @@ function Subscription() {
               <div className="plist-search search-subs-number">
                 <input type="text" name="psearch" id="psearch" placeholder="Buscar # de suscripción"/>
                 <div className="plist-but plist-but-search boton-border">Buscar</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="plist-head-row3">
+            <div className="extra-filter_container flex no-justify">
+              <div className="s_p_container extra-filter">
+                <div className="s_p_value extra-filter_label">
+                  <span className="extra-filter-action" data-filter="payment_method"><BsPlus /><BsX className="hidden" /></span> Método de pago
+                  <span className="selected-ex-filter"></span>
+                </div>
+
+                <div className="s_p_edit hidden">
+                  <span className="semi-text">Filtrar por método de pago</span>
+                  <div className="input-container app-input input margin-bottom-10px">
+                    <select name="payment_method_select" id="payment_method_select">
+                      <option value="">Seleccionar método de pago</option>
+                      <option value="ePayco">ePayco card</option>
+                      <option value="ePayco PSE">ePayco PSE</option>
+                      <option value="Wompi">Wompi card</option>
+                      <option value="Wompi PSE">Wompi PSE</option>
+                      <option value="Wompi Nequi">Wompi Nequi</option>
+                      <option value="Wompi Debito">Wompi Debito</option>
+                      <option value="Payu">Payu card</option>
+                      <option value="PayU PSE">PayU PSE</option>
+                      <option value="Stripe">Stripe card</option>
+                      <option value="Place to Pay">Place to Pay card</option>
+                      <option value="Payments Way">Payments Way card</option>
+                      <option value="Payments Way PSE">Payments Way PSE</option>
+                    </select>
+                  </div>
+                  <button className="botones boton-violeta btn100 button-full apply-extra-filter apply-payment_method-filter">Aplicar</button>
+                </div>
               </div>
             </div>
           </div>
