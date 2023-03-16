@@ -3326,6 +3326,9 @@ h3.mis-direcciones {
     background-color: #F6F6F6;
     margin-bottom: 15px;
   }
+  select#bulkactions {
+    background-color: #fff;
+  }
   .plist-filter-container h3 {
     margin-bottom: 30px;
   }
@@ -3344,6 +3347,7 @@ h3.mis-direcciones {
     width: 100%;
     flex: 0 0 100%;
     border-radius: 10px;
+    background-color: #fff;
   }
 }
 /* fin 1100 */
@@ -3432,10 +3436,10 @@ h3.mis-direcciones {
   span.step-toggle {
     top: 10px;
   }
-  .plist-head-title {
+  .suscripciones .plist-head-title, .pagos .plist-head-title {
     display: block;
   }
-  .plist-head-title .plist-head-titlecol1:nth-child(1) {
+  .suscripciones .plist-head-title .plist-head-titlecol1:nth-child(1), .pagos .plist-head-title .plist-head-titlecol1:nth-child(1) {
     margin-bottom: 24px;
   }
   .step-title_col2 {
