@@ -3335,7 +3335,27 @@ h3.mis-direcciones {
   .plist-but.plist-but-filter {
     margin: 0px;
   }
+  .olist-container .status-filter div {
+    flex: 0 0 151px !important;
+  }
+  .olist-status.status-filter {
+    white-space: nowrap;
+    overflow: auto;
+    width: 100%;
+    flex: 0 0 100%;
+    border-radius: 10px;
+  }
 }
+/* fin 1100 */
+@media only screen and (max-width: 768px) {
+  .ant-table-wrapper .ant-table {
+    overflow-x: scroll;
+  }
+  .ant-table-container {
+    width: 1000px;
+  }
+}
+/* fin 768 */
 @media only screen and (max-width: 600px) {
   h2 {
     font-size: var(--h2-font-size-resp);
@@ -3395,7 +3415,11 @@ h3.mis-direcciones {
     padding: 0px 0px 0px 43px;
     margin-top: 6px;
   }
+  .ant-table-container {
+    width: 800px;
+  }
 }
+/* fin 600 */
 @media only screen and (max-width: 425px) {
   .get-started-img-cont img {
     margin: 120px 0px 0px !important;
@@ -3411,7 +3435,20 @@ h3.mis-direcciones {
   .step-title_col2 {
     margin-top: 2px;
   }
+  .plist-head-titlecol1 {
+    display: block;
+  }
+  .plist-head-title {
+    align-items: end;
+  }
+  .plist-head-title h2 {
+    margin: 0px 20px 20px 0px;
+  }
+  .ant-table-container {
+    width: 720px;
+  }
 }
+/* fin 425 */
 @media only screen and (max-width: 375px) {
   .get-started-img-cont img {
     margin: 140px 0px 0px !important;
