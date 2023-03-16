@@ -3354,7 +3354,7 @@ h3.mis-direcciones {
   h2.head-number {
     flex: 0 0 100%;
   }
-  .status-style {
+  .order-head .status-style {
     margin: 16px 10px 0px 0px;
   }
   .new-product-cols {
@@ -3508,6 +3508,12 @@ h3.mis-direcciones {
   .botones, .ant-table-cell.estado span, .status-style {
     padding-left: 12px !important;
     padding-right: 12px !important;
+  }
+  .subs-timeline .flex {
+    display: inline-block;
+  }
+  .subs-timeline .status-style {
+    margin: 10px 0px 5px;
   }
 }
 /* fin 425 */
