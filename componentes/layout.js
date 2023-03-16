@@ -78,7 +78,7 @@ function Layout({ children }) {
       <div className="macc-body">
         
         <div className={`macc-sidebar ${active ? "mobile-side-hover": ""} ${menuMobile ? "show-sidebar": ""}` .trimEnd()} onMouseOver={handleMouseOver} onMouseOut ={handleMouseOut}>
-          <div className="close-sidebar hide-desktop pointer" onClick={closeMenuClic}>
+          <div className="cerrar close-sidebar hide-desktop pointer" onClick={closeMenuClic}>
             <BsX />
           </div>
           <div className="macc-sidebar_top-row">

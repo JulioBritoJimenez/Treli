@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Checkbox, Table } from 'antd';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
+import { BsFilter, BsX, BsPlus } from "react-icons/bs";
 
 const columns = [
   {
@@ -123,6 +124,14 @@ function Order() {
   
   const router = useRouter()
 
+  const [filtro, setFiltro] = useState(false);
+  const filtroClic = () => {
+    setFiltro(true);
+  };
+  const cerrarFiltroClic = () => {
+    setFiltro(false);
+  };
+
   return (
     <>
       <Layout>
@@ -143,7 +152,8 @@ function Order() {
               <div className={`filter-order olist-processing ${estadoFiltroState === 2 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(2)} data-status="processing">Aprobado</div>
               <div className={`filter-order olist-completed ${estadoFiltroState === 3 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(3)} data-status="completed">Completado</div>
               <div className={`filter-order olist-pending ${estadoFiltroState === 4 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(4)} data-status="pending">Pendiente</div>
-              <div className={`filter-order olist-canceled ${estadoFiltroState === 5 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(5)} data-status="cancelled">Fallido</div>
+              <div className={`filter-order olist-past-due ${estadoFiltroState === 5 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(5)} data-status="past-due">Vencido</div>
+              <div className={`filter-order olist-canceled ${estadoFiltroState === 6 ? "plist-activestyle": ""}` .trimEnd()} onClick={() => estadoFiltroTab(6)} data-status="cancelled">Fallido</div>
             </div>
             <div className="plist-search">
               <input type="text" name="psearch" id="psearch" placeholder="Buscar pago #" />
@@ -163,7 +173,15 @@ function Order() {
               <div className="plist-but olist-but-apply boton-border">Aplicar</div>
             </div>
 
-            <div className="plist-filter-container">
+            <div className="filter-toggle hide-desktop pointer" onClick={filtroClic}>
+              <BsFilter /> <span>Filtrar pedidos</span>
+            </div>
+
+            <div className={`plist-filter-container ${filtro ? "filter-show": ""}` .trimEnd()}>
+              <h3 className="hide-desktop">Filtrar pedidos</h3>
+              <div className="cerrar close-filter hide-desktop pointer" onClick={cerrarFiltroClic}>
+                <BsX />
+              </div>
               <div className="plist-type">
                 <input name="filterdate" id="filterdate" type="text" placeholder="Filtrar por fecha" />
               </div>
@@ -187,6 +205,58 @@ function Order() {
               </div>
 
               <div className="plist-but plist-but-filter boton-border">Aplicar</div>
+            </div>
+          </div>
+
+          <div className="plist-head-row3">
+            <div className="extra-filter_container flex no-justify">
+              <div className="s_p_container extra-filter">
+                <div className="s_p_value extra-filter_label">
+                  <span className="extra-filter-action" data-filter="payment_method"><BsPlus /><BsX className="hidden" /></span> Método de pago
+                  <span className="selected-ex-filter"></span>
+                </div>
+
+                <div className="s_p_edit hidden">
+                  <span className="semi-text">Filtrar por método de pago</span>
+                  <div className="input-container app-input input margin-bottom-10px">
+                    <select name="payment_method_select" id="payment_method_select">
+                      <option value="">Seleccionar método de pago</option>
+                      <option value="ePayco">ePayco card</option>
+                      <option value="ePayco PSE">ePayco PSE</option>
+                      <option value="Wompi">Wompi card</option>
+                      <option value="Wompi PSE">Wompi PSE</option>
+                      <option value="Wompi Nequi">Wompi Nequi</option>
+                      <option value="Wompi Debito">Wompi Debito</option>
+                      <option value="Payu">Payu card</option>
+                      <option value="PayU PSE">PayU PSE</option>
+                      <option value="Stripe">Stripe card</option>
+                      <option value="Place to Pay">Place to Pay card</option>
+                      <option value="Payments Way">Payments Way card</option>
+                      <option value="Payments Way PSE">Payments Way PSE</option>
+                    </select>
+                  </div>
+                  <button className="botones boton-violeta btn100 button-full apply-extra-filter apply-payment_method-filter">Aplicar</button>
+                </div>
+              </div>
+
+              <div className="s_p_container extra-filter">
+                <div className="s_p_value extra-filter_label">
+                  <span className="extra-filter-action" data-filter="payment_method"><BsPlus /><BsX className="hidden" /></span> Item
+                  <span className="selected-ex-filter"></span>
+                </div>
+
+                <div className="s_p_edit hidden">
+                  <span className="semi-text">Filtrar por item</span>
+                  <div className="input-container app-input input margin-bottom-10px">
+                    <select name="payment_method_select" id="payment_method_select">
+                      <option value="">Seleccionar un item</option>
+                      <option value="35105">Prueba 1</option>
+                      <option value="35103">Prueba 2</option>
+                    </select>
+                  </div>
+                  <button className="botones boton-violeta btn100 button-full apply-extra-filter apply-payment_method-filter">Aplicar</button>
+                </div>
+              </div>
             </div>
           </div>
 

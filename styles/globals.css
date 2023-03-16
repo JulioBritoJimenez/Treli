@@ -878,8 +878,11 @@ span.check-container-text_title {
   color: var(--placeholder-color);
   cursor: pointer;
 }
+.pagos .status-filter {
+  padding-right: 0px;
+}
 .pagos .status-filter div {
-  flex: 0 0 20%;
+  flex: 1 1 0px;
 }
 .plist-status .plist-activestyle, .status-filter .plist-activestyle {
   background-color: var(--morado-oscuro);
@@ -1059,6 +1062,42 @@ li.ant-pagination-prev button, li.ant-pagination-next button {
 .estado.status-hold span, .head-status.status-hold, .estado-order-info.pendiente {
   background-color: #FFE494;
   color: #51390B;
+}
+.plist-head-row3 {
+  margin-top: 15px;
+}
+.plist-head-row3 .s_p_value svg {
+  margin: 0px 3px -4px 0px !important;
+  font-size: 22px;
+}
+.s_p_container.extra-filter {
+  margin-right: 10px;
+}
+.s_p_value.extra-filter_label {
+  border: 1px solid var(--morado-oscuro);
+  font-size: var(--font-size-16px);
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 8px 12px 4px;
+  border-radius: 100px;
+  border-style: dashed;
+}
+.s_p_value {
+  color: var(--morado-oscuro);
+  cursor: pointer;
+}
+.extra-filter .s_p_edit {
+  min-width: 260px;
+}
+.extra-filter .s_p_edit {
+  left: 0;
+  margin-top: 7px;
+}
+.s_p_edit select {
+  margin: 0px !important;
+  padding: 10px !important;
 }
 
 /* Orders - Pagos Detalle */
@@ -3218,7 +3257,7 @@ h3.mis-direcciones {
   .toggle-submenu svg {
     padding: 0px 0px 0px 14px;
   }
-  .close-sidebar {
+  .cerrar {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -3231,13 +3270,13 @@ h3.mis-direcciones {
     justify-content: center;
     align-items: center;
   }
-  .close-sidebar:hover {
+  .cerrar-hover {
     background-color: var(--violeta-claro);
   }
-  .close-sidebar svg {
+  .cerrar svg {
     font-size: 30px;
   }
-  .close-sidebar:hover svg {
+  .cerrar:hover svg {
     color: var(--morado-oscuro);
   }
   .dashboard-box {
@@ -3263,6 +3302,38 @@ h3.mis-direcciones {
   .plist-search {
     padding-left: 0px;
     margin-top: 14px;
+  }
+  .plist-filter-container {
+    position: fixed;
+    left: 0;
+    top: 120%;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    transition: 0.4s;
+    padding: 30px 20px 10px;
+    z-index: 2;
+    display: block;
+  }
+  .plist-filter-container.filter-show {
+    top: 0;
+  }
+  .filter-toggle svg {
+    margin: 20px 4px -8px 0px;
+    font-size: 26px;
+  }
+  .plist-filter-container input, .plist-filter-container select {
+    background-color: #F6F6F6;
+    margin-bottom: 15px;
+  }
+  .plist-filter-container h3 {
+    margin-bottom: 30px;
+  }
+  .plist-type, .plist-avail, .plist-tag {
+    padding-right: 0px;
+  }
+  .plist-but.plist-but-filter {
+    margin: 0px;
   }
 }
 @media only screen and (max-width: 600px) {
