@@ -3432,17 +3432,14 @@ h3.mis-direcciones {
   span.step-toggle {
     top: 10px;
   }
-  .step-title_col2 {
-    margin-top: 2px;
-  }
-  .plist-head-titlecol1 {
+  .plist-head-title {
     display: block;
   }
-  .plist-head-title {
-    align-items: end;
+  .plist-head-title .plist-head-titlecol1:nth-child(1) {
+    margin-bottom: 24px;
   }
-  .plist-head-title h2 {
-    margin: 0px 20px 20px 0px;
+  .step-title_col2 {
+    margin-top: 2px;
   }
   .ant-table-container {
     width: 720px;
