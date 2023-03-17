@@ -61,6 +61,14 @@ function AjustesSuscripcion() {
     setCobro(false);
   };
 
+  const [PrecioMinimo, setPrecioMinimo] = useState(false);
+  const showPrecioMinimo = () => {
+    setPrecioMinimo(true);
+  };
+  const handlePrecioMinimo = () => {
+    setPrecioMinimo(false);
+  };
+
   return(
     <>
       <Layout>
@@ -72,14 +80,14 @@ function AjustesSuscripcion() {
           <GuardarCambios />
           <p>Configura ajustes avanzados o activa funcionalidades extra para tus suscripciones.</p>
 
-          <div className="order-box-container subs-tools margin-bottom">
+          <div className="order-box-container subs-tools margin-bottom ajustes-suscripciones">
             <div className="order-box">
               <h3>Herramientas de suscripción para tus clientes</h3>
             </div>
             <div className="order-box">
               <div className="flex">
                 <span>Permitir que tus clientes cancelen o pausen una suscripción activa</span>
-                <a onClick={showPausar}>Administrar</a>
+                <a className="open-pause-cancel" onClick={showPausar}>Administrar</a>
                 <Modal 
                   title="Activar o desactivar pausar y cancelar"
                   open={Pausar} 
@@ -109,7 +117,7 @@ function AjustesSuscripcion() {
             <div className="order-box">
               <div className="flex">
                 <span>Configurar el limite de tiempo de los cambios de suscripción de tus clientes</span>
-                <a onClick={showLimite}>Administrar</a>
+                <a className="open-timeframe" onClick={showLimite}>Administrar</a>
                 <Modal 
                   title="Límite de tiempo para cambios en suscripciones de tus clientes"
                   open={Limite} 
@@ -131,7 +139,7 @@ function AjustesSuscripcion() {
             <div className="order-box">
               <div className="flex">
                 <span>Permitir que tus clientes cambien, editen y modifiquen sus suscripciones</span>
-                <a onClick={showCambiar}>Administrar</a>
+                <a className="open-switch" onClick={showCambiar}>Administrar</a>
                 <Modal 
                   title="Cambio en suscripciones de tus clientes"
                   open={Cambiar} 
@@ -162,7 +170,7 @@ function AjustesSuscripcion() {
             <div className="order-box">
               <div className="flex">
                 <span>Seguimiento del uso de suscripciones</span>
-                <a onClick={showSeguimiento}>Administrar</a>
+                <a className="open-usage-tracking" onClick={showSeguimiento}>Administrar</a>
                 <Modal 
                   title="Seguimiento del uso de suscripciones"
                   open={Seguimiento} 
@@ -188,7 +196,7 @@ function AjustesSuscripcion() {
             <div className="order-box">
               <div className="flex">
                 <span>Variaciones de productos de suscripción</span>
-                <a onClick={showVariacion}>Administrar</a>
+                <a className="open-product-variations" onClick={showVariacion}>Administrar</a>
                 <Modal 
                   title="Variaciones de productos de suscripción"
                   open={Variacion} 
@@ -214,7 +222,7 @@ function AjustesSuscripcion() {
             <div className="order-box">
               <div className="flex">
                 <span>Configurar el cobro basado en el uso</span>
-                <a onClick={showCobro}>Administrar</a>
+                <a className="open-usage-billing" onClick={showCobro}>Administrar</a>
                 <Modal 
                   title="Cobro basado en el uso"
                   open={Cobro} 
@@ -242,6 +250,32 @@ function AjustesSuscripcion() {
                       <option value="manual">Manualmente</option>
                     </select>
                   </div>
+                </Modal>
+              </div>
+            </div>
+
+            <div className="order-box">
+              <div className="flex">
+                <span>Precio mínimo de suscripción</span>
+                <a className="open-product-variations" onClick={showPrecioMinimo}>Administrar</a>
+                <Modal 
+                  title="Precio mínimo de suscripción"
+                  open={PrecioMinimo} 
+                  onCancel={handlePrecioMinimo} 
+                  footer={[
+                    <Button className="boton-gris" onClick={handlePrecioMinimo} key="cancelar">Cancelar</Button>,
+                    <Button onClick={handlePrecioMinimo} key="guardar">Guardar ajustes</Button>
+                  ]} closeIcon={<BsX />} 
+                  centered width={700}
+                >
+                  <p>Activar si vendes planes con varias unidades y quieres configurar un precio mínimo si el usuario no cumple con las unidades mínimas requeridas. Puedes configurar el precio mínimo en cada plan de suscripción.</p>
+                  <p className="app-input">
+                    <label className="switch space-r">
+                      <input type="checkbox" id="minimum_price" name="minimum_price" value="1" />
+                      <span className="slider round"></span>
+                    </label>
+                    <span className="acc-label">Activar / Desactivar</span>
+                  </p>
                 </Modal>
               </div>
             </div>
