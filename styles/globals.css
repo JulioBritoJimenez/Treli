@@ -3357,7 +3357,7 @@ h3.mis-direcciones {
   .order-head .status-style {
     margin: 16px 10px 0px 0px;
   }
-  .new-product-cols {
+  .new-product-cols, .settings-home-container {
     display: block;
   }
   .new-product-col1, .new-product-col2 {
@@ -3384,6 +3384,9 @@ h3.mis-direcciones {
     position: absolute;
     right: 0;
   }
+  .settings-home-title {
+    padding: 10px 0px 0px;
+  }
 }
 /* fin 1100 */
 @media only screen and (max-width: 768px) {
@@ -3392,6 +3395,12 @@ h3.mis-direcciones {
   }
   .ant-table-container {
     width: 1000px;
+  }
+  .app-input {
+    flex-wrap: wrap;
+  }
+  .input {
+    margin-bottom: 18px;
   }
 }
 /* fin 768 */
@@ -3520,6 +3529,10 @@ h3.mis-direcciones {
   }
   .agregar-nuevo h2 {
     margin-bottom: 20px;
+  }
+  .ant-modal-title {
+    padding-right: 45px;
+    line-height: 1.2em !important;
   }
 }
 /* fin 425 */
