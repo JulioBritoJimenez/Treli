@@ -100,7 +100,7 @@ span.small {
   font-size: var(--font-size-15px);
   font-weight: normal;
 }
-.hidden {
+.hidden, .login-step-two.olvido, .upw-inst.olvido {
   display: none !important;
 }
 .active {
@@ -532,8 +532,11 @@ p.dont a, p.reg-priv a, p.why-text a {
 p.dont a:hover, p.reg-priv a:hover, p.why-text a:hover {
   color: var(--violeta);
 }
-.otp-inst, .upw-inst {
+.otp-inst, .upw-inst, p.lost-password {
   text-align: center;
+}
+.texto-otp {
+  display: block;
 }
 
 /* Register */
