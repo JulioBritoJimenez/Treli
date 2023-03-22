@@ -468,7 +468,7 @@ a.active-head, a.active-head span {
 }
 .login-content h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
   line-height: 1.2em;
 }
 .login-content input, .register-container input, .register-container select, .input input, .input select, .input textarea, .tabla-codigo td span {
@@ -531,6 +531,9 @@ p.dont a, p.reg-priv a, p.why-text a {
 }
 p.dont a:hover, p.reg-priv a:hover, p.why-text a:hover {
   color: var(--violeta);
+}
+.otp-inst, .upw-inst {
+  text-align: center;
 }
 
 /* Register */

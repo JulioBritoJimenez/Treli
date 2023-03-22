@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
-import LogoTreli from '../public/treli.svg';
-import { useState } from 'react';
+import LogoTreli from "../public/treli.svg";
+import { useState } from "react";
 
 export default function Home() {
 
@@ -22,7 +22,10 @@ export default function Home() {
       <div className="login-container">
           <div className="login-content">
             <Link href="/account"><Image src={LogoTreli} alt="Logo Treli" /></Link>
-            <h2>Inicie sesión en su cuenta Treli</h2>
+            <h2>Ingresa a tu cuenta de Treli</h2>
+            <p className="otp-inst">Ingresa tu correo electrónico o usuario y recibirás un código de seguridad para continuar.</p>
+            <p className="upw-inst hidden">Ingresa tu correo electrónico o usuario y contraseña para continuar</p>
+            
             <form className="form-login" method="post">
               <p className="app-input">
                 <input className="input-text" placeholder="Usuario" type="text" name="username" id="username" autoComplete="username" />
