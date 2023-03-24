@@ -3406,6 +3406,18 @@ h3.mis-direcciones {
     height: 14px;
     margin: 1px 5px 0px 6px;
   }
+  .settings-features .flex {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+  }
+  .label-text-admin .strong {
+    flex: 0 0 20px;
+    margin-right: 0px;
+  }
+  .label-text-admin .flex .text {
+    padding-right: 0px;
+  }
 }
 /* fin 1100 */
 @media only screen and (max-width: 768px) {
