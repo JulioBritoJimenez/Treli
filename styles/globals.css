@@ -3396,7 +3396,7 @@ h3.mis-direcciones {
   .settings-home-title {
     padding: 10px 0px 0px;
   }
-  .order-box-container.active-providers .flex.flex-center {
+  .order-box-container.active-providers .flex.flex-center, .manual-providers .flex {
     flex-direction: column;
     align-items: start;
     row-gap: 22px;
