@@ -3221,6 +3221,9 @@ h3.mis-direcciones {
   .hide-mobile {
 		display: none !important;
 	}
+  h3.semi {
+    font-size: var(--font-size-16px) !important;
+  }
   .macc-header {
     padding: 0px 16px;
   }
@@ -3392,6 +3395,16 @@ h3.mis-direcciones {
   }
   .settings-home-title {
     padding: 10px 0px 0px;
+  }
+  .order-box-container.active-providers .flex.flex-center {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 22px;
+  }
+  span.status-circle {
+    width: 14px;
+    height: 14px;
+    margin: 1px 7px 0px 8px;
   }
 }
 /* fin 1100 */
