@@ -3418,6 +3418,25 @@ h3.mis-direcciones {
   .label-text-admin .flex .text {
     padding-right: 0px;
   }
+  .zone-table-row {
+    padding: 20px 10px;
+    position: relative;
+  }
+  .zone-head-item {
+    padding: 3px;
+    flex: 0 0 70% !important;
+  }
+  .zone-head-item.table-zone-method {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+  .zone-head-item.table-zone-active .switch {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 /* fin 1100 */
 @media only screen and (max-width: 768px) {
@@ -3628,5 +3647,12 @@ h3.mis-direcciones {
   }
   .settings-box .acc-label {
     margin-right: 18px;
+  }
+  .shipping-head {
+    display: block;
+  }
+  .shipping-head a {
+    margin: 20px 0px 0px;
+    display: inline-flex;
   }
 }

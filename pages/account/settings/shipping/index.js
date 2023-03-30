@@ -20,7 +20,7 @@ function Envios() {
           <p>Nota: las membresías y los servicios recurrentes tienen envío gratuito de forma predeterminada.</p>
 
           <div className="shipping-zones-table">
-            <div className="zone-table-head">
+            <div className="zone-table-head hide-mobile">
               <div className="zone-head-item table-zone-name">Nombre</div>
               <div className="zone-head-item table-zone-region">Región</div>
               <div className="zone-head-item table-zone-method">Método</div>
