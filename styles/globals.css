@@ -3606,4 +3606,7 @@ h3.mis-direcciones {
   .get-started-img-cont img {
     margin: 140px 0px 0px !important;
   }
+  .settings-box .acc-label {
+    margin-right: 18px;
+  }
 }
