@@ -59,7 +59,7 @@ function PlantillasPago() {
               </div>
 
               <div className={`order-box-container margin-bottom hidden ${show ? "active": ""}` .trimEnd()}>
-                <div className="settings-box">
+                <div className="settings-box width100">
                   <p className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Nombre de la plantilla</span><br />
@@ -71,7 +71,7 @@ function PlantillasPago() {
                   </p>
                 </div>
 
-                <div className="settings-box">
+                <div className="settings-box width100">
                   <div className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Fecha de vencimiento del pago</span><br />
@@ -112,7 +112,7 @@ function PlantillasPago() {
                   </p>
                 </div>
 
-                <div className={`settings-box hidden ${showRecordatorios ? "active": ""}` .trimEnd()}>
+                <div className={`settings-box width100 hidden ${showRecordatorios ? "active": ""}` .trimEnd()}>
                   <div className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Recordar antes de la fecha de vencimiento del pago</span><br />
@@ -134,7 +134,7 @@ function PlantillasPago() {
                   </div>
                 </div>
 
-                <div className={`settings-box hidden ${showRecordatorios ? "active": ""}` .trimEnd()}>
+                <div className={`settings-box width100 hidden ${showRecordatorios ? "active": ""}` .trimEnd()}>
                   <div className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Recordar después de la fecha de vencimiento del pago</span><br />
@@ -168,7 +168,7 @@ function PlantillasPago() {
                   </p>
                 </div>
 
-                <div className={`settings-box hidden ${showTasas ? "active": ""}` .trimEnd()}>
+                <div className={`settings-box width100 hidden ${showTasas ? "active": ""}` .trimEnd()}>
                   <div className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Tasa de interés diaria</span><br />
@@ -190,7 +190,7 @@ function PlantillasPago() {
                   </div>
                 </div>
 
-                <div className={`settings-box hidden ${showTasas ? "active": ""}` .trimEnd()}>
+                <div className={`settings-box width100 hidden ${showTasas ? "active": ""}` .trimEnd()}>
                   <div className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Tasa de interés mensual</span><br />
@@ -213,7 +213,7 @@ function PlantillasPago() {
                   <div className="missing_field"><BsFillExclamationCircleFill />Este campo es requerido</div>
                 </div>
 
-                <div className={`settings-box hidden ${showTasas ? "active": ""}` .trimEnd()}>
+                <div className={`settings-box width100 hidden ${showTasas ? "active": ""}` .trimEnd()}>
                   <div className="app-input input label-flex1">
                     <span className="acc-label">
                       <span>Tasa de interés de mora diaria</span><br />

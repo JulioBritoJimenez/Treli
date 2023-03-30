@@ -3500,6 +3500,10 @@ h3.mis-direcciones {
   .order-box-container {
     padding: 20px 14px;
   }
+  .settings-box {
+    margin: 20px -14px 0px;
+    padding: 20px 14px 0px;
+  }
   .order-box, .plan-container {
     margin: 0 -14px 25px;
     padding: 0 14px 25px;
@@ -3588,6 +3592,13 @@ h3.mis-direcciones {
   }
   .settings-pasarelas .g-rates, .settings-pasarelas .gmanage {
     text-align: left;
+  }
+  .settings-box.width100 .acc-label {
+    margin: 0px 0px 16px 0px;
+    flex: 0 0 100%;
+  }
+  .settings-box.width100 .s_p_edit {
+    left: 0px;
   }
 }
 /* fin 425 */
