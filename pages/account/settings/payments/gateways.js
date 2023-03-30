@@ -12,7 +12,7 @@ function Gateways() {
   return(
     <>
       <Layout>
-        <div className="account-appe-container settings-dunning settings-ganalytics">
+        <div className="account-appe-container settings-dunning settings-ganalytics settings-pasarelas">
           <div className="order-head-paid">
             <Link href="/account/settings/payments/" className="order-back"><BsArrowLeftShort /></Link>
             <h2>Pasarelas de pago</h2>

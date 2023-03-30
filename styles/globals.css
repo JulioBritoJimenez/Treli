@@ -3578,6 +3578,17 @@ h3.mis-direcciones {
     padding-right: 45px;
     line-height: 1.2em !important;
   }
+  .settings-pasarelas .order-box .flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 40px 30px 0px;
+  }
+  .settings-pasarelas .flex-no-space.list-item a, .settings-pasarelas .flex-no-space.list-item div {
+    width: 100%;
+  }
+  .settings-pasarelas .g-rates, .settings-pasarelas .gmanage {
+    text-align: left;
+  }
 }
 /* fin 425 */
 @media only screen and (max-width: 375px) {
