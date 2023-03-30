@@ -3430,7 +3430,7 @@ h3.mis-direcciones {
   .app-input {
     flex-wrap: wrap;
   }
-  .ajustes-adicionales .app-input {
+  .ajustes-adicionales .app-input, .provider-other-settings .app-input {
     flex-wrap: initial;
   }
   .input {
@@ -3600,15 +3600,17 @@ h3.mis-direcciones {
     padding-right: 45px;
     line-height: 1.2em !important;
   }
-  .settings-pasarelas .order-box .flex {
+  .settings-pasarelas .order-box .flex, .proveedores-facturas .order-box .flex {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40px 40px 30px 0px;
   }
-  .settings-pasarelas .flex-no-space.list-item a, .settings-pasarelas .flex-no-space.list-item div {
+  .settings-pasarelas .flex-no-space.list-item a, .settings-pasarelas .flex-no-space.list-item div,
+  .proveedores-facturas .flex-no-space.list-item a, .proveedores-facturas .flex-no-space.list-item div {
     width: 100%;
   }
-  .settings-pasarelas .g-rates, .settings-pasarelas .gmanage {
+  .settings-pasarelas .g-rates, .settings-pasarelas .gmanage,
+  .proveedores-facturas .g-rates, .proveedores-facturas .gmanage {
     text-align: left;
   }
   .settings-box.width100 .acc-label {

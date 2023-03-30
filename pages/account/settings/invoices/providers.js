@@ -8,7 +8,7 @@ function Provedores() {
   return(
     <>
       <Layout>
-        <div className="account-appe-container settings-dunning settings-ganalytics">
+        <div className="account-appe-container settings-dunning settings-ganalytics proveedores-facturas">
           <div className="order-head-paid">
             <Link href="/account/settings/invoices/" className="order-back"><BsArrowLeftShort /></Link>
             <h2>Proveedores de facturación</h2>
