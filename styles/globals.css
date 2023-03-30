@@ -3430,12 +3430,18 @@ h3.mis-direcciones {
   .app-input {
     flex-wrap: wrap;
   }
+  .ajustes-adicionales .app-input {
+    flex-wrap: initial;
+  }
   .input {
     margin-bottom: 18px;
   }
   span.routing-use {
     flex: 0 0 100%;
     margin: 10px 0px 0px;
+  }
+  .space-l {
+    margin-left: 0px;
   }
 }
 /* fin 768 */

@@ -93,7 +93,7 @@ function Monedas() {
                 <Link href="/account/settings/smart-routing" className="botones boton-violeta button-full">Configurar</Link>
               </div>
 
-              <div className="order-box-container margin-bottom">
+              <div className="order-box-container margin-bottom ajustes-adicionales">
                 <h3 className="margin-bottom">Ajustes adicionales</h3>
                 <p className="app-input trm-pricing">
                   <label className="switch space-r">
