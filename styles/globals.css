@@ -2263,6 +2263,12 @@ span.plan-pricing_amount {
   flex-grow: 1;
   text-align: right;
 }
+td.td-long {
+  width: 30%;
+}
+.capitalize {
+  text-transform: capitalize;
+}
 
 /* Account - Cuenta */
 .dashboard-summary {
