@@ -9,6 +9,7 @@ function MyAccount() {
         <div className="settings-head my-account-container status-filter">
           <Link href="/account/my-account/" className="settings-head-item plist-activestyle">General</Link>
           <Link href="/account/my-account/billing" className="settings-head-item">Facturación</Link>
+          <Link href="/account/my-account/team" className="settings-head-item">Equipo</Link>
         </div>
 
         <div className="new-product-cols">

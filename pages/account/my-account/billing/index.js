@@ -28,9 +28,10 @@ function Billing() {
     <>
       <Layout>
         <h2 className="margin-bottom">Facturación</h2>
-        <div className="settings-head my-account-container status-filter">
+        <div className="settings-head my-account-container status-filter tabs-account">
           <Link href="/account/my-account/" className="settings-head-item">General</Link>
           <Link href="/account/my-account/billing" className="settings-head-item plist-activestyle">Facturación</Link>
+          <Link href="/account/my-account/team" className="settings-head-item">Equipo</Link>
         </div>
 
         <div className="new-product-cols">

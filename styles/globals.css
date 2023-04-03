@@ -2148,11 +2148,15 @@ span.t_red {
   border-radius: 10px;
 }
 .my-account-container a.settings-head-item {
-  flex: 0 0 50%;
+  flex: 1;
 }
 a.settings-head-item:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+a.settings-head-item:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* Billing - Facturación */
@@ -2242,6 +2246,22 @@ span.plan-pricing_amount {
 .order-box-container.cycle-summary h2 {
   font-size: var(--font-size-28px);
   font-weight: 500;
+}
+
+/* Team - Equipo */
+.tabs-account {
+  padding: 0px;
+}
+.input-blanco input, .input-blanco select {
+  background: #fff;
+}
+.team-filter_name, .team-filter_active {
+  margin-right: 20px;
+  flex: 0 0 20%;
+}
+.add_team_member {
+  flex-grow: 1;
+  text-align: right;
 }
 
 /* Account - Cuenta */
