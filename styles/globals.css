@@ -2269,6 +2269,20 @@ td.td-long {
 .capitalize {
   text-transform: capitalize;
 }
+.miembro-equipo p.app-input {
+  flex-direction: column;
+  align-items: start;
+}
+.miembro-equipo label {
+  margin-bottom: 2px;
+}
+.miembro-equipo p {
+  margin-bottom: 2px;
+}
+.editar-miembro:hover {
+  color: #6652f1;
+  cursor: pointer;
+}
 
 /* Account - Cuenta */
 .dashboard-summary {
