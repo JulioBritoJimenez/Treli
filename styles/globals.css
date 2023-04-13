@@ -2284,7 +2284,6 @@ td.td-long {
   cursor: pointer;
 }
 
-
 /* Account - Cuenta */
 .dashboard-summary {
   background-color: var(--violeta);
@@ -2908,7 +2907,7 @@ span.t_email-logo_text {
 }
 
 /* My Account - Mi cuenta */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1101px) {
   .account-container {
     max-width: 1140px;
     margin: auto;
@@ -3478,6 +3477,10 @@ h3.mis-direcciones {
     top: 50%;
     transform: translate(0, -50%);
   }
+  .account-container {
+    max-width: 100%;
+    padding: 60px 30px 80px;
+  }
 }
 /* fin 1100 */
 @media only screen and (max-width: 768px) {
@@ -3502,6 +3505,11 @@ h3.mis-direcciones {
   }
   .space-l {
     margin-left: 0px;
+  }
+  .account-menu {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    gap: 30px;
   }
 }
 /* fin 768 */
@@ -3608,6 +3616,10 @@ h3.mis-direcciones {
   .provider-status {
     margin-right: 7px;
   }
+  .account-menu {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }
 /* fin 600 */
 @media only screen and (max-width: 425px) {
@@ -3679,6 +3691,9 @@ h3.mis-direcciones {
   }
   .settings-box.width100 .s_p_edit {
     left: 0px;
+  }
+  .account-container {
+    padding: 40px 20px 40px;
   }
 }
 /* fin 425 */
