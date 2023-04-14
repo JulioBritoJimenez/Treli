@@ -1,14 +1,20 @@
 import GuardarCambios from "../../../../componentes/guardarCambios";
 import Layout from "../../../../componentes/layout";
 import Link from 'next/link';
-import { BsExclamationCircle } from "react-icons/bs";
+import { BsExclamationCircle, BsInfoCircleFill } from "react-icons/bs";
+import { Tooltip } from 'antd';
 
 function ZonaEnvio() {
+
+  const nombreZona = <div>Tus clientes verán esto al finalizar la compra</div>;
+
+  const codigoPostal = <div>También se aceptan códigos postales que contienen rangos completamente numéricos (por ejemplo, 90210...99000)</div>;
+
   return (
     <>
       <Layout>
         <div className="account-appe-container shipping-zone-container">
-          <h2 className="margin-bottom">New shipping zone</h2>
+          <h2 className="margin-bottom">Nueva zona de envío</h2>
           <GuardarCambios />
 
           <div className="settings-head status-filter flex">
@@ -24,16 +30,16 @@ function ZonaEnvio() {
             <div className="new-product-col1">
               <div className="order-box-container margin-bottom">
                 <p className="app-input input">
-                  <span className="acc-label">Nombre</span>
-                  <span className="globito-cont">
-                    <span className="globito"><BsExclamationCircle /></span>
-                    <span className="globito-text">Tus clientes verán esto al finalizar la compra.</span>
+                  <span className="acc-label">Nombre
+                    <Tooltip title={nombreZona} trigger="click" placement="bottom" color="#fff">
+                      <BsInfoCircleFill />
+                    </Tooltip>
                   </span>
                   <input type="text" name="zone_name" id="zone_name" placeholder="Tarifa fija" />
                 </p>
 
                 <p className="app-input input">
-                  <span className="acc-label">Country</span>
+                  <span className="acc-label">País</span>
                   <select name="zone_country" id="zone_country">
                     <option value="0">Seleccionar país</option>
                     <option value="CO">Colombia</option>
@@ -46,6 +52,15 @@ function ZonaEnvio() {
                     <option value="all_states">Todos los estados/departamentos</option>
                     <option value="ATL">Atlántico</option>
                   </select>
+                </p>
+
+                <p className="app-input input">
+                  <span className="acc-label">Código postal
+                    <Tooltip title={codigoPostal} trigger="click" placement="bottom" color="#fff">
+                      <BsInfoCircleFill />
+                    </Tooltip>
+                  </span>
+                  <input type="text" name="zone_zipcodes" id="zone_zipcodes" placeholder="Lista de códigos postales separados por comas" />
                 </p>
               </div>
 
