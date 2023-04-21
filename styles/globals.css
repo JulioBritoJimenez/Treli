@@ -3517,6 +3517,34 @@ h3.mis-direcciones {
   .shipping-zone-container span.globito {
     top: -2px;
   }
+  .business-logo-container {
+    flex-wrap: wrap;
+  }
+  .business-logo-show {
+    flex: 1;
+    text-align: right;
+  }
+  p.image-choose {
+    flex: 0 0 100%;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  input#colorpicker {
+    margin-bottom: 10px;
+  }
+  input#hexcolor, input#buwha, input#buphone {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  select#phonecountry, select#wacountry {
+    width: 100%;
+    margin-bottom: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .info-contacto .align-right {
+    text-align: left;
+  }
 }
 /* fin 768 */
 @media only screen and (max-width: 600px) {
@@ -3700,6 +3728,10 @@ h3.mis-direcciones {
   }
   .account-container {
     padding: 40px 20px 40px;
+  }
+  .business-logo-show img {
+    width: 80px;
+    height: 80px;
   }
 }
 /* fin 425 */

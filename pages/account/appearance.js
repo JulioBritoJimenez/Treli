@@ -50,7 +50,7 @@ function EstilosMarca() {
               </div>
 
               <h3 className="margin-bottom-15px">Información de contacto</h3>
-              <div className="order-box-container margin-bottom">
+              <div className="order-box-container margin-bottom info-contacto">
                 <p className="app-input input margin-bottom">
                   <span className="acc-label">Teléfono</span>
                   <select name="phonecountry" id="phonecountry">
