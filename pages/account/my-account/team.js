@@ -48,7 +48,7 @@ function Team() {
           title="Nuevo miembro"
           open={miembro}
           onCancel={handleMiembro}
-          footer={[<Button onClick={handleMiembro} key="agregar">Agregar</Button>]} closeIcon={<BsX />}
+          footer={[<Button onClick={handleMiembro} key="eliminar" className="eliminar-btn">Eliminar</Button>, <Button onClick={handleMiembro} key="agregar">Agregar</Button>]} closeIcon={<BsX />}
           centered width={700}
         >
           <div className="miembro-equipo">
@@ -83,8 +83,12 @@ function Team() {
               <label className="acc-label">Rol</label>
               <select className="v-required" name="create_member_role" id="create_member_role">
                 <option value="">Selecciona el rol</option>
-                <option value="corredor">Corredor</option>
+                <option value="team_admin">Administrador</option>
                 <option value="analista">Analista</option>
+                <option value="corredor">Corredor</option>
+                <option value="team_manager">Manager</option>
+                <option value="team_custom">Personalizado</option>
+                <option value="team_viewonly">Solo vista</option>
               </select>
             </p>
             <p className="app-input siigo_vendor_cont hidden">
