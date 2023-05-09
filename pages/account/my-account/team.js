@@ -61,6 +61,10 @@ function Team() {
               <input type="text" className="v-required" name="last_name" id="last_name" placeholder="Apellido" />
             </p>
             <p className="app-input">
+              <label className="acc-label">Identificación</label>
+              <input type="text" className="v-required" name="identification" id="identification" placeholder="1132212532" />
+            </p>
+            <p className="app-input">
               <label className="acc-label">Correo electrónico</label>
               <input type="text" className="v-required" name="email" id="email" placeholder="Email" />
             </p>
@@ -69,8 +73,11 @@ function Team() {
               <input type="number" className="v-required" name="buphone" id="buphone" placeholder="Teléfono" />
             </p>
             <p className="app-input">
-              <label className="acc-label">Referencia interna</label>
-              <input type="text" className="v-required" name="internal_reference" id="internal_reference" placeholder="11223344" />
+              <label className="acc-label">Estado</label>
+              <select name="status" id="status">
+                <option value="active">Activo</option>
+                <option value="inactive">Inactivo</option>
+              </select>
             </p>
             <p className="app-input">
               <label className="acc-label">Rol</label>
@@ -88,20 +95,64 @@ function Team() {
                 <option value="vendedor2">Vendedor #2</option>
               </select>
             </p>
-            <p className="app-input">
-              <label className="acc-label">Preferencia de login</label>
-              <select name="login_type" id="login_type">
-                <option value="otp">OTP</option>
-                <option value="contrasena">Contraseña</option>
-              </select>
+            <p className="app-input hidden">
+              <label className="acc-label">Vehículo</label>
+              <input type="text" name="corredor_vehiculo" id="corredor_vehiculo" placeholder="11262993" />
             </p>
-            <p className="app-input">
-              <label className="acc-label">Estado</label>
-              <select name="status" id="status">
-                <option value="activo">Activo</option>
-                <option value="inactivo">Inactivo</option>
-              </select>
-            </p>
+            <div className="app-input perm-supercontainer">
+              <label className="acc-label">Permisos</label>
+              <div className="perm-container">
+                <div className="perm-section">
+                  <p className="perm-tit">Dashboard</p>
+                  <div className="perm-inside">
+                    <label className="check-container">Ver dashboard
+                      <input type="checkbox" className="permisions_tog input_tog" section="dashboard" id="view_dashboard" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="perm-section">
+                  <p className="perm-tit">Pagos</p>
+                  <div className="perm-inside">
+                    <label className="check-container">Ver pagos
+                      <input type="checkbox" className="permisions_tog input_tog" section="pagos" id="view_payments" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Exportar pagos
+                      <input type="checkbox" className="permisions_tog input_tog" section="pagos" id="export_payments" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Actualizar valores
+                      <input type="checkbox" className="permisions_tog input_tog" section="pagos" id="update_value_payments" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Actualizar estados
+                      <input type="checkbox" className="permisions_tog input_tog" section="pagos" id="update_status_payments" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Crear pagos
+                      <input type="checkbox" className="permisions_tog input_tog" section="pagos" id="create_payments" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+
+                  <div className="perm-section">
+                    <p className="perm-tit">Suscripciones</p>
+                    <div className="perm-inside">
+                      <label className="check-container">Ver suscripciones
+                        <input type="checkbox" className="permisions_tog input_tog" section="suscripciones" id="view_subscriptions" value="1" />
+                        <span className="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Modal>
 

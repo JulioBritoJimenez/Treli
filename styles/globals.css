@@ -2283,6 +2283,37 @@ td.td-long {
   color: #6652f1;
   cursor: pointer;
 }
+.app-input.perm-supercontainer {
+  display: block;
+}
+.perm-container {
+  margin-top: 10px;
+}
+.perm-inside {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+}
+.perm-inside label {
+  flex: 0 0 33%;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  text-decoration: none;
+}
+.perm-supercontainer .checkmark {
+  width: 17px;
+  height: 17px;
+}
+.perm-supercontainer .check-container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 3px;
+  height: 7px;
+  border-width: 0 2px 2px 0;
+}
+.ant-modal-body .perm-supercontainer .checkmark {
+  top: -1px;
+}
 
 /* Account - Cuenta */
 .dashboard-summary {
@@ -3748,8 +3779,5 @@ h3.mis-direcciones {
   .shipping-head a {
     margin: 20px 0px 0px;
     display: inline-flex;
-  }
-  .clase-de-prueba {
-    display: block;
   }
 }
