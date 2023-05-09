@@ -14,7 +14,7 @@ function Team() {
     setMiembro(false);
   };
 
-  return(
+  return (
     <>
       <Layout>
         <h2 className="margin-bottom">Equipo</h2>
@@ -44,11 +44,11 @@ function Team() {
           </div>
         </div>
 
-        <Modal 
+        <Modal
           title="Nuevo miembro"
-          open={miembro} 
-          onCancel={handleMiembro} 
-          footer={[<Button onClick={handleMiembro} key="agregar">Agregar</Button>]} closeIcon={<BsX />} 
+          open={miembro}
+          onCancel={handleMiembro}
+          footer={[<Button onClick={handleMiembro} key="agregar">Agregar</Button>]} closeIcon={<BsX />}
           centered width={700}
         >
           <div className="miembro-equipo">
@@ -140,15 +140,170 @@ function Team() {
                       <span className="checkmark"></span>
                     </label>
                   </div>
+                </div>
 
-                  <div className="perm-section">
-                    <p className="perm-tit">Suscripciones</p>
-                    <div className="perm-inside">
-                      <label className="check-container">Ver suscripciones
-                        <input type="checkbox" className="permisions_tog input_tog" section="suscripciones" id="view_subscriptions" value="1" />
-                        <span className="checkmark"></span>
-                      </label>
-                    </div>
+                <div className="perm-section">
+                  <p className="perm-tit">Suscripciones</p>
+                  <div className="perm-inside">
+                    <label className="check-container">Ver suscripciones
+                      <input type="checkbox" className="permisions_tog input_tog" section="suscripciones" id="view_subscriptions" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Exportar suscripciones
+                      <input type="checkbox" className="permisions_tog input_tog" section="suscripciones" id="export_subscriptions" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Actualizar valores
+                      <input type="checkbox" className="permisions_tog input_tog" section="suscripciones" id="update_value_subscriptions" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Actualizar estados
+                      <input type="checkbox" className="permisions_tog input_tog" section="suscripciones" id="update_status_subscriptions" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Crear suscripciones
+                      <input type="checkbox" className="permisions_tog input_tog" section="suscripciones" id="create_subscriptions" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="perm-section">
+                  <p className="perm-tit">Catálogo</p>
+                  <div className="perm-inside">
+                    <label className="check-container">Ver catálago
+                      <input type="checkbox" className="permisions_tog input_tog" section="catalogo" id="view_catalog" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Crear planes
+                      <input type="checkbox" className="permisions_tog input_tog" section="catalogo" id="create_plans_catalog" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Crear addons
+                      <input type="checkbox" className="permisions_tog input_tog" section="catalogo" id="create_addons_catalog" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Crear productos
+                      <input type="checkbox" className="permisions_tog input_tog" section="catalogo" id="create_products_catalog" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Crear cupones
+                      <input type="checkbox" className="permisions_tog input_tog" section="catalogo" id="create_coupons_catalog" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="perm-section">
+                  <p className="perm-tit">Configuraciones</p>
+                  <div className="perm-inside">
+                    <label className="check-container">Perfil del negocio
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="profile_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Ajuste de suscripciones
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="subscription_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Pagos
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="payment_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Facturación
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="invoice_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Monedas
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="currencies_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Envíos
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="shipping_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Integraciones
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="integrations_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Estilos de marca
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="styles_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Notificaciones
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="notifications_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Página de pago
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="checkout_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Portal de autoservicio
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="portal_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Treli tienda
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="store_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Reclamación
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="dunning_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">API Keys
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="api_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Webhooks
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="webhooks_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Políticas
+                      <input type="checkbox" className="permisions_tog input_tog" section="configuraciones" id="politicas_settings" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="perm-section">
+                  <p className="perm-tit">Cuenta</p>
+                  <div className="perm-inside">
+                    <label className="check-container">General
+                      <input type="checkbox" className="permisions_tog input_tog" section="cuenta" id="general_account" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Facturación
+                      <input type="checkbox" className="permisions_tog input_tog" section="cuenta" id="billing_account" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
+
+                    <label className="check-container">Equipo
+                      <input type="checkbox" className="permisions_tog input_tog" section="cuenta" id="team_account" value="1" />
+                      <span className="checkmark"></span>
+                    </label>
                   </div>
                 </div>
               </div>
