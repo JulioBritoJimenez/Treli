@@ -3685,6 +3685,21 @@ h3.mis-direcciones {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+  .team_table.order-box-container {
+    overflow: auto;
+  }
+  .tabla-equipo td {
+    min-width: 160px;
+  }
+  .tabla-equipo .td-long {
+    min-width: 214px;
+  }
+  .tabla-equipo td.capitalize {
+    min-width: 125px;
+  }
+  .tabla-equipo td.t_table_right {
+    min-width: 34px;
+  }
 }
 /* fin 600 */
 @media only screen and (max-width: 425px) {
@@ -3763,6 +3778,10 @@ h3.mis-direcciones {
   .business-logo-show img {
     width: 80px;
     height: 80px;
+  }
+  .perm-inside label {
+    flex: 0 0 50%;
+    font-size: var(--font-size-14px);
   }
 }
 /* fin 425 */

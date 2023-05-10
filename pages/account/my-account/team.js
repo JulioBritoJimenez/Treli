@@ -316,7 +316,7 @@ function Team() {
         </Modal>
 
         <div className="team_table order-box-container">
-          <table className="payment-history">
+          <table className="payment-history tabla-equipo">
             <tbody>
               <tr>
                 <th>Nombre</th>
