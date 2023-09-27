@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { BsArrowLeftShort } from "react-icons/bs";
 import Image from "next/image";
 import IconePayco from '../../../../public/icon-epayco.jpg';
-import IconWompi from '../../../../public/icon-wompi.png';
+import IconWompi from '../../../../public/icon-wompi3.png';
 import IconPayu from '../../../../public/icon-payu.png';
 import IconStripe from '../../../../public/icon-stripe.png';
 import IconPlacetopay from '../../../../public/icon-placetopay.svg';
